@@ -1,20 +1,21 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '9.0'
+# Comment the next line if you don't want to use dynamic frameworks
+use_frameworks!
+
+workspace 'ZuYu.xcworkspace'
 
 target 'ZuYu' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-  # Pods for ZuYu ZuYu.xcworkspace
+
+# Pods for ZuYu ZuYu.xcworkspace
 pod 'Moya/RxSwift', '~> 13.0'
 pod 'SwifterSwift/SwiftStdlib'
 pod 'SwifterSwift/Foundation'
 pod 'SwifterSwift/UIKit'
-#pod 'FlagPhoneNumber', '~> 0.8.0'
 pod 'SVProgressHUD'
 pod 'IQKeyboardManagerSwift'
 pod 'Toast-Swift'
 #pod 'swiftScan', :git => 'https://github.com/MxABC/swiftScan.git'
-#pod 'GoogleMaps'
 pod 'Segmentio'
 pod 'MJRefresh'
 pod 'Kingfisher'
@@ -23,25 +24,25 @@ pod 'SwiftyMenu', '~> 0.5.8'
 
 end
 
+
 target 'ZuYu2' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-  # Pods for ZuYu ZuYu.xcworkspace
+project "ZuYu2/ZuYu2.project"
 pod 'Moya/RxSwift', '~> 13.0'
 pod 'SwifterSwift/SwiftStdlib'
 pod 'SwifterSwift/Foundation'
 pod 'SwifterSwift/UIKit'
-#pod 'FlagPhoneNumber', '~> 0.8.0'
 pod 'SVProgressHUD'
 pod 'IQKeyboardManagerSwift'
 pod 'Toast-Swift'
+pod 'Kingfisher'
+pod 'LLCycleScrollView'
 #pod 'swiftScan', :git => 'https://github.com/MxABC/swiftScan.git'
-#pod 'GoogleMaps'
 pod 'Segmentio'
 pod 'MJRefresh'
-pod 'Kingfisher'
 pod 'YPImagePicker'
 pod 'SwiftyMenu', '~> 0.5.8'
+pod 'MarqueeLabel'
+pod 'AMap2DMap' #高德地图sdk
 
 end
 

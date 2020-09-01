@@ -582,7 +582,7 @@
                             <rect key="frame" x="0.0" y="434" width="414" height="279"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dC-0C-tf8" customClass="CustomButton" customModule="ZuYu" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0dC-0C-tf8" customClass="CustomBgLayerButton" customModule="ZuYu" customModuleProvider="target">
                                     <rect key="frame" x="15" y="187" width="384" height="48"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="48" id="smC-cq-cWz"/>
@@ -890,7 +890,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-mL-8ou" customClass="CustomButton" customModule="ZuYu" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVK-mL-8ou" customClass="CustomBgLayerButton" customModule="ZuYu" customModuleProvider="target">
                                 <rect key="frame" x="15" y="824" width="384" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="qsw-IG-N3b"/>
@@ -985,7 +985,7 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showEyes" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-2D-Mh6" customClass="CustomButton" customModule="ZuYu" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUN-2D-Mh6" customClass="CustomBgLayerButton" customModule="ZuYu" customModuleProvider="target">
                                 <rect key="frame" x="15" y="824" width="384" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Cly-oB-Msd"/>
@@ -1082,7 +1082,7 @@
                                     <constraint firstItem="9sQ-j9-xaq" firstAttribute="leading" secondItem="8Va-XX-Q0T" secondAttribute="leading" constant="15" id="tgC-QJ-O5w"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocQ-D6-O9o" customClass="CustomButton" customModule="ZuYu" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ocQ-D6-O9o" customClass="CustomBgLayerButton" customModule="ZuYu" customModuleProvider="target">
                                 <rect key="frame" x="15" y="804" width="384" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Bwo-qx-w8H"/>
@@ -1195,7 +1195,7 @@
             <color red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryColor">
-            <color red="0.95686274509803926" green="0.58431372549019611" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.54509803921568623" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="primaryDarkColor">
             <color red="0.20000000298023224" green="0.20000000298023224" blue="0.20000000298023224" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

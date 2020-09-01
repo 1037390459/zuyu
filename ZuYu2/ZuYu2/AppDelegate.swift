@@ -1,21 +1,33 @@
 //
 //  AppDelegate.swift
-//  ZuYu2
+//  ZuYu
 //
-//  Created by million on 2020/8/1.
+//  Created by million on 2020/7/11.
 //  Copyright © 2020 million. All rights reserved.
 //
 
 import UIKit
+import Toast_Swift
+import SVProgressHUD
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
+    var window: UIWindow?
+    static var shared: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        globalSettings()
         return true
+    }
+    
+    func globalSettings() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        ToastManager.shared.isTapToDismissEnabled = false
+        ToastManager.shared.isQueueEnabled = true
+        SVProgressHUD.setDefaultMaskType(.clear)
     }
 
     // MARK: UISceneSession Lifecycle

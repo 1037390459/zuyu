@@ -80,6 +80,7 @@
 		7B9BB48524BB0262008B35ED /* ShopCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ShopCell.xib; sourceTree = "<group>"; };
 		7B9EF26624CC00CE000FC13D /* OrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderCell.swift; sourceTree = "<group>"; };
 		7B9EF26724CC00CE000FC13D /* OrderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderCell.xib; sourceTree = "<group>"; };
+		7B9FB1FA24E57C0D002829F7 /* ZuYu.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZuYu.entitlements; sourceTree = "<group>"; };
 		7BAD405D24CD31490075DBA9 /* SettingsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableController.swift; sourceTree = "<group>"; };
 		7BAD405F24CD31C80075DBA9 /* AboutUsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsController.swift; sourceTree = "<group>"; };
 		7BAD406124CD31DE0075DBA9 /* FeedBackController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBackController.swift; sourceTree = "<group>"; };
@@ -132,6 +133,7 @@
 		7B2ECC0D24B95E390004773E /* ZuYu */ = {
 			isa = PBXGroup;
 			children = (
+				7B9FB1FA24E57C0D002829F7 /* ZuYu.entitlements */,
 				7B2ECC2424B9C66C0004773E /* model */,
 				7B2ECC2324B9C6660004773E /* view */,
 				7B2ECC2224B9C6530004773E /* controller */,
@@ -281,7 +283,6 @@
 				7B2ECC0824B95E390004773E /* Frameworks */,
 				7B2ECC0924B95E390004773E /* Resources */,
 				9CBD9963324AF8C4DD7D9456 /* [CP] Embed Pods Frameworks */,
-				3965E35CC6A2C9CCE97DFBB7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,23 +345,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3965E35CC6A2C9CCE97DFBB7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZuYu/Pods-ZuYu-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ZuYu/Pods-ZuYu-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZuYu/Pods-ZuYu-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		44093136DA98651FB9D9BF17 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -579,6 +563,7 @@
 			baseConfigurationReference = 3A3758AAFC40FA1463C263C7 /* Pods-ZuYu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZuYu/ZuYu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4QHHXE5WM4;
@@ -600,6 +585,7 @@
 			baseConfigurationReference = 90C2F6966A7A723D1E7FCEDC /* Pods-ZuYu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ZuYu/ZuYu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4QHHXE5WM4;
