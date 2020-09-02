@@ -22,6 +22,10 @@ pod 'Kingfisher'
 pod 'YPImagePicker'
 pod 'SwiftyMenu', '~> 0.5.8'
 
+pod 'SwiftyJSON'
+pod 'SwiftyUserDefaults', '5.0.0-beta.5'
+pod 'QMUIKit', :git => 'https://github.com/Tencent/QMUI_iOS.git', :tag => '4.0.4'
+
 end
 
 
@@ -43,6 +47,8 @@ pod 'YPImagePicker'
 pod 'SwiftyMenu', '~> 0.5.8'
 pod 'MarqueeLabel'
 pod 'AMap2DMap' #高德地图sdk
+
+pod 'SwiftyJSON'
 
 end
 
