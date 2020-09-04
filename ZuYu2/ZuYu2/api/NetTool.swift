@@ -9,13 +9,14 @@
 import Foundation
 import Moya
 import SVProgressHUD
+import RxSwift
 
 let networkPlugin = NetworkActivityPlugin { (type, target) in
     switch type {
-        case .began:
-            SVProgressHUD.show()
-        case .ended:
-            SVProgressHUD.dismiss()
+    case .began:
+        SVProgressHUD.show()
+    case .ended:
+        SVProgressHUD.dismiss()
     }
 }
 
@@ -27,6 +28,8 @@ let requestTimeoutClosure = { (endpoint: Endpoint, done: @escaping MoyaProvider<
 let provider = MoyaProvider<NetTool>(plugins:[NetworkLoggerPlugin(verbose:true), networkPlugin])
 
 public enum NetTool {
+    case getDynamicKey([String : Any])
+    case login([String : Any])
     case qxFloorRegistration([String : Any])
     case userLogin(String, String)
     case sendCode(String)
@@ -48,6 +51,10 @@ extension NetTool: Moya.TargetType {
     
     public var path: String {
         switch self {
+        case .getDynamicKey:
+            return "/qx-floor/common/getDynamicKey"
+        case .login:
+            return "/login"
         case .qxFloorRegistration:
             return "/qx-floor/registration"
             /* 登录模块*/
@@ -83,7 +90,12 @@ extension NetTool: Moya.TargetType {
     }
     
     public var method: Moya.Method {
-        return .post
+        switch self {
+        case .getDynamicKey:
+            return .get
+        default:
+            return .post
+        }
     }
     
     public var sampleData: Data {
@@ -92,7 +104,9 @@ extension NetTool: Moya.TargetType {
     
     public var task: Moya.Task {
         switch self {
-        case .qxFloorRegistration(let dict):
+        case .getDynamicKey(let dict),
+             .login(let dict),
+             .qxFloorRegistration(let dict):
             return .requestParameters(parameters: dict, encoding: URLEncoding.default)
             /* 登录模块*/
         case .userLogin(let userName, let password):
@@ -143,4 +157,38 @@ extension NetTool: Moya.TargetType {
         return .successCodes
     }
     
+}
+
+extension NetTool {
+    @discardableResult
+    static func request<Entity : Codable>(_ token: NetTool, entity: Entity.Type) ->Observable<Entity> {
+        return provider.rx.request(token, callbackQueue: DispatchQueue.main)
+            .asObservable()
+            .flatMap { (response : Response) -> Observable<Entity> in
+                let subject = PublishSubject<Entity>()
+                do {
+                    let json = try response.map(ApiBaseModel<Entity>.self)
+                    switch json.code! {
+                    case 200:
+                        subject.onNext(json.data!)
+                        subject.onError(RxError.timeout)
+                         subject.onCompleted()
+                        break
+                    case 400:
+                        _ = request(.userLogin("", ""), entity: EmptyModel.self).do(onNext: { (_) in
+                            request(token, entity: Entity.self)
+                        })
+                        break
+                    default:
+                        let msg = json.message ?? "no msg"
+                        SVProgressHUD.showError(withStatus: msg) //服务端报错
+                        subject.onCompleted()
+                        break
+                    }
+                } catch(let error) {
+                    subject.onError(error)
+                }
+                return subject.asObservable()
+        }
+    }
 }

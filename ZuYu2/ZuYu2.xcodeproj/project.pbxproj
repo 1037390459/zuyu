@@ -50,6 +50,7 @@
 		7B97D97124F159E600A81A93 /* DurationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B97D97024F159E600A81A93 /* DurationView.xib */; };
 		7B97D97624F413C900A81A93 /* NetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D97524F413C900A81A93 /* NetTool.swift */; };
 		7B97D97824FAE33C00A81A93 /* ApiBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D97724FAE33C00A81A93 /* ApiBaseModel.swift */; };
+		7B97D97B25021DD200A81A93 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D97A25021DD200A81A93 /* EmptyModel.swift */; };
 		7B9D11ED24EAD5A600962407 /* JSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D11EC24EAD5A600962407 /* JSNavigationController.swift */; };
 		7B9D11EF24ED820D00962407 /* LMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D11EE24ED820D00962407 /* LMHomeController.swift */; };
 		7B9D11F224ED8ABB00962407 /* LMHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D11F024ED8ABB00962407 /* LMHomeCell.swift */; };
@@ -85,10 +86,6 @@
 		7BEA559F24DAF9A10033C9B6 /* IndicatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA559E24DAF9A10033C9B6 /* IndicatorButton.swift */; };
 		7BEA55A224DB0D5A0033C9B6 /* CallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA55A024DB0D5A0033C9B6 /* CallCell.swift */; };
 		7BEA55A324DB0D5A0033C9B6 /* CallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA55A124DB0D5A0033C9B6 /* CallCell.xib */; };
-		B75C7BD424FFD88E00BE9935 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C7BD024FFD88D00BE9935 /* NetworkManager.swift */; };
-		B75C7BD524FFD88E00BE9935 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C7BD124FFD88D00BE9935 /* ReachabilityHelper.swift */; };
-		B75C7BD624FFD88E00BE9935 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C7BD224FFD88D00BE9935 /* API.swift */; };
-		B75C7BD724FFD88E00BE9935 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75C7BD324FFD88E00BE9935 /* NetworkConfig.swift */; };
 		E29C9EDD948D50AB5C96A779 /* Pods_ZuYu2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30693E7871868B17805A9A1 /* Pods_ZuYu2.framework */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +136,7 @@
 		7B97D97024F159E600A81A93 /* DurationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DurationView.xib; sourceTree = "<group>"; };
 		7B97D97524F413C900A81A93 /* NetTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTool.swift; sourceTree = "<group>"; };
 		7B97D97724FAE33C00A81A93 /* ApiBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBaseModel.swift; sourceTree = "<group>"; };
+		7B97D97A25021DD200A81A93 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		7B9D11EC24EAD5A600962407 /* JSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSNavigationController.swift; sourceTree = "<group>"; };
 		7B9D11EE24ED820D00962407 /* LMHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMHomeController.swift; sourceTree = "<group>"; };
 		7B9D11F024ED8ABB00962407 /* LMHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMHomeCell.swift; sourceTree = "<group>"; };
@@ -175,10 +173,6 @@
 		7BEA559E24DAF9A10033C9B6 /* IndicatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorButton.swift; sourceTree = "<group>"; };
 		7BEA55A024DB0D5A0033C9B6 /* CallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCell.swift; sourceTree = "<group>"; };
 		7BEA55A124DB0D5A0033C9B6 /* CallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallCell.xib; sourceTree = "<group>"; };
-		B75C7BD024FFD88D00BE9935 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		B75C7BD124FFD88D00BE9935 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
-		B75C7BD224FFD88D00BE9935 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
-		B75C7BD324FFD88E00BE9935 /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
 		D23984C4224258786911380D /* Pods-ZuYu2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZuYu2.release.xcconfig"; path = "Target Support Files/Pods-ZuYu2/Pods-ZuYu2.release.xcconfig"; sourceTree = "<group>"; };
 		F30693E7871868B17805A9A1 /* Pods_ZuYu2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZuYu2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -397,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				7B97D97724FAE33C00A81A93 /* ApiBaseModel.swift */,
+				7B97D97A25021DD200A81A93 /* EmptyModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -412,10 +407,6 @@
 		7B97D97424F413AE00A81A93 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				B75C7BD224FFD88D00BE9935 /* API.swift */,
-				B75C7BD324FFD88E00BE9935 /* NetworkConfig.swift */,
-				B75C7BD024FFD88D00BE9935 /* NetworkManager.swift */,
-				B75C7BD124FFD88D00BE9935 /* ReachabilityHelper.swift */,
 				7B97D97524F413C900A81A93 /* NetTool.swift */,
 			);
 			path = api;
@@ -592,8 +583,8 @@
 				7B9FB20624E8DDFD002829F7 /* GdShopTableController.swift in Sources */,
 				7B9FB1F324E009C0002829F7 /* SelfSizedTableView.swift in Sources */,
 				7B1F5A7924D76105005AB33E /* JiShiController.swift in Sources */,
+				7B97D97B25021DD200A81A93 /* EmptyModel.swift in Sources */,
 				7B1F5A7B24D76115005AB33E /* PaiWeiController.swift in Sources */,
-				B75C7BD424FFD88E00BE9935 /* NetworkManager.swift in Sources */,
 				7B35A01D24D5B9CD0067763B /* CurrentCityTableViewCell.swift in Sources */,
 				7B35A02224D5B9CD0067763B /* Constant.swift in Sources */,
 				7BAAEAA524DED0E900C72AF8 /* PaiHangBanTableController.swift in Sources */,
@@ -613,10 +604,8 @@
 				7BEA559F24DAF9A10033C9B6 /* IndicatorButton.swift in Sources */,
 				7B97D96F24F159CB00A81A93 /* DurationView.swift in Sources */,
 				7B97D96524EEA01700A81A93 /* LMNotificationController.swift in Sources */,
-				B75C7BD524FFD88E00BE9935 /* ReachabilityHelper.swift in Sources */,
 				7BAAEAA124DED0BF00C72AF8 /* JSYeJiTableController.swift in Sources */,
 				7B35A01F24D5B9CD0067763B /* ResultTableViewController.swift in Sources */,
-				B75C7BD724FFD88E00BE9935 /* NetworkConfig.swift in Sources */,
 				7B35A01924D5B9CD0067763B /* CitySelectorViewController.swift in Sources */,
 				7B35A00E24D5B9CD0067763B /* TextViewWithPlaceholder.swift in Sources */,
 				7B45B04B24D6BB8B002A3F02 /* UIButtonExtension.swift in Sources */,
@@ -636,7 +625,6 @@
 				7B1F5A7D24D76138005AB33E /* WodeTableController.swift in Sources */,
 				7B9FB1F624E037E0002829F7 /* PaiWeiCell.swift in Sources */,
 				7B9D11F224ED8ABB00962407 /* LMHomeCell.swift in Sources */,
-				B75C7BD624FFD88E00BE9935 /* API.swift in Sources */,
 				7BAAEA9624DEA42100C72AF8 /* HeJiCell.swift in Sources */,
 				7BAAEA8E24DE7FD600C72AF8 /* PaiHangBanCell.swift in Sources */,
 				7B1F5A7724D760EB005AB33E /* YeJiController.swift in Sources */,

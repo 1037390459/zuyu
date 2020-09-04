@@ -5,8 +5,6 @@
 
 import Foundation
 
-struct EmptyModel : Codable {}
-
 struct ApiBaseModel<T:Codable> : Codable {
     
     let data : T?

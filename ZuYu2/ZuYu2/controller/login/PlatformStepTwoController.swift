@@ -12,7 +12,7 @@ import Moya
 import SVProgressHUD
 
 class PlatformStepTwoController: UIViewController {
-
+    
     @IBOutlet weak var nameTf: CustomTextField!
     
     @IBOutlet weak var telTf: CustomTextField!
@@ -53,20 +53,24 @@ class PlatformStepTwoController: UIViewController {
         
     }
     
+    func refreshSession() {
+        
+    }
+    
     func register() {
         SVProgressHUD.show()
-        let dict = ["" : ""]
-        provider.rx.request(.qxFloorRegistration(dict), callbackQueue: DispatchQueue.main)
-        .asObservable()
-        .map(ApiBaseModel<EmptyModel>.self)
-        .subscribe(onNext: { [weak self] (result) in
-            SVProgressHUD.dismiss()
-            guard let self = self else { return }
-            }, onError: { (e) in
-                print(e)
-                SVProgressHUD.dismiss()
-        })
-        .disposed(by: disposeBag)
+                let dict = ["" : ""]
+                provider.rx.request(.qxFloorRegistration(dict), callbackQueue: DispatchQueue.main)
+                .asObservable()
+                .map(ApiBaseModel<EmptyModel>.self)
+                .subscribe(onNext: { [weak self] (result) in
+                    SVProgressHUD.dismiss()
+                    guard let self = self else { return }
+                    }, onError: { (e) in
+                        print(e)
+                        SVProgressHUD.dismiss()
+                })
+                .disposed(by: disposeBag)
     }
     
     @IBAction func upload(_ sender: Any) {
@@ -79,7 +83,7 @@ class PlatformStepTwoController: UIViewController {
     }
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == PlatformStepThreeController.className {
@@ -87,7 +91,7 @@ class PlatformStepTwoController: UIViewController {
         }
     }
     
-
+    
 }
 
 extension PlatformStepTwoController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {

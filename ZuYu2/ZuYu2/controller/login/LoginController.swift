@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import RxSwift
+import SVProgressHUD
 
 class LoginController: UIViewController {
+    
+    let disposeBag = DisposeBag()
     
     enum ActionType {
         case password
@@ -102,7 +106,36 @@ class LoginController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-        clientType = .jishi
+//        clientType = .jishi
+//        let subject = PublishSubject<Int>()
+//        subject.asObserver().subscribe(onNext :{
+//            (element) in
+//            print(element)
+//            }).disposed(by: disposeBag)
+//        subject.onNext(123)
+        
+        let ob = NetTool.request(.getDynamicKey([:]), entity: Dictionary<String, String>.self)
+        ob.subscribe { print("Event:", $0) }.disposed(by: disposeBag)
+//        .subscribe(onNext: { [weak self] (result) in
+//            print("123123")
+//            guard let self = self else { return }
+//            }, onError: { (e) in
+//                SVProgressHUD.showError(withStatus: e.localizedDescription)
+//            }).disposed(by: disposeBag)
+        
+//        var dict : [String : Any] = [:]
+//        dict["code"] = nil
+//        dict["iv"] = nil
+//        dict["loginType"] = 1
+//        dict["mobile"] = phoneTf.text
+//        dict["password"] = passwordTf.text
+//        let loginObservable =  NetTool.request(.login(dict), entity: EmptyModel.self)
+//        .subscribe(onNext: { [weak self] (result) in
+//            guard let self = self else { return }
+//            }, onError: { (e) in
+//                print(e)
+//        })
+//        .disposed(by: disposeBag)
     }
     
     
