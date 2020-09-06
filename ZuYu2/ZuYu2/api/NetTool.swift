@@ -46,7 +46,7 @@ public enum NetTool {
 
 extension NetTool: Moya.TargetType {
     public var baseURL: URL {
-        return URL(string: "http://192.168.0.121:9310")!
+        return URL(string: serverUrl)!
     }
     
     public var path: String {
@@ -54,7 +54,7 @@ extension NetTool: Moya.TargetType {
         case .getDynamicKey:
             return "/qx-floor/common/getDynamicKey"
         case .login:
-            return "/login"
+            return "/qx-floor/login"
         case .qxFloorRegistration:
             return "/qx-floor/registration"
             /* 登录模块*/
@@ -104,13 +104,14 @@ extension NetTool: Moya.TargetType {
     
     public var task: Moya.Task {
         switch self {
-        case .getDynamicKey(let dict),
-             .login(let dict),
+        case .getDynamicKey:
+            return .requestParameters(parameters: [:], encoding: URLEncoding.default)
+        case .login(let dict),
              .qxFloorRegistration(let dict):
-            return .requestParameters(parameters: dict, encoding: URLEncoding.default)
+            return .requestParameters(parameters: dict, encoding: JSONEncoding.default)
             /* 登录模块*/
         case .userLogin(let userName, let password):
-            return .requestParameters(parameters: ["phoneNumber":userName,"passWord":password], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["phoneNumber":userName,"passWord":password], encoding: JSONEncoding.default)
         case .sendCode(let phoneNumber):
             return .requestParameters(parameters: ["phoneNumber":phoneNumber], encoding: URLEncoding.default)
         case .userRegister(let phoneNumber, let passWord, let vCode, let userName, let email):
@@ -150,7 +151,7 @@ extension NetTool: Moya.TargetType {
     }
     
     public var headers: [String : String]? {
-        return ["Content-Type": "application/x-www-form-urlencoded"]
+        return ["Content-Type": "application/json"]
     }
     
     public var validationType: ValidationType {
@@ -160,20 +161,17 @@ extension NetTool: Moya.TargetType {
 }
 
 extension NetTool {
+    
     @discardableResult
     static func request<Entity : Codable>(_ token: NetTool, entity: Entity.Type) ->Observable<Entity> {
         return provider.rx.request(token, callbackQueue: DispatchQueue.main)
             .asObservable()
             .flatMap { (response : Response) -> Observable<Entity> in
-                let subject = PublishSubject<Entity>()
                 do {
                     let json = try response.map(ApiBaseModel<Entity>.self)
                     switch json.code! {
                     case 200:
-                        subject.onNext(json.data!)
-                        subject.onError(RxError.timeout)
-                         subject.onCompleted()
-                        break
+                        return Observable.just(json.data!)
                     case 400:
                         _ = request(.userLogin("", ""), entity: EmptyModel.self).do(onNext: { (_) in
                             request(token, entity: Entity.self)
@@ -182,13 +180,14 @@ extension NetTool {
                     default:
                         let msg = json.message ?? "no msg"
                         SVProgressHUD.showError(withStatus: msg) //服务端报错
-                        subject.onCompleted()
                         break
                     }
                 } catch(let error) {
-                    subject.onError(error)
+                  return Observable<Entity>.error(error)
                 }
-                return subject.asObservable()
+                return Observable.empty()
         }
     }
+    
+    
 }

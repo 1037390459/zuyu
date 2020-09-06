@@ -58,19 +58,15 @@ class PlatformStepTwoController: UIViewController {
     }
     
     func register() {
-        SVProgressHUD.show()
-                let dict = ["" : ""]
-                provider.rx.request(.qxFloorRegistration(dict), callbackQueue: DispatchQueue.main)
-                .asObservable()
-                .map(ApiBaseModel<EmptyModel>.self)
-                .subscribe(onNext: { [weak self] (result) in
-                    SVProgressHUD.dismiss()
-                    guard let self = self else { return }
-                    }, onError: { (e) in
-                        print(e)
-                        SVProgressHUD.dismiss()
-                })
-                .disposed(by: disposeBag)
+        let dict = ["" : ""]
+        NetTool.request(.qxFloorRegistration(dict), entity: ApiBaseModel<EmptyModel>.self)
+            .subscribe(onNext: { [weak self] (result) in
+                guard let self = self else { return }
+                }, onError: { (e) in
+                    print(e)
+                SVProgressHUD.dismiss()
+            })
+            .disposed(by: disposeBag)
     }
     
     @IBAction func upload(_ sender: Any) {

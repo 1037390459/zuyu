@@ -106,48 +106,58 @@ class LoginController: UIViewController {
     }
     
     @IBAction func login(_ sender: Any) {
-//        clientType = .jishi
-//        let subject = PublishSubject<Int>()
-//        subject.asObserver().subscribe(onNext :{
-//            (element) in
-//            print(element)
+        clientType = .jishi
+//        NetTool.request(.getDynamicKey([:]), entity: Dictionary<String, String>.self)
+//            .flatMap({ (result) -> Observable<Dictionary<String, String>> in
+//                print("result2:\(result)")
+//                var dict : [String : Any] = [:]
+//                dict["code"] = ""
+//                dict["iv"] = "vpmlvk5c0pftqt8p"//result["iv"]
+//                dict["loginType"] = 2
+//                dict["mobile"] = "13242447188"//self.phoneTf.text
+//                dict["password"] = "7llJO1a6wAQgwNAnUAnpVA==\n"//self.passwordTf.text
+//                return NetTool.request(.login(dict), entity: Dictionary<String, String>.self)
+//            })
+//            .subscribe(onNext: { [weak self] (result) in
+//                print("result2:\(result)")
+//                guard let self = self else { return }
+//                }, onError: { (e) in
+//                    SVProgressHUD.showError(withStatus: e.localizedDescription)
 //            }).disposed(by: disposeBag)
-//        subject.onNext(123)
         
-        let ob = NetTool.request(.getDynamicKey([:]), entity: Dictionary<String, String>.self)
-        ob.subscribe { print("Event:", $0) }.disposed(by: disposeBag)
+        NetTool.request(.getDynamicKey([:]), entity: Dictionary<String, String>.self)
+        .subscribe(onNext: { [weak self] (result) in
+            print("result2:\(result)")
+            guard let self = self else { return }
+            }, onError: { (e) in
+                SVProgressHUD.showError(withStatus: e.localizedDescription)
+        }).disposed(by: disposeBag)
+        
+//        var dict : [String : Any] = [:]
+//                       dict["code"] = ""
+//                       dict["iv"] = "vpmlvk5c0pftqt8p"//result["iv"]
+//                       dict["loginType"] = 2
+//                       dict["mobile"] = "13242447188"//self.phoneTf.text
+//                       dict["password"] = "7llJO1a6wAQgwNAnUAnpVA==\n"//self.passwordTf.text
+//        NetTool.request(.login(dict), entity: Dictionary<String, String>.self)
 //        .subscribe(onNext: { [weak self] (result) in
-//            print("123123")
+//            print("result2:\(result)")
 //            guard let self = self else { return }
 //            }, onError: { (e) in
 //                SVProgressHUD.showError(withStatus: e.localizedDescription)
-//            }).disposed(by: disposeBag)
-        
-//        var dict : [String : Any] = [:]
-//        dict["code"] = nil
-//        dict["iv"] = nil
-//        dict["loginType"] = 1
-//        dict["mobile"] = phoneTf.text
-//        dict["password"] = passwordTf.text
-//        let loginObservable =  NetTool.request(.login(dict), entity: EmptyModel.self)
-//        .subscribe(onNext: { [weak self] (result) in
-//            guard let self = self else { return }
-//            }, onError: { (e) in
-//                print(e)
-//        })
-//        .disposed(by: disposeBag)
+//        }).disposed(by: disposeBag)
     }
     
     
     
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
     
-
+    
 }

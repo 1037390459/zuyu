@@ -16,9 +16,6 @@ class JiShiController: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
-    /// 呼叫商品
-    @IBOutlet weak var hjspBtn: CustomBgLayerButton!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -74,6 +71,70 @@ class JiShiController: UIViewController {
     
     @objc func xiaoxi(_ sender : Any) {
         
+    }
+    
+    /// 呼叫商品
+    @IBAction func callcommodity(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/callcommodity")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    @IBAction func checkoutroom(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/checkoutroom")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    @IBAction func replaceproject(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/replaceproject")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    @IBAction func serviceclock(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/serviceclock")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    /// TODO:考勤打卡
+    
+    @IBAction func appointment(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/appointment")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    
+    @IBAction func management(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/management")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    @IBAction func clockfake(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/clockfake")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    @IBAction func rechargevip(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/rechargevip")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    @IBAction func servicemanagement(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/servicemanagement")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
+    }
+    
+    @IBAction func openorder(_ sender: Any) {
+        let vc = WebController.init("\(serverUrl)/qx-js-app/#/openorder")
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc)
     }
     /*
     // MARK: - Navigation

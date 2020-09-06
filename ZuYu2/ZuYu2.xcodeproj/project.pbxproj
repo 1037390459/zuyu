@@ -51,6 +51,7 @@
 		7B97D97624F413C900A81A93 /* NetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D97524F413C900A81A93 /* NetTool.swift */; };
 		7B97D97824FAE33C00A81A93 /* ApiBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D97724FAE33C00A81A93 /* ApiBaseModel.swift */; };
 		7B97D97B25021DD200A81A93 /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D97A25021DD200A81A93 /* EmptyModel.swift */; };
+		7B97D97E25044AE900A81A93 /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D97D25044AE800A81A93 /* WebController.swift */; };
 		7B9D11ED24EAD5A600962407 /* JSNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D11EC24EAD5A600962407 /* JSNavigationController.swift */; };
 		7B9D11EF24ED820D00962407 /* LMHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D11EE24ED820D00962407 /* LMHomeController.swift */; };
 		7B9D11F224ED8ABB00962407 /* LMHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9D11F024ED8ABB00962407 /* LMHomeCell.swift */; };
@@ -137,6 +138,7 @@
 		7B97D97524F413C900A81A93 /* NetTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTool.swift; sourceTree = "<group>"; };
 		7B97D97724FAE33C00A81A93 /* ApiBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBaseModel.swift; sourceTree = "<group>"; };
 		7B97D97A25021DD200A81A93 /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
+		7B97D97D25044AE800A81A93 /* WebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		7B9D11EC24EAD5A600962407 /* JSNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSNavigationController.swift; sourceTree = "<group>"; };
 		7B9D11EE24ED820D00962407 /* LMHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMHomeController.swift; sourceTree = "<group>"; };
 		7B9D11F024ED8ABB00962407 /* LMHomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMHomeCell.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 		7B359FE824D5B9CC0067763B /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				7B97D97C25044AB500A81A93 /* base */,
 				7B9FB20424E8DDDD002829F7 /* other */,
 				7B1F5A7E24D763C9005AB33E /* tabbar */,
 				7B359FE924D5B9CC0067763B /* jishi */,
@@ -410,6 +413,14 @@
 				7B97D97524F413C900A81A93 /* NetTool.swift */,
 			);
 			path = api;
+			sourceTree = "<group>";
+		};
+		7B97D97C25044AB500A81A93 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				7B97D97D25044AE800A81A93 /* WebController.swift */,
+			);
+			path = base;
 			sourceTree = "<group>";
 		};
 		7B9FB20424E8DDDD002829F7 /* other */ = {
@@ -596,6 +607,7 @@
 				7B35A00D24D5B9CD0067763B /* CustomTextField.swift in Sources */,
 				7B35A02124D5B9CD0067763B /* RecentCitiesableViewCell.swift in Sources */,
 				7B35A00C24D5B9CD0067763B /* ExtraImageButton.swift in Sources */,
+				7B97D97E25044AE900A81A93 /* WebController.swift in Sources */,
 				7BA047A124D665DB008CF9A4 /* LoginController.swift in Sources */,
 				7B97D96D24EEB41000A81A93 /* UIImageExtension.swift in Sources */,
 				7B97D96724EEA1BA00A81A93 /* LMNotiTableController.swift in Sources */,
