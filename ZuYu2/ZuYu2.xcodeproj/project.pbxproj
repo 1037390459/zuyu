@@ -16,6 +16,13 @@
 		7B1F5A8324D99F6F005AB33E /* CustomImagePostionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1F5A8224D99F6F005AB33E /* CustomImagePostionButton.swift */; };
 		7B1FEE4B24D74EBC0053CFBD /* ResetPassword1Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1FEE4A24D74EBC0053CFBD /* ResetPassword1Controller.swift */; };
 		7B1FEE4D24D74ECF0053CFBD /* ResetPassword2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1FEE4C24D74ECF0053CFBD /* ResetPassword2Controller.swift */; };
+		7B223E97250D919400D5FCB2 /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B223E96250D919400D5FCB2 /* NetManager.swift */; };
+		7B223E99250DA40200D5FCB2 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B223E98250DA40200D5FCB2 /* StringExtension.swift */; };
+		7B223E9B2517214A00D5FCB2 /* UserBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B223E9A2517214A00D5FCB2 /* UserBean.swift */; };
+		7B223E9D2517264900D5FCB2 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B223E9C2517264900D5FCB2 /* UserInfo.swift */; };
+		7B223E9F25173F2500D5FCB2 /* AchievementsBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B223E9E25173F2500D5FCB2 /* AchievementsBean.swift */; };
+		7B23FE2525543C7D00D7616A /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B23FE2425543C7D00D7616A /* LocationViewController.swift */; };
+		7B23FE272554538100D7616A /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B23FE262554538100D7616A /* CommonUtils.swift */; };
 		7B359FB124D5A8C00067763B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B359FB024D5A8C00067763B /* AppDelegate.swift */; };
 		7B359FB324D5A8C00067763B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B359FB224D5A8C00067763B /* SceneDelegate.swift */; };
 		7B359FB524D5A8C00067763B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B359FB424D5A8C00067763B /* ViewController.swift */; };
@@ -39,8 +46,14 @@
 		7B35A02124D5B9CD0067763B /* RecentCitiesableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35A00124D5B9CD0067763B /* RecentCitiesableViewCell.swift */; };
 		7B35A02224D5B9CD0067763B /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B35A00424D5B9CD0067763B /* Constant.swift */; };
 		7B35A02424D5BA5C0067763B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B35A02324D5BA5C0067763B /* Login.storyboard */; };
+		7B43576B255ACE650024CDD0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B43576A255ACE650024CDD0 /* ProfileViewController.swift */; };
 		7B45B04B24D6BB8B002A3F02 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B45B04A24D6BB8B002A3F02 /* UIButtonExtension.swift */; };
 		7B58B48C24DC6046006C1161 /* DashLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B58B48B24DC6046006C1161 /* DashLine.swift */; };
+		7B624954255628D100DC5E34 /* AddressSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B624953255628D100DC5E34 /* AddressSearchViewController.swift */; };
+		7B842BC4255AEE3A008A16BB /* ProjectsBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B842BC3255AEE3A008A16BB /* ProjectsBean.swift */; };
+		7B842BE8255AF2C2008A16BB /* ProjectBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B842BE7255AF2C2008A16BB /* ProjectBean.swift */; };
+		7B957CE8255660CB00A8F627 /* PoiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B957CE6255660CB00A8F627 /* PoiCell.swift */; };
+		7B957CE9255660CB00A8F627 /* PoiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B957CE7255660CB00A8F627 /* PoiCell.xib */; };
 		7B97D96524EEA01700A81A93 /* LMNotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D96424EEA01600A81A93 /* LMNotificationController.swift */; };
 		7B97D96724EEA1BA00A81A93 /* LMNotiTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D96624EEA1BA00A81A93 /* LMNotiTableController.swift */; };
 		7B97D96A24EEAFC500A81A93 /* LMNotiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97D96824EEAFC500A81A93 /* LMNotiCell.swift */; };
@@ -101,6 +114,14 @@
 		7B1F5A8224D99F6F005AB33E /* CustomImagePostionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePostionButton.swift; sourceTree = "<group>"; };
 		7B1FEE4A24D74EBC0053CFBD /* ResetPassword1Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword1Controller.swift; sourceTree = "<group>"; };
 		7B1FEE4C24D74ECF0053CFBD /* ResetPassword2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword2Controller.swift; sourceTree = "<group>"; };
+		7B223E96250D919400D5FCB2 /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
+		7B223E98250DA40200D5FCB2 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		7B223E9A2517214A00D5FCB2 /* UserBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBean.swift; sourceTree = "<group>"; };
+		7B223E9C2517264900D5FCB2 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		7B223E9E25173F2500D5FCB2 /* AchievementsBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementsBean.swift; sourceTree = "<group>"; };
+		7B23FE2425543C7D00D7616A /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		7B23FE262554538100D7616A /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+		7B23FE292556245400D7616A /* ZuYu2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZuYu2-Bridging-Header.h"; sourceTree = "<group>"; };
 		7B359FAD24D5A8C00067763B /* ZuYu2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZuYu2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B359FB024D5A8C00067763B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B359FB224D5A8C00067763B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,8 +147,14 @@
 		7B35A00124D5B9CD0067763B /* RecentCitiesableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecentCitiesableViewCell.swift; sourceTree = "<group>"; };
 		7B35A00424D5B9CD0067763B /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		7B35A02324D5BA5C0067763B /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		7B43576A255ACE650024CDD0 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		7B45B04A24D6BB8B002A3F02 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		7B58B48B24DC6046006C1161 /* DashLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashLine.swift; sourceTree = "<group>"; };
+		7B624953255628D100DC5E34 /* AddressSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressSearchViewController.swift; sourceTree = "<group>"; };
+		7B842BC3255AEE3A008A16BB /* ProjectsBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsBean.swift; sourceTree = "<group>"; };
+		7B842BE7255AF2C2008A16BB /* ProjectBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectBean.swift; sourceTree = "<group>"; };
+		7B957CE6255660CB00A8F627 /* PoiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiCell.swift; sourceTree = "<group>"; };
+		7B957CE7255660CB00A8F627 /* PoiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PoiCell.xib; sourceTree = "<group>"; };
 		7B97D96424EEA01600A81A93 /* LMNotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMNotificationController.swift; sourceTree = "<group>"; };
 		7B97D96624EEA1BA00A81A93 /* LMNotiTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMNotiTableController.swift; sourceTree = "<group>"; };
 		7B97D96824EEAFC500A81A93 /* LMNotiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMNotiCell.swift; sourceTree = "<group>"; };
@@ -256,6 +283,7 @@
 				7B359FB924D5A8C20067763B /* Assets.xcassets */,
 				7B359FBB24D5A8C20067763B /* LaunchScreen.storyboard */,
 				7B359FBE24D5A8C20067763B /* Info.plist */,
+				7B23FE292556245400D7616A /* ZuYu2-Bridging-Header.h */,
 			);
 			path = ZuYu2;
 			sourceTree = "<group>";
@@ -287,6 +315,8 @@
 				7B97D96924EEAFC500A81A93 /* LMNotiCell.xib */,
 				7B97D96E24F159CB00A81A93 /* DurationView.swift */,
 				7B97D97024F159E600A81A93 /* DurationView.xib */,
+				7B957CE6255660CB00A8F627 /* PoiCell.swift */,
+				7B957CE7255660CB00A8F627 /* PoiCell.xib */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -306,6 +336,7 @@
 				7B58B48B24DC6046006C1161 /* DashLine.swift */,
 				7B9FB1F224E009C0002829F7 /* SelfSizedTableView.swift */,
 				7B97D96C24EEB41000A81A93 /* UIImageExtension.swift */,
+				7B223E98250DA40200D5FCB2 /* StringExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -349,6 +380,7 @@
 			isa = PBXGroup;
 			children = (
 				7B1F5A7C24D76138005AB33E /* WodeTableController.swift */,
+				7B43576A255ACE650024CDD0 /* ProfileViewController.swift */,
 			);
 			path = wode;
 			sourceTree = "<group>";
@@ -360,6 +392,8 @@
 				7BA047A224D665F9008CF9A4 /* PlatformStepOneController.swift */,
 				7BA047A424D6660C008CF9A4 /* PlatformStepTwoController.swift */,
 				7BA047A624D66620008CF9A4 /* PlatformStepThreeController.swift */,
+				7B23FE2425543C7D00D7616A /* LocationViewController.swift */,
+				7B624953255628D100DC5E34 /* AddressSearchViewController.swift */,
 				7B1FEE4A24D74EBC0053CFBD /* ResetPassword1Controller.swift */,
 				7B1FEE4C24D74ECF0053CFBD /* ResetPassword2Controller.swift */,
 			);
@@ -395,6 +429,10 @@
 			children = (
 				7B97D97724FAE33C00A81A93 /* ApiBaseModel.swift */,
 				7B97D97A25021DD200A81A93 /* EmptyModel.swift */,
+				7B223E9A2517214A00D5FCB2 /* UserBean.swift */,
+				7B842BC3255AEE3A008A16BB /* ProjectsBean.swift */,
+				7B842BE7255AF2C2008A16BB /* ProjectBean.swift */,
+				7B223E9E25173F2500D5FCB2 /* AchievementsBean.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -403,6 +441,7 @@
 			isa = PBXGroup;
 			children = (
 				7B35A00424D5B9CD0067763B /* Constant.swift */,
+				7B23FE262554538100D7616A /* CommonUtils.swift */,
 			);
 			path = constant;
 			sourceTree = "<group>";
@@ -411,6 +450,8 @@
 			isa = PBXGroup;
 			children = (
 				7B97D97524F413C900A81A93 /* NetTool.swift */,
+				7B223E96250D919400D5FCB2 /* NetManager.swift */,
+				7B223E9C2517264900D5FCB2 /* UserInfo.swift */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -464,6 +505,7 @@
 				7B359FAA24D5A8C00067763B /* Frameworks */,
 				7B359FAB24D5A8C00067763B /* Resources */,
 				D66AE9BBB1B2B42B59C36630 /* [CP] Embed Pods Frameworks */,
+				7C5104CE571382B35ACFC138 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -486,6 +528,7 @@
 				TargetAttributes = {
 					7B359FAC24D5A8C00067763B = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -528,6 +571,7 @@
 				7B97D97124F159E600A81A93 /* DurationView.xib in Resources */,
 				7B35A01C24D5B9CD0067763B /* hotCities.plist in Resources */,
 				7BAAEA8F24DE7FD600C72AF8 /* PaiHangBanCell.xib in Resources */,
+				7B957CE9255660CB00A8F627 /* PoiCell.xib in Resources */,
 				7B9D11F724ED99BB00962407 /* LMHomeHeader.xib in Resources */,
 				7BAAEA9324DE93AB00C72AF8 /* GongZiCell.xib in Resources */,
 				7BAAEA9B24DEA43600C72AF8 /* MingXiCell.xib in Resources */,
@@ -537,6 +581,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7C5104CE571382B35ACFC138 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZuYu2/Pods-ZuYu2-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZuYu2/Pods-ZuYu2-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZuYu2/Pods-ZuYu2-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		AD80886C709D950E11F1704A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -591,12 +652,15 @@
 				7B35A00B24D5B9CD0067763B /* StarStackView.swift in Sources */,
 				7B35A00924D5B9CD0067763B /* NSObjectExtension.swift in Sources */,
 				7BEA55A224DB0D5A0033C9B6 /* CallCell.swift in Sources */,
+				7B223E9D2517264900D5FCB2 /* UserInfo.swift in Sources */,
 				7B9FB20624E8DDFD002829F7 /* GdShopTableController.swift in Sources */,
 				7B9FB1F324E009C0002829F7 /* SelfSizedTableView.swift in Sources */,
 				7B1F5A7924D76105005AB33E /* JiShiController.swift in Sources */,
 				7B97D97B25021DD200A81A93 /* EmptyModel.swift in Sources */,
 				7B1F5A7B24D76115005AB33E /* PaiWeiController.swift in Sources */,
 				7B35A01D24D5B9CD0067763B /* CurrentCityTableViewCell.swift in Sources */,
+				7B23FE2525543C7D00D7616A /* LocationViewController.swift in Sources */,
+				7B223E9F25173F2500D5FCB2 /* AchievementsBean.swift in Sources */,
 				7B35A02224D5B9CD0067763B /* Constant.swift in Sources */,
 				7BAAEAA524DED0E900C72AF8 /* PaiHangBanTableController.swift in Sources */,
 				7B1F5A8024D763E6005AB33E /* JSTabController.swift in Sources */,
@@ -608,6 +672,7 @@
 				7B35A02124D5B9CD0067763B /* RecentCitiesableViewCell.swift in Sources */,
 				7B35A00C24D5B9CD0067763B /* ExtraImageButton.swift in Sources */,
 				7B97D97E25044AE900A81A93 /* WebController.swift in Sources */,
+				7B957CE8255660CB00A8F627 /* PoiCell.swift in Sources */,
 				7BA047A124D665DB008CF9A4 /* LoginController.swift in Sources */,
 				7B97D96D24EEB41000A81A93 /* UIImageExtension.swift in Sources */,
 				7B97D96724EEA1BA00A81A93 /* LMNotiTableController.swift in Sources */,
@@ -622,6 +687,7 @@
 				7B35A00E24D5B9CD0067763B /* TextViewWithPlaceholder.swift in Sources */,
 				7B45B04B24D6BB8B002A3F02 /* UIButtonExtension.swift in Sources */,
 				7B1F5A8324D99F6F005AB33E /* CustomImagePostionButton.swift in Sources */,
+				7B43576B255ACE650024CDD0 /* ProfileViewController.swift in Sources */,
 				7B35A00A24D5B9CD0067763B /* CustomBgLayerButton.swift in Sources */,
 				7B1FEE4D24D74ECF0053CFBD /* ResetPassword2Controller.swift in Sources */,
 				7BAAEAA324DED0D200C72AF8 /* GongZiTableController.swift in Sources */,
@@ -633,16 +699,23 @@
 				7BD8B9F624DAEB4800CE72D5 /* RoleController.swift in Sources */,
 				7BAAEA9E24DEC81300C72AF8 /* MingXiInnerCell.swift in Sources */,
 				7B359FB324D5A8C00067763B /* SceneDelegate.swift in Sources */,
+				7B223E99250DA40200D5FCB2 /* StringExtension.swift in Sources */,
 				7B9FB1F924E04A1A002829F7 /* TouPaiTableController.swift in Sources */,
+				7B842BC4255AEE3A008A16BB /* ProjectsBean.swift in Sources */,
 				7B1F5A7D24D76138005AB33E /* WodeTableController.swift in Sources */,
 				7B9FB1F624E037E0002829F7 /* PaiWeiCell.swift in Sources */,
+				7B223E97250D919400D5FCB2 /* NetManager.swift in Sources */,
 				7B9D11F224ED8ABB00962407 /* LMHomeCell.swift in Sources */,
+				7B842BE8255AF2C2008A16BB /* ProjectBean.swift in Sources */,
 				7BAAEA9624DEA42100C72AF8 /* HeJiCell.swift in Sources */,
 				7BAAEA8E24DE7FD600C72AF8 /* PaiHangBanCell.swift in Sources */,
 				7B1F5A7724D760EB005AB33E /* YeJiController.swift in Sources */,
+				7B624954255628D100DC5E34 /* AddressSearchViewController.swift in Sources */,
+				7B23FE272554538100D7616A /* CommonUtils.swift in Sources */,
 				7B1FEE4B24D74EBC0053CFBD /* ResetPassword1Controller.swift in Sources */,
 				7B97D97624F413C900A81A93 /* NetTool.swift in Sources */,
 				7B35A01B24D5B9CD0067763B /* HotCityTableViewCell.swift in Sources */,
+				7B223E9B2517214A00D5FCB2 /* UserBean.swift in Sources */,
 				7B97D96A24EEAFC500A81A93 /* LMNotiCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,6 +861,7 @@
 			baseConfigurationReference = 64387D15A1ED1FFACE076BB3 /* Pods-ZuYu2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZuYu2/ZuYu2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
@@ -800,6 +874,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = zuyu2.dev;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu2/ZuYu2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -810,6 +886,7 @@
 			baseConfigurationReference = D23984C4224258786911380D /* Pods-ZuYu2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZuYu2/ZuYu2.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
@@ -822,6 +899,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = zuyu2.dis;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu2/ZuYu2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -12,11 +12,13 @@ class PlatformStepThreeController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(done))
     }
-    
 
+   @objc func done() {
+        navigationController?.popToRootViewController(animated: true)
+   }
+    
     /*
     // MARK: - Navigation
 

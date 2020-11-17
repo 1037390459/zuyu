@@ -21,6 +21,14 @@ class ResetPassword2Controller: UIViewController {
     }
     
     @IBAction func sure(_ sender: Any) {
+        guard let pwd = pwdTf.text, !pwd.isEmpty else {
+            view.makeToast("请输入密码")
+            return
+        }
+        guard let confirmPwd = confirmPwdTf.text, !confirmPwd.isEmpty else {
+            view.makeToast("请再次确认密码")
+            return
+        }
         navigationController?.popToRootViewController(animated: true)
     }
     

@@ -100,6 +100,18 @@ class YeJiController: UIViewController {
         return button
     }()
     
+    lazy var filterBtn : UIButton = {
+        let button = IndicatorButton.init(type: .custom)
+        button.addTarget(self, action: #selector(YeJiController.rightBtnTapped(_:)), for: .touchUpInside)
+        button.bottomLayerEnabled = true
+        button.setTitleForAllStates("筛选")
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+        button.setTitleColor(Constant.Color.lightPrimaryDark, for: .normal)
+        button.setTitleColor(Constant.Color.jishiPrimary, for: .selected)
+        return button
+    }()
+    
+    
     lazy var contentView : UIView = {
         let contentView = UIView()
         contentView.backgroundColor = UIColor.white

@@ -26,7 +26,7 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZT-fp-h0j">
-                    <rect key="frame" x="15" y="445" width="384" height="322"/>
+                    <rect key="frame" x="15" y="447.5" width="384" height="319.5"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="切换身份" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8P-oC-eaO">
                             <rect key="frame" x="159.5" y="15" width="65.5" height="19.5"/>
@@ -35,10 +35,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fh2-6C-4Yf">
-                            <rect key="frame" x="10" y="54.5" width="364" height="247.5"/>
+                            <rect key="frame" x="10" y="54.5" width="364" height="245"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIF-ua-K52">
-                                    <rect key="frame" x="0.0" y="0.0" width="364" height="50.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="364" height="50"/>
                                     <color key="backgroundColor" red="0.99607843137254903" green="0.45098039215686275" blue="0.55294117647058827" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" title="股东端">
@@ -60,7 +60,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUE-Cr-Adp">
-                                    <rect key="frame" x="0.0" y="65.5" width="364" height="51"/>
+                                    <rect key="frame" x="0.0" y="65" width="364" height="50"/>
                                     <color key="backgroundColor" red="0.99607843139999996" green="0.45098039220000002" blue="0.55294117649999996" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" title="楼面端">
@@ -83,7 +83,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xAb-Qs-Ww0">
-                                    <rect key="frame" x="0.0" y="131.5" width="364" height="50.5"/>
+                                    <rect key="frame" x="0.0" y="130" width="364" height="50"/>
                                     <color key="backgroundColor" red="0.99607843139999996" green="0.45098039220000002" blue="0.55294117649999996" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" title="技师端">
@@ -105,8 +105,11 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvX-AP-LVL">
-                                    <rect key="frame" x="0.0" y="197" width="364" height="50.5"/>
+                                    <rect key="frame" x="0.0" y="195" width="364" height="50"/>
                                     <color key="backgroundColor" red="0.99607843139999996" green="0.45098039220000002" blue="0.55294117649999996" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="cjV-GY-E3h"/>
+                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" title="切换账号">
                                         <color key="titleColor" red="0.99607843139999996" green="0.45098039220000002" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,7 +140,6 @@
                         <constraint firstItem="C8P-oC-eaO" firstAttribute="centerX" secondItem="nZT-fp-h0j" secondAttribute="centerX" id="b0F-lb-7LP"/>
                         <constraint firstItem="C8P-oC-eaO" firstAttribute="top" secondItem="nZT-fp-h0j" secondAttribute="top" constant="15" id="slV-HG-caq"/>
                         <constraint firstAttribute="trailing" secondItem="fh2-6C-4Yf" secondAttribute="trailing" constant="10" id="uVb-0f-F0I"/>
-                        <constraint firstAttribute="height" constant="322" id="wq3-I8-aMo"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">

@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-import SVProgressHUD
+import Toast_Swift
 
 class WebController: UIViewController {
     
@@ -18,7 +18,11 @@ class WebController: UIViewController {
     
     init(_ url: String?) {
         super.init(nibName: nil, bundle: nil)
-        self.url = url
+        self.url = url ?? ""
+        if let token = getUser()?.accessToken {
+            self.url = "\(self.url!)?token=\(token)"
+        }
+        print("url:\(self.url!)")
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -37,6 +41,20 @@ class WebController: UIViewController {
         return script
     }
     
+    lazy var contentView : UIView = {
+        let contentView = UIView()
+        contentView.backgroundColor = UIColor.white
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(contentView)
+        NSLayoutConstraint.activate([
+            contentView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            contentView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            contentView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            contentView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+        ])
+        return contentView
+    }()
+    
     lazy var webView : WKWebView = {
         let preferences = WKPreferences()
         preferences.javaScriptEnabled = true
@@ -45,11 +63,13 @@ class WebController: UIViewController {
         configuration.selectionGranularity = WKSelectionGranularity.character
         let userContent = WKUserContentController()
         userContent.add(self, name: backMethodName)
-        userContent.addUserScript(registerElementEvent(methodName: backMethodName, className: "van-nav-bar__left"))
+//        userContent.addUserScript(registerElementEvent(methodName: backMethodName, className: "van-nav-bar__left"))
         configuration.userContentController = userContent
         let webView = WKWebView(frame: .zero, configuration: configuration)
+        webView.translatesAutoresizingMaskIntoConstraints = false
+        webView.scrollView.contentInsetAdjustmentBehavior = .never
         webView.allowsBackForwardNavigationGestures = true
-        view.addSubview(webView)
+        contentView.addSubview(webView)
         // 让webview翻动有回弹效果
         webView.scrollView.bounces = false
         webView.navigationDelegate = self
@@ -58,6 +78,7 @@ class WebController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         loadWeb()
     }
     
@@ -80,8 +101,22 @@ class WebController: UIViewController {
         guard let request = URLRequest(urlString: url) else {
             return
         }
-        SVProgressHUD.show()
         webView.load(request)
+    }
+    
+    func callNative(code : String?, data: String?) {
+        if let code = code, code == "back" {
+            navigationController?.popViewController(animated: true)
+        }
+        if let code = code, code == "call", let phoneStr = data {
+            let phone = "telprompt://" + phoneStr
+            if UIApplication.shared.canOpenURL(URL(string: phone)!) {
+                UIApplication.shared.open(URL(string: phone)!, options: [:], completionHandler: nil)
+             }
+        }
+        if let code = code, code == "toast" {
+            view.makeToast(data)
+        }
     }
     
     /*
@@ -101,12 +136,11 @@ extension WebController: WKNavigationDelegate, WKScriptMessageHandler {
     ///在网页加载完成时调用js方法
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         print("finish load")
-        SVProgressHUD.dismiss()
         //webView.evaluateJavaScript("sayHello()", completionHandler: nil)
     }
     
     func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
-        SVProgressHUD.dismiss()
+        print("webview error:\(error)")
     }
     
     ///接收js调用方法
@@ -116,4 +150,29 @@ extension WebController: WKNavigationDelegate, WKScriptMessageHandler {
             navigationController?.popViewController(animated: true)
         }
     }
+    
+    //! WKWeView在每次加载请求前会调用此方法来确认是否进行请求跳转
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        print("navigation==>\(navigationAction.request.url!)")
+        if let url = navigationAction.request.url, url.scheme == "protocol", url.host == "android" {
+            let parameters = url.queryParameters
+            let code = parameters?["code"]
+            let data = parameters?["data"]
+            callNative(code: code, data: data)
+            decisionHandler(.cancel)
+            return
+        }
+        decisionHandler(.allow)
+       
+    }
+//    - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+//
+//        if ([navigationAction.request.URL.scheme caseInsensitiveCompare:@"jsToOc"] == NSOrderedSame) {
+//            [WKWebViewInterceptController showAlertWithTitle:navigationAction.request.URL.host message:navigationAction.request.URL.query cancelHandler:nil];
+//            decisionHandler(WKNavigationActionPolicyCancel);
+//        }
+//        else {
+//            decisionHandler(WKNavigationActionPolicyAllow);
+//        }
+//    }
 }

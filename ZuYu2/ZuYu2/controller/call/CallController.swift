@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SVProgressHUD
+import RxSwift
 
 enum ServiceType : Int {
     case main
@@ -77,9 +79,35 @@ class CallController: UIViewController {
          return button
        }()
     
+    var disposeBag = DisposeBag()
+    
+    var beans : [ProjectBean] = []
+    
+    var filterBeans : [ProjectBean] {
+        get{
+            var filterBeans : [ProjectBean] = []
+            switch type {
+            case .main:
+                filterBeans = beans.filter({$0.type != 2})
+                break
+            case .sub:
+                filterBeans = beans.filter({$0.type == 2})
+                break
+            default:
+                break
+            }
+            return filterBeans
+        }
+    }
+    
+    var pageNo = 1
+    
+    var pageSize = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        getAllProjectList()
     }
     
     let callBtnLayer = Constant.Layer.gradientLayer2()
@@ -92,6 +120,18 @@ class CallController: UIViewController {
         tableView.tableFooterView = UIView.init(frame: CGRect.zero)
         tableView.delegate = self
         tableView.dataSource = self
+//        tableView.mj_header = MJRefreshHeader.init(refreshingBlock: {
+//            [weak self] in
+//            guard let self = self else {return}
+//            self.pageNo = 1
+//            self.tableView.reloadData()
+//        })
+//        tableView.mj_footer = MJRefreshFooter.init(refreshingBlock: {
+//            [weak self] in
+//            guard let self = self else {return}
+//            self.pageNo += 1
+//            self.tableView.reloadData()
+//        })
     }
     
     func initNavigationItem() {
@@ -106,10 +146,66 @@ class CallController: UIViewController {
     
     @objc func leftBtnTapped(_ sender :UIButton ) {
         type = .main
+        tableView.reloadData()
     }
     
     @objc func rightBtnTapped(_ sender :UIButton ) {
         type = .sub
+        tableView.reloadData()
+    }
+    
+    func getAllProjectList() {
+        let dict : [String : Any] = ["pageNum" : pageNo,
+                    "pageSize" : pageSize,
+                    "type" : "0"]
+        NetManager.request(.getAllProjectList(dict), entity: ProjectsBean.self)
+            .subscribe(onNext: { [weak self] (result) in
+                guard let self = self else { return }
+                print("result:\(result)")
+                self.tableView.mj_header?.endRefreshing()
+                self.tableView.mj_footer?.endRefreshing()
+                if self.pageNo == 1 {
+                    self.beans.removeAll()
+                }
+                self.beans.append(contentsOf: result.list ?? [])
+                if self.beans.count == result.totalNumber {
+                    self.tableView.mj_footer?.endRefreshingWithNoMoreData()
+                }
+                self.tableView.reloadData()
+            }, onError: { (e) in
+                SVProgressHUD.showError(withStatus: e.localizedDescription)
+        }).disposed(by: disposeBag)
+    }
+    
+    func callProject(project : ProjectBean) {
+        let dict : [String : Any] = [
+            "projectId" : project.projectId ?? "",
+            "projectName" : project.projectName ?? "",
+            "roomId" : 0,
+            "roomName" : "",
+            "type" : project.type ?? 0]
+        NetManager.request(.callProject(dict), entity: EmptyModel.self)
+            .subscribe(onNext: { [weak self] (result) in
+                guard let self = self else { return }
+                print("result:\(result)")
+                SVProgressHUD.showSuccess(withStatus: "呼叫成功")
+            }, onError: { (e) in
+                SVProgressHUD.showError(withStatus: e.localizedDescription)
+        }).disposed(by: disposeBag)
+    }
+    
+    @IBAction func callWaiter(_ sender : UIButton) {
+        let dict : [String : Any] = [
+            "roomId" : 0,
+            "roomName" : "",]
+        NetManager.request(.callWaiter(dict), entity: EmptyModel.self)
+            .subscribe(onNext: { [weak self] (result) in
+                guard let self = self else { return }
+                print("result:\(result)")
+                SVProgressHUD.showSuccess(withStatus: "呼叫成功")
+            }, onError: { (e) in
+                SVProgressHUD.showError(withStatus: e.localizedDescription)
+        }).disposed(by: disposeBag)
     }
 
     /*
@@ -126,16 +222,18 @@ class CallController: UIViewController {
 
 extension CallController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return filterBeans.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdOrNibName) as! CallCell
+        let model = filterBeans[indexPath.row]
         cell.type = type
+        cell.model = model
         cell.selectionStyle = .none
         cell.callClosure = {
             [weak self] in
-            self?.callService()
+            self?.callService(project: model)
         }
         cell.typeClosure = {
             
@@ -147,13 +245,13 @@ extension CallController : UITableViewDataSource, UITableViewDelegate {
         return 52
     }
     
-    func callService()  {
-        let alertVc = UIAlertController.init(title: "提示", message: "确认呼叫(\("修脚"))技师嘛？", preferredStyle: .alert)
+    func callService(project : ProjectBean)  {
+        let alertVc = UIAlertController.init(title: "提示", message: "确认呼叫(\(project.projectName ?? ""))技师嘛？", preferredStyle: .alert)
         alertVc.view.tintColor = Constant.Color.jishiPrimary
         let cancelAction = UIAlertAction.init(title: "取消", style: .default, handler: nil)
         cancelAction.setValue(Constant.Color.lightPrimaryDark, forKey: "titleTextColor")
-        let sureAction = UIAlertAction.init(title: "确定", style: .destructive) { (_) in
-            
+        let sureAction = UIAlertAction.init(title: "确定", style: .destructive) {_ in
+            self.callProject(project: project)
         }
         alertVc.addAction(cancelAction)
         alertVc.addAction(sureAction)

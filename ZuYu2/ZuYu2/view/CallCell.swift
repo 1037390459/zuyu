@@ -35,6 +35,12 @@ class CallCell: UITableViewCell {
     
     @IBOutlet weak var callBtn: CustomImagePostionButton!
     
+    var model : ProjectBean? {
+        didSet {
+            nameLbl.text = model?.projectName
+        }
+    }
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

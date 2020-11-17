@@ -28,4 +28,13 @@ class LMHomeCell: UICollectionViewCell {
         // Initialization code
     }
 
+    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
+        setNeedsLayout()
+        layoutIfNeeded()
+        let size = contentView.systemLayoutSizeFitting(layoutAttributes.size)
+        var newFrame = layoutAttributes.frame
+        newFrame.size = size
+        layoutAttributes.frame = newFrame
+        return layoutAttributes
+    }
 }

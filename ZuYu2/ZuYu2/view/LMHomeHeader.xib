@@ -361,6 +361,17 @@
                 <constraint firstItem="eim-ee-OWo" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="15" id="ztj-uW-w2N"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="jdkfLbl" destination="qsy-F6-tJc" id="NjX-3a-0Zo"/>
+                <outlet property="kdjjLbl" destination="Daf-mx-t82" id="kuq-gQ-8S3"/>
+                <outlet property="krslLbl" destination="XTc-gg-aee" id="pXL-Qv-aPN"/>
+                <outlet property="notificationLbl" destination="0Yy-aS-gQR" id="bKS-dz-izs"/>
+                <outlet property="skyjLbl" destination="2My-6C-C5a" id="GXj-BE-jIF"/>
+                <outlet property="spyjLbl" destination="ZJt-gX-dM3" id="ziZ-xx-8nW"/>
+                <outlet property="xcyjLbl" destination="zV6-HW-d9Q" id="D7v-dJ-ij6"/>
+                <outlet property="xmyjLbl" destination="8Mb-wd-oID" id="lnz-Do-4va"/>
+                <outlet property="xzhyLbl" destination="sXY-Jg-3Pn" id="7pN-nY-1hg"/>
+            </connections>
             <point key="canvasLocation" x="137.68115942028987" y="151.33928571428569"/>
         </collectionReusableView>
     </objects>

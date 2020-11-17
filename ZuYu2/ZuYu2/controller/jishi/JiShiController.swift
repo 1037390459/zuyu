@@ -33,7 +33,9 @@ class JiShiController: UIViewController {
         //全透明
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
-        navigationItem.title = "技师:李若禅(0823)"
+        if let user = getUser() {
+            navigationItem.title = "技师:\(user.name ?? "")(\(user.empCode ?? "")"
+        }
         let xiaoxi = UIBarButtonItem.init(image: UIImage.init(named: "xiaoxi")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(JiShiController.xiaoxi(_:)))
         let qiehuan = UIBarButtonItem.init(image: UIImage.init(named: "qiehuan")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(JiShiController.qiehuan(_:)))
         navigationItem.rightBarButtonItems = [qiehuan, xiaoxi]

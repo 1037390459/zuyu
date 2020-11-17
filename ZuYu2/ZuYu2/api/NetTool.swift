@@ -11,37 +11,22 @@ import Moya
 import SVProgressHUD
 import RxSwift
 
-let networkPlugin = NetworkActivityPlugin { (type, target) in
-    switch type {
-    case .began:
-        SVProgressHUD.show()
-    case .ended:
-        SVProgressHUD.dismiss()
-    }
-}
-
-let requestTimeoutClosure = { (endpoint: Endpoint, done: @escaping MoyaProvider<NetTool>.RequestResultClosure) in
-    var request = try? endpoint.urlRequest()
-    request?.timeoutInterval = 15 //超时15s
-}
-
-let provider = MoyaProvider<NetTool>(plugins:[NetworkLoggerPlugin(verbose:true), networkPlugin])
-
 public enum NetTool {
-    case getDynamicKey([String : Any])
+    case getDynamicKey
     case login([String : Any])
+    case refreshToken(String)
     case qxFloorRegistration([String : Any])
-    case userLogin(String, String)
-    case sendCode(String)
-    case userRegister(String, String, String, String, String)
-    case forgetPass(String, String, String)
-    case findUser(String)
-    case selectAllNet(page: Int, limit: Int)
-    case selectNearbyNet(lat: String, lng: String, name: String? = nil, page: Int, limit: Int)
-    case addFault(String, String, Int, String, String, Image)
-    case selectUserAppOrder(String, String, String, String)
-    case creatPayRecord(Int, String, Int, Int, String)
-    case creatSdkToken(String)
+    case sendSmsCode([String : Any])
+    case uploadData(String, Data)
+    case uploadBase64(String, Data)
+    
+    /* 楼面端*/
+    case achievements
+    
+    /* 技师端*/
+    case callProject([String : Any])
+    case callWaiter([String : Any])
+    case getAllProjectList([String : Any])
 }
 
 extension NetTool: Moya.TargetType {
@@ -55,43 +40,36 @@ extension NetTool: Moya.TargetType {
             return "/qx-floor/common/getDynamicKey"
         case .login:
             return "/qx-floor/login"
+        case .refreshToken(let userType):
+            return "qx-floor/home/\(userType)"
+        case .sendSmsCode:
+            return "/qx-floor/common/sendSmsCode"
         case .qxFloorRegistration:
             return "/qx-floor/registration"
-            /* 登录模块*/
-        case .userLogin:
-            return "/user/userLogin"
-        case .sendCode:
-            return "/user/sendCode"
-        case .userRegister:
-            return "/user/userRegister"
-        case .forgetPass:
-            return "/user/forgetPass"
-        case .findUser:
-            return "/user/findUser"
+        case .uploadData:
+            return "/qx-floor/file-manage/upload"
+        case .uploadBase64:
+            return "/qx-floor/file-manage/uploadBase64"
             
-            /* 网点模块*/
-        case .selectAllNet:
-            return "/shop/selectAllNet"
-        case .selectNearbyNet:
-            return "/shop/selectNearbyNet"
+        /* 楼面端*/
+        case .achievements:
+            return "/qx-floor/home/achievements"
             
-            /* 故障模块*/
-        case .addFault:
-            return "/device/addFault"
-            
-            /* 订单模块*/
-        case .selectUserAppOrder:
-            return "/user/selectUserAppOrder"
-        case .creatPayRecord:
-            return "/pay/creatPayRecord"
-        case .creatSdkToken:
-            return "/pay/creatSdkToken"
+        /* 技师端*/
+        case .callProject:
+            return "/qx-floor/callService/callProject"
+        case .callWaiter:
+            return "/qx-floor/callService/callWaiter"
+        case .getAllProjectList:
+            return "/qx-floor/callService/getAllProjectList"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .getDynamicKey:
+        case .getDynamicKey,
+             .refreshToken,
+             .achievements:
             return .get
         default:
             return .post
@@ -104,90 +82,43 @@ extension NetTool: Moya.TargetType {
     
     public var task: Moya.Task {
         switch self {
-        case .getDynamicKey:
+        case .getDynamicKey,
+             .refreshToken,
+             .achievements
+            :
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .login(let dict),
-             .qxFloorRegistration(let dict):
+             .sendSmsCode(let dict),
+             .qxFloorRegistration(let dict),
+             .callProject(let dict),
+             .callWaiter(let dict),
+             .getAllProjectList(let dict)
+            :
             return .requestParameters(parameters: dict, encoding: JSONEncoding.default)
-            /* 登录模块*/
-        case .userLogin(let userName, let password):
-            return .requestParameters(parameters: ["phoneNumber":userName,"passWord":password], encoding: JSONEncoding.default)
-        case .sendCode(let phoneNumber):
-            return .requestParameters(parameters: ["phoneNumber":phoneNumber], encoding: URLEncoding.default)
-        case .userRegister(let phoneNumber, let passWord, let vCode, let userName, let email):
-            return .requestParameters(parameters:
-                ["phoneNumber":phoneNumber, "passWord":passWord, "vCode":vCode, "userName":userName, "email":email], encoding: URLEncoding.default)
-        case .forgetPass(let phoneNumber, let vCode, let passWord):
-            return .requestParameters(parameters: ["phoneNumber":phoneNumber, "vCode":vCode, "passWord":passWord], encoding: URLEncoding.default)
-        case .findUser(let userId):
-            return .requestParameters(parameters: ["userId":userId], encoding: URLEncoding.default)
+        case .uploadData(let fileName, let data),
+             .uploadBase64(let fileName, let data)
+            :
+            print("data len: \(data.count)")
+            return .uploadMultipart([MultipartFormData(provider: .data(data),
+                                                       name: "file",
+                                                       fileName: fileName,
+                                                       mimeType: "application/octet-stream")])
             
-            /* 网点模块*/
-        case .selectAllNet(let page, let limit):
-            return .requestParameters(parameters: ["page" : page, "limit":limit], encoding: URLEncoding.default)
-        case .selectNearbyNet(let lat, let lng, let name, let page, let limit):
-            var parameters = [String: Any]()
-            parameters["lat"] = lat
-            parameters["lng"] = lng
-            parameters["name"] = name
-            parameters["page"] = page
-            parameters["limit"] = limit
-            return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
-        case .addFault(let userId, let deviceCode, let cause, let otherCause, let content, let image):
-            let imageData = image.jpegData(compressionQuality: 1.0)!
-            return .uploadCompositeMultipart([MultipartFormData(provider: .data(imageData),
-                                                                name: "file",
-                                                                fileName: "fault.jpg",
-                                                                mimeType: "image/jpg")], urlParameters: ["userId":userId, "deviceCode":deviceCode, "cause":cause, "otherCause":otherCause, "content":content])
-            
-            /* 订单模块*/
-        case .selectUserAppOrder(let userId, let page, let limit, let status):
-            return .requestParameters(parameters: ["userId":userId, "page":page, "limit":limit, "status":status], encoding: URLEncoding.default)
-        case .creatPayRecord(let userId, let payCode, let payType, let money, let sn):
-            return .requestParameters(parameters: ["user_id":userId, "payCode":payCode, "pay_type":payType, "money":money, "sn":sn], encoding: URLEncoding.default)
-        case .creatSdkToken(let deviceId):
-            return .requestParameters(parameters: ["device_id":deviceId], encoding: URLEncoding.default)
         }
     }
     
     public var headers: [String : String]? {
-        return ["Content-Type": "application/json"]
+        var headers : [String : String] = [:]
+        headers["Content-Type"] = "application/json"
+        if let user = getUser() {
+            let token = user.accessToken
+            headers["accessToken"] = token
+        }
+        return headers
     }
     
     public var validationType: ValidationType {
         return .successCodes
     }
-    
-}
-
-extension NetTool {
-    
-    @discardableResult
-    static func request<Entity : Codable>(_ token: NetTool, entity: Entity.Type) ->Observable<Entity> {
-        return provider.rx.request(token, callbackQueue: DispatchQueue.main)
-            .asObservable()
-            .flatMap { (response : Response) -> Observable<Entity> in
-                do {
-                    let json = try response.map(ApiBaseModel<Entity>.self)
-                    switch json.code! {
-                    case 200:
-                        return Observable.just(json.data!)
-                    case 400:
-                        _ = request(.userLogin("", ""), entity: EmptyModel.self).do(onNext: { (_) in
-                            request(token, entity: Entity.self)
-                        })
-                        break
-                    default:
-                        let msg = json.message ?? "no msg"
-                        SVProgressHUD.showError(withStatus: msg) //服务端报错
-                        break
-                    }
-                } catch(let error) {
-                  return Observable<Entity>.error(error)
-                }
-                return Observable.empty()
-        }
-    }
-    
     
 }

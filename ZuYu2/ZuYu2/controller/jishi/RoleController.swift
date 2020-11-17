@@ -45,10 +45,16 @@ class RoleController: UIViewController {
         }
     }
     
+    var clientTypes : [ClientType] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         backgroundView.backgroundColor = .clear
+        clientTypes.append(.qiehuan)
         for view in stackView.arrangedSubviews {
+            let index = stackView.arrangedSubviews.firstIndex(of: view)
+            let types : [ClientType] = [.gudong, .loumian, .jishi, .qiehuan]
+            view.isHidden = !clientTypes.contains(types[index!])
             if let btn = view as? UIButton {
                 btn.setTitleColor(textColor, for: .normal)
                 btn.backgroundColor = backgroundColor

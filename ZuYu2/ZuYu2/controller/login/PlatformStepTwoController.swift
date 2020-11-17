@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import Moya
 import SVProgressHUD
+import Alamofire
 
 class PlatformStepTwoController: UIViewController {
     
@@ -22,6 +23,18 @@ class PlatformStepTwoController: UIViewController {
     @IBOutlet weak var noteTv: TextViewWithPlaceholder!
     
     @IBOutlet weak var uploadBtn: UIButton!
+    
+    var password : String?
+    
+    var regMobile : String?
+    
+    var code : String?
+    
+    var licenseUrl : String?
+    
+    var iv : String?
+    
+    var poi : AMapPOI?
     
     let disposeBag = DisposeBag()
     
@@ -45,23 +58,39 @@ class PlatformStepTwoController: UIViewController {
         uploadBtn.setupButtonImageAndTitlePossitionWith(padding: 18, style: .imageIsTop)
         noteTv.placeholderText = "请输入备注"
         noteTv.textContainerInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        
         addressTf.rightView = mapBtn
         addressTf.rightViewMode = .always
     }
     
     @objc func openMap(_ sender : Any) {
-        
-    }
-    
-    func refreshSession() {
-        
+        performSegue(withIdentifier: LocationViewController.className, sender: nil)
     }
     
     func register() {
-        let dict = ["" : ""]
-        NetTool.request(.qxFloorRegistration(dict), entity: ApiBaseModel<EmptyModel>.self)
+        NetManager.request(.getDynamicKey, entity: Dictionary<String, String>.self)
+            .flatMap({ [weak self] (dict) -> Observable<Int> in
+                guard let self = self else { return Observable.empty()}
+                var params : [String : Any] = [:]
+                params["iv"] = dict["iv"]
+                params["regMobile"] = self.regMobile
+                params["code"] = self.code
+                params["password"] = try? self.password?.aesEncrypt(key: dict["key"] ?? "", iv: dict["iv"] ?? "")
+                if let poi = self.poi, poi.address == self.addressTf.text {
+                    params["lat"] = poi.location.latitude
+                    params["lng"] = poi.location.longitude
+                    params["storeName"] = poi.name
+                }
+                params["address"] = self.addressTf.text
+                params["licenseUrl"] = self.licenseUrl
+                params["regName"] = self.nameTf.text
+                params["regTelPhone"] = self.telTf.text
+                params["remark"] = self.noteTv.text
+                return  NetManager.request(.qxFloorRegistration(params), entity: Int.self)
+            })
             .subscribe(onNext: { [weak self] (result) in
                 guard let self = self else { return }
+                self.performSegue(withIdentifier: PlatformStepThreeController.className, sender: nil)
                 }, onError: { (e) in
                     print(e)
                 SVProgressHUD.dismiss()
@@ -73,9 +102,21 @@ class PlatformStepTwoController: UIViewController {
         print("upload")
         showAlert()
     }
+
+    func uploadFile(fileName : String, data : Data) {
+        NetManager.request(.uploadData(fileName, data), entity: Dictionary<String, String>.self)
+            .subscribe(onNext: { [weak self] (dict) in
+                guard let self = self else { return }
+                self.licenseUrl = dict["url"]
+                }, onError: { (e) in
+                    print(e)
+                SVProgressHUD.dismiss()
+            })
+            .disposed(by: disposeBag)
+    }
     
     @IBAction func next(_ sender: Any) {
-        performSegue(withIdentifier: PlatformStepThreeController.className, sender: nil)
+        register()
     }
     
     // MARK: - Navigation
@@ -85,8 +126,18 @@ class PlatformStepTwoController: UIViewController {
         if segue.identifier == PlatformStepThreeController.className {
             let vc = segue.destination as! PlatformStepThreeController
         }
+        if segue.identifier == LocationViewController.className {
+            let vc = segue.destination as! LocationViewController
+            vc.onAddressCallBack =  {
+                [weak self] poi in
+                guard let self = self else {
+                    return
+                }
+                self.poi = poi
+                self.addressTf.text = poi.address
+            }
+        }
     }
-    
     
 }
 
@@ -136,6 +187,8 @@ extension PlatformStepTwoController : UIImagePickerControllerDelegate, UINavigat
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         print("获得照片============= \(info)")
         let image : UIImage = info[UIImagePickerController.InfoKey.editedImage] as! UIImage
+        let imageUrl = info[UIImagePickerController.InfoKey.imageURL] as! URL
+        uploadFile(fileName: imageUrl.lastPathComponent, data: image.jpegData(compressionQuality: 0.2)!)
         uploadBtn.restInset()
         uploadBtn.setTitle(nil, for: .normal)
         uploadBtn.setImage(image, for: .normal)
