@@ -63,7 +63,7 @@ class WodeTableController: UITableViewController {
     }
     
     @objc func tixian() {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/withdrawal")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/withdrawal")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
@@ -117,7 +117,7 @@ class WodeTableController: UITableViewController {
             // do nothing
         }
         if indexPath.row == 1 {
-            let vc = WebController.init("\(serverUrl)/qx-js-app/#/replacephone")
+            let vc = WebController.init("\(serverUrl)/app/h5/tech/#/replacephone")
             vc.hidesBottomBarWhenPushed = true
             navigationController?.pushViewController(vc)
         }

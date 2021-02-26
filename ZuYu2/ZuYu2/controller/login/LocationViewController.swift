@@ -73,7 +73,6 @@ class LocationViewController: UIViewController {
             
             print("geo:\(String(describing: reGeoCode))")
         }
-        // Do any additional setup after loading the view.
     }
     
     func setUpUI() {

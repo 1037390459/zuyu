@@ -104,7 +104,7 @@ class WebController: UIViewController {
         webView.load(request)
     }
     
-    func callNative(code : String?, data: String?) {
+    func callNative(code : String?, data: String?, source : String? = nil) {
         if let code = code, code == "back" {
             navigationController?.popViewController(animated: true)
         }
@@ -116,6 +116,54 @@ class WebController: UIViewController {
         }
         if let code = code, code == "toast" {
             view.makeToast(data)
+        }
+        if let code = code, code == "WeChatPay" {
+            wechatPay(data)
+        }
+        if let code = code, code == "WeChatPay" {
+            wechatPay(data)
+        }
+        if let code = code, code == "aliPay" {
+            alipay(source)
+        }
+    }
+    
+    func wechatPay(_ jsonString : String?)  {
+        let decoder = JSONDecoder()
+        guard let data = jsonString?.data(using: .utf8), let dict = try? decoder.decode(Dictionary<String, String>.self, from: data) else {
+            return
+        }
+        print("wechatPayReq:\(dict)")
+        let payReq = PayReq()
+        payReq.nonceStr = dict["noncestr"] ?? ""
+        payReq.package = dict["package"] ?? ""
+        payReq.partnerId = dict["partnerid"] ?? ""
+        payReq.prepayId = dict["prepayid"] ?? ""
+        payReq.sign = dict["sign"] ?? ""
+        payReq.timeStamp = UInt32(dict["timeStamp"] ?? "0") ?? 0
+        WXApiManager.shared.payAlertController(self, request: payReq) {
+            [weak self] in
+            guard let self = self else { return }
+            print("wechatPay-suc")
+            self.webView.reload()
+        } payFail: {
+            print("wechatPay-failed")
+        }
+    }
+    
+    func alipay(_ source : String?) {
+        guard let source = source, let range = source.range(of: "data=") else {
+            return
+        }
+        let orderStr = String(source[range.upperBound...])
+        print("alipayReq:\(orderStr)")
+        AliPayManager.shared.payAlertController(self, request: orderStr) {
+            [weak self] in
+            guard let self = self else { return }
+            print("alipay-suc")
+            self.webView.reload()
+        } payFail: {
+            print("alipay-failed")
         }
     }
     
@@ -158,7 +206,7 @@ extension WebController: WKNavigationDelegate, WKScriptMessageHandler {
             let parameters = url.queryParameters
             let code = parameters?["code"]
             let data = parameters?["data"]
-            callNative(code: code, data: data)
+            callNative(code: code, data: data, source: url.query)
             decisionHandler(.cancel)
             return
         }

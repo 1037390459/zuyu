@@ -15,10 +15,15 @@ import IQKeyboardManagerSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
     static var shared: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
+    
+    var locationManager : CLLocationManager = CLLocationManager()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         globalSettings()
+        AMapServices.shared()?.apiKey = amapKey
+        requestLocationPermission()
         return true
     }
     
@@ -31,6 +36,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setDefaultMaskType(.clear)
 //        //user defaults
 //        UserDefaults.standard.register(defaults: ["isFirstLogin":true])
+    }
+    
+    func requestLocationPermission() {
+        if #available(iOS 14.0, *) {
+            switch locationManager.authorizationStatus {
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            default:
+                break
+            }
+        } else {
+            switch CLLocationManager.authorizationStatus() {
+            case .notDetermined:
+                locationManager.requestWhenInUseAuthorization()
+            default:
+                break
+            }
+        }
     }
 
     // MARK: UISceneSession Lifecycle

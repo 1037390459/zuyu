@@ -77,25 +77,25 @@ class JiShiController: UIViewController {
     
     /// 呼叫商品
     @IBAction func callcommodity(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/callcommodity")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/callcommodity")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     @IBAction func checkoutroom(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/checkoutroom")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/checkoutroom")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     @IBAction func replaceproject(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/replaceproject")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/replaceproject")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     @IBAction func serviceclock(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/serviceclock")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/serviceclock")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
@@ -103,38 +103,38 @@ class JiShiController: UIViewController {
     /// TODO:考勤打卡
     
     @IBAction func appointment(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/appointment")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/appointment")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     
     @IBAction func management(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/management")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/management")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     @IBAction func clockfake(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/clockfake")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/clockfake")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     @IBAction func rechargevip(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/rechargevip")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/rechargevip")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     @IBAction func servicemanagement(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/servicemanagement")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/servicemanagement")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
     
     @IBAction func openorder(_ sender: Any) {
-        let vc = WebController.init("\(serverUrl)/qx-js-app/#/openorder")
+        let vc = WebController.init("\(serverUrl)/app/h5/tech/#/openorder")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }

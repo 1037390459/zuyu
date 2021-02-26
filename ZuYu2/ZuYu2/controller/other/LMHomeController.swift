@@ -198,7 +198,8 @@ class LMHomeController: UIViewController {
     
     /// 通知
     @objc func xiaoxi(_ sender : Any) {
-        performSegue(withIdentifier: LMNotificationController.className, sender: nil)
+        return
+//        performSegue(withIdentifier: LMNotificationController.className, sender: nil)
     }
 
     /*
@@ -243,7 +244,7 @@ extension LMHomeController :  UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = mData[indexPath.row]
         let action = model["action"]
-        let vc = WebController.init("\(serverUrl)/qx-floor-app/#/\(action!)")
+        let vc = WebController.init("\(serverUrl)/app/h5/floor/#/\(action!)")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }

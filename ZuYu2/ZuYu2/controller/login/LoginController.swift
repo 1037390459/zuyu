@@ -55,11 +55,13 @@ class LoginController: UIViewController {
                 passwordTf.text = nil
                 forgetPwdBtn.isEnabled = true
                 forgetPwdBtn.setTitle("忘记密码", for: .normal)
+                wayBtn.setTitle("密码登录", for: .normal)
                 forgetPwdBtn.sizeToFit()
                 break
             case .vCode:
                 passwordTf.rightView = vCodeBtn
                 loginWayLbl.text = "验证码"
+                wayBtn.setTitle("验证码登录", for: .normal)
                 passwordTf.text = nil
                 break
             default:

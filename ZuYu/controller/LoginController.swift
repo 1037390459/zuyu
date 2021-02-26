@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import RxSwift
+import SVProgressHUD
+import Toast_Swift
+import CHIOTPField
 
 class LoginController: UIViewController {
     
@@ -24,15 +28,9 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var passwordTf: UITextField!
     
+    @IBOutlet weak var vCodeTf: UITextField!
+    
     @IBOutlet weak var vCodeStackView: UIStackView!
-    
-    @IBOutlet weak var vCodeTf1: UITextField!
-    
-    @IBOutlet weak var vCodeTf2: UITextField!
-    
-    @IBOutlet weak var vCodeTf3: UITextField!
-    
-    @IBOutlet weak var vCodeTf4: UITextField!
     
     @IBOutlet weak var loginBtn: UIButton!
     
@@ -69,6 +67,10 @@ class LoginController: UIViewController {
             }
         }
     }
+    
+    private var timerDispose : Disposable?
+    
+    let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -135,24 +137,100 @@ class LoginController: UIViewController {
    @objc private func toggleLoginAction() {
          switch actionType {
          case .password:
-             loginApi()
+            guard let password = passwordTf.text, !password.isEmpty else {
+                view.makeToast("请输入密码")
+                return
+            }
+             loginApi(password: password)
          case .vCode1:
              getVcodeApi()
              break
          case .vCode2:
-             loginApi()
+             verifyCodeApi()
              break
          default:
              break
          }
     }
     
-    private func loginApi() {
+    private func login() {
         AppDelegate.shared.window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
     }
     
+    private func loginApi(code : String? = nil, password : String? = nil) {
+        guard let phone = phoneTf.text, !phone.isEmpty else {
+            view.makeToast("请输入手机号码")
+            return
+        }
+        NetManager.request(.getDynamicKey, entity: Dictionary<String, String>.self)
+            .flatMap({(result) -> Observable<UserBean> in
+                var dict : [String : Any] = [:]
+                dict["iv"] = result["iv"]
+                dict["mobile"] = phone
+                if password != nil {
+                    dict["password"] = try! password!.aesEncrypt(key: result["key"]!, iv: result["iv"]!)
+                    dict["loginType"] = 2
+                }
+                if code != nil {
+                    dict["code"] = code
+                    dict["loginType"] = 1
+                }
+                return NetManager.request(.login(dict), entity: UserBean.self)
+            })
+            .subscribe(onNext: { [weak self] (result) in
+                print("result:\(result)")
+                let encoder = JSONEncoder()
+                let jsonData = try? encoder.encode(result)
+                let jsonString = String(bytes: jsonData!, encoding: .utf8)
+                UserDefaults.standard.set(jsonString, forKey: "userBean")
+                self?.login()
+                }, onError: { (e) in
+                    print("error:\(e)")
+                    SVProgressHUD.showError(withStatus: e.localizedDescription)
+            }).disposed(by: disposeBag)
+    }
+    
     private func getVcodeApi() {
-        
+        guard let phone = phoneTf.text, !phone.isEmpty else {
+            view.makeToast("请输入手机号码")
+            return
+        }
+        NetManager.request(.getDynamicKey, entity: Dictionary<String, String>.self)
+            .flatMap({(result) -> Observable<EmptyModel> in
+                var dict : [String : Any] = [:]
+                dict["type"] = "LOGIN"
+                dict["iv"] = result["iv"]
+                dict["mobile"] = try? phone.aesEncrypt(key: result["key"]!, iv: result["iv"]!)
+                return NetManager.request(.sendSmsCode(dict), entity: EmptyModel.self)
+            })
+            .subscribe(onNext: { [weak self] (result) in
+                print("result:\(result)")
+                self?.actionType = .vCode2
+                }, onError: { (e) in
+                    print("error:\(e)")
+                    SVProgressHUD.showError(withStatus: e.localizedDescription)
+            }).disposed(by: disposeBag)
+    }
+    
+    private func verifyCodeApi() {
+        guard let phone = phoneTf.text, !phone.isEmpty else {
+            view.makeToast("请输入手机号")
+            return
+        }
+        guard let code = vCodeTf.text, !code.isEmpty else {
+            view.makeToast("请输入验证码")
+            return
+        }
+        let type = VerifyCodeType.LOGIN
+        let params : [String : Any] = ["code" : code, "mobile" : phone, "type" : type.rawValue]
+        NetManager.request(.verifyCode(params), entity: String.self)
+            .subscribe(onNext: { [weak self] (result) in
+                print("result:\(result)")
+                guard let self = self else { return }
+                self.loginApi(code: code)
+                }, onError: { (e) in
+                    SVProgressHUD.showError(withStatus: e.localizedDescription)
+            }).disposed(by: disposeBag)
     }
 
     @objc private func loginByWeChat() {

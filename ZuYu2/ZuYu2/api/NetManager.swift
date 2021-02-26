@@ -12,17 +12,23 @@ import SVProgressHUD
 import RxSwift
 
 class NetManager: NSObject {
-    
-   static let networkPlugin = NetworkActivityPlugin { (type, target) in
-        switch type {
-        case .began:
+    public final class CustomPlugin : PluginType {
+        public func prepare(_ request: URLRequest, target: TargetType) -> URLRequest {
+            var mRequest = request
+            mRequest.timeoutInterval = 15
+            return mRequest
+        }
+        
+        public func willSend(_ request: RequestType, target: TargetType) {
             SVProgressHUD.show()
-        case .ended:
+        }
+        
+        public func didReceive(_ result: Result<Response, MoyaError>, target: TargetType) {
             SVProgressHUD.dismiss()
         }
     }
     
-   static let provider = MoyaProvider<NetTool>(plugins:[NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose)), networkPlugin])
+    static let provider = MoyaProvider<NetTool>(plugins:[NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose)),  CustomPlugin()])
     
    @discardableResult
    static public func request<Entity : Codable>(_ token: NetTool, entity: Entity.Type) ->Observable<Entity> {

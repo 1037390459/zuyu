@@ -10,5 +10,10 @@
 #import <MAMapKit/MAMapKit.h>
 #import <AMapLocationKit/AMapLocationKit.h>
 #import <MJRefresh/MJRefresh.h>
+#import <AlipaySDK/AlipaySDK.h>
+
+
+#import "WXApi.h"
+#import "WXApiObject.h"
 
 #endif /* Swift_Bridging_Header_h */

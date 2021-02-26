@@ -21,7 +21,13 @@ pod 'MJRefresh'
 pod 'Kingfisher'
 pod 'YPImagePicker'
 pod 'SwiftyMenu', '~> 0.5.8'
+pod 'CryptoSwift', '~> 1.0' #加密
 pod 'SwiftyJSON'
+pod 'CHIOTPField', '~> 0.1' #验证码输入框
+pod 'CHIOTPField/Four' #验证码输入框
+pod 'AMap2DMap' #高德地图 2D地图SDK
+pod 'AMapSearch' #高德地图 搜索功能
+pod 'AMapLocation' #高德地图 定位SDK
 
 #公共组件
 pod 'JCore', '2.1.4-noidfa'

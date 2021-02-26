@@ -25,6 +25,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         globalSettings()
         AMapServices.shared()?.apiKey = amapKey
         requestLocationPermission()
+        WXApi.startLog(by: .detail) { (info) in
+            print(info)
+        }
+        WXApi.registerApp(WX_APPID, universalLink: "https://m.sz-mysaas.com/app2")
         print("wifi : \(getWifiName() ?? "")")
         return true
     }
@@ -91,3 +95,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+// MARK: - 支付回调
+extension AppDelegate{
+    // iOS 8 及以下请用这个
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if url.host == "safepay"{//支付宝
+            //支付回调
+            AlipaySDK.defaultService().processOrder(withPaymentResult: url, standbyCallback:{ (resultDic) in
+                if resultDic != nil{
+                    AliPayManager.shared.showResult(result:resultDic! as NSDictionary)
+                }
+            })
+            //授权回调
+            AlipaySDK.defaultService().processAuth_V2Result(url, standbyCallback: { (resultDic) in
+                if resultDic != nil{
+                    AliPayManager.shared.showAuth_V2Result(result:resultDic! as NSDictionary)
+                }
+            })
+            return true
+        }else{//微信
+            return WXApi.handleOpen(url, delegate:WXApiManager.shared)
+        }
+        
+    }
+    
+    // iOS 9 以上请用这个
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any]) -> Bool {
+        if url.host == "safepay"{//支付宝
+            //支付回调
+            AlipaySDK.defaultService().processOrder(withPaymentResult: url, standbyCallback:{ (resultDic) in
+                if resultDic != nil{
+                    AliPayManager.shared.showResult(result:resultDic! as NSDictionary)
+                }
+            })
+            //授权回调
+            AlipaySDK.defaultService().processAuth_V2Result(url, standbyCallback: { (resultDic) in
+                if resultDic != nil{
+                    AliPayManager.shared.showAuth_V2Result(result:resultDic! as NSDictionary)
+                }
+            })
+            return true
+        }else{//微信
+            return WXApi.handleOpen(url,delegate:WXApiManager.shared)
+        }
+    }
+}

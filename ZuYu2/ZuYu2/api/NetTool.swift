@@ -22,6 +22,9 @@ public enum NetTool {
     
     /* 楼面端*/
     case achievements
+    case createWalletOrder([String : Any])
+    case walletOrderPay([String : Any])
+    case walletTemplateList
     
     /* 技师端*/
     case callProject([String : Any])
@@ -37,31 +40,37 @@ extension NetTool: Moya.TargetType {
     public var path: String {
         switch self {
         case .getDynamicKey:
-            return "/qx-floor/common/getDynamicKey"
+            return "/app/api/store-app/common/getDynamicKey"
         case .login:
-            return "/qx-floor/login"
+            return "/app/api/store-app/login"
         case .refreshToken(let userType):
-            return "qx-floor/home/\(userType)"
+            return "/app/api/store-app/home/\(userType)"
         case .sendSmsCode:
-            return "/qx-floor/common/sendSmsCode"
+            return "/app/api/store-app/common/sendSmsCode"
         case .qxFloorRegistration:
-            return "/qx-floor/registration"
+            return "/app/api/store-app/registration"
         case .uploadData:
-            return "/qx-floor/file-manage/upload"
+            return "/app/api/store-app/file-manage/upload"
         case .uploadBase64:
-            return "/qx-floor/file-manage/uploadBase64"
+            return "/app/api/store-app/file-manage/uploadBase64"
             
         /* 楼面端*/
         case .achievements:
-            return "/qx-floor/home/achievements"
+            return "/app/api/store-app/home/achievements"
+        case .createWalletOrder:
+            return "/app/api/store-app/store-wallet/createWalletOrder"
+        case .walletOrderPay:
+            return "/app/api/store-app/store-wallet/walletOrderPay"
+        case .walletTemplateList:
+            return "/app/api/store-app/store-wallet/walletTemplateList"
             
         /* 技师端*/
         case .callProject:
-            return "/qx-floor/callService/callProject"
+            return "/app/api/store-app/callService/callProject"
         case .callWaiter:
-            return "/qx-floor/callService/callWaiter"
+            return "/app/api/store-app/callService/callWaiter"
         case .getAllProjectList:
-            return "/qx-floor/callService/getAllProjectList"
+            return "/app/api/store-app/callService/getAllProjectList"
         }
     }
     
@@ -69,7 +78,8 @@ extension NetTool: Moya.TargetType {
         switch self {
         case .getDynamicKey,
              .refreshToken,
-             .achievements:
+             .achievements,
+             .walletTemplateList:
             return .get
         default:
             return .post
@@ -84,7 +94,8 @@ extension NetTool: Moya.TargetType {
         switch self {
         case .getDynamicKey,
              .refreshToken,
-             .achievements
+             .achievements,
+             .walletTemplateList
             :
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .login(let dict),
@@ -92,7 +103,9 @@ extension NetTool: Moya.TargetType {
              .qxFloorRegistration(let dict),
              .callProject(let dict),
              .callWaiter(let dict),
-             .getAllProjectList(let dict)
+             .getAllProjectList(let dict),
+             .createWalletOrder(let dict),
+             .walletOrderPay(let dict)
             :
             return .requestParameters(parameters: dict, encoding: JSONEncoding.default)
         case .uploadData(let fileName, let data),

@@ -9,6 +9,22 @@
 import UIKit
 import SwifterSwift
 
+//public let serverUrl = "http://192.168.0.121" //测试地址
+
+public let serverUrl = "http://120.24.149.42" //正式地址
+
+/// 高德sdk api key
+public let amapKey = "55debb8534627997e5146c6a9af80b2c"
+
+public let screenWidth = UIScreen.main.bounds.width
+
+public let screenHeight = UIScreen.main.bounds.height
+
+public let mainHeight : CGFloat = 812
+
+/// 验证码倒计时 s
+let countDownSeconds = 60
+
 func statusBarHeight() -> CGFloat {
     var height : CGFloat = 0
     if #available(iOS 13.0, *) {
@@ -18,6 +34,22 @@ func statusBarHeight() -> CGFloat {
         height = UIApplication.shared.statusBarFrame.height
     }
     return height
+}
+
+func getUser() ->UserBean? {
+    let decoder = JSONDecoder()
+    let jsonString = UserDefaults.standard.string(forKey: "userBean")
+    if let data = jsonString?.data(using: .utf8) {
+        let user = try? decoder.decode(UserBean.self, from: data)
+        return user
+    }
+    return nil
+}
+
+public enum VerifyCodeType: String {
+    case LOGIN = "LOGIN"
+    case REGISTER = "REGISTER"
+    case CHANGE_PASSWORD = "CHANGE_PASSWORD"
 }
 
 struct Constant {

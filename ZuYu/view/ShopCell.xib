@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,10 +19,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg2" translatesAutoresizingMaskIntoConstraints="NO" id="y5K-vE-9bl">
-                        <rect key="frame" x="15" y="10" width="160" height="91"/>
+                        <rect key="frame" x="15" y="10" width="80" height="91"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="荔湾足浴保健城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfE-sm-SS5">
-                        <rect key="frame" x="185" y="10" width="115" height="20"/>
+                        <rect key="frame" x="105" y="10" width="115" height="20"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <color key="textColor" name="primaryDarkColor"/>
                         <nil key="highlightedColor"/>
@@ -33,26 +34,25 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="环境3分 I 服务3分" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nj-CS-qgz">
-                        <rect key="frame" x="185" y="41" width="99" height="14.5"/>
+                        <rect key="frame" x="105" y="41" width="99" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" name="lightPrimaryDarkColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥63元起" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wBV-JR-JFE">
-                        <rect key="frame" x="185" y="65.5" width="61" height="17"/>
+                        <rect key="frame" x="105" y="65.5" width="61" height="17"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                         <color key="textColor" name="redColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="43单" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clY-Y4-tde">
-                        <rect key="frame" x="251" y="68" width="27.5" height="14.5"/>
+                        <rect key="frame" x="171" y="68" width="27.5" height="14.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" name="lightPrimaryDarkColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6F-jl-C9a">
-                        <rect key="frame" x="278" y="67" width="38" height="15"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u6F-jl-C9a">
+                        <rect key="frame" x="274" y="67.5" width="38" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                         <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="-10" maxY="0.0"/>
@@ -68,16 +68,27 @@
                     <constraint firstItem="clY-Y4-tde" firstAttribute="bottom" secondItem="wBV-JR-JFE" secondAttribute="bottom" id="JhH-5a-6Cz"/>
                     <constraint firstItem="wBV-JR-JFE" firstAttribute="top" secondItem="2nj-CS-qgz" secondAttribute="bottom" constant="10" id="LIe-cW-15g"/>
                     <constraint firstItem="wBV-JR-JFE" firstAttribute="leading" secondItem="2nj-CS-qgz" secondAttribute="leading" id="ZCa-5E-Xtq"/>
+                    <constraint firstItem="u6F-jl-C9a" firstAttribute="bottom" secondItem="clY-Y4-tde" secondAttribute="bottom" id="b27-u1-8ud"/>
                     <constraint firstAttribute="bottom" secondItem="y5K-vE-9bl" secondAttribute="bottom" constant="10" id="eCB-Jd-wAD"/>
                     <constraint firstItem="y5K-vE-9bl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="eDO-0b-le9"/>
                     <constraint firstItem="GfE-sm-SS5" firstAttribute="leading" secondItem="y5K-vE-9bl" secondAttribute="trailing" constant="10" id="gsC-P0-iGA"/>
                     <constraint firstItem="y5K-vE-9bl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hpD-xW-95b"/>
                     <constraint firstItem="2nj-CS-qgz" firstAttribute="leading" secondItem="GfE-sm-SS5" secondAttribute="leading" id="mIL-hm-spc"/>
+                    <constraint firstItem="u6F-jl-C9a" firstAttribute="trailing" secondItem="dFO-rU-82R" secondAttribute="trailing" id="nqY-Ev-2tR"/>
                     <constraint firstItem="clY-Y4-tde" firstAttribute="leading" secondItem="wBV-JR-JFE" secondAttribute="trailing" constant="5" id="nzM-tv-bdo"/>
                     <constraint firstItem="2nj-CS-qgz" firstAttribute="top" secondItem="GfE-sm-SS5" secondAttribute="bottom" constant="11" id="z10-EV-jiq"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="countLbl" destination="clY-Y4-tde" id="S82-36-8Sc"/>
+                <outlet property="distanceLbl" destination="dFO-rU-82R" id="f2i-BE-i3z"/>
+                <outlet property="iconImgV" destination="y5K-vE-9bl" id="HL1-zQ-8PH"/>
+                <outlet property="nameLbl" destination="GfE-sm-SS5" id="KfO-or-2NS"/>
+                <outlet property="priceLbl" destination="wBV-JR-JFE" id="hVr-BQ-PTR"/>
+                <outlet property="scoreLbl" destination="2nj-CS-qgz" id="6Yt-vs-0Ow"/>
+                <outlet property="zanBtn" destination="u6F-jl-C9a" id="15c-rn-C6k"/>
+            </connections>
             <point key="canvasLocation" x="23.913043478260871" y="126.22767857142857"/>
         </tableViewCell>
     </objects>

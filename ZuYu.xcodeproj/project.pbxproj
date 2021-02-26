@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4FE25C2679EB51ABEB3F5AE1 /* Pods_ZuYu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ED2830CF586459AF525A0A1 /* Pods_ZuYu.framework */; };
+		7B0F35F02590FC1C009384DA /* StoreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F35EF2590FC1C009384DA /* StoreList.swift */; };
+		7B0F361A2590FEAB009384DA /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0F36192590FEAB009384DA /* CommonUtils.swift */; };
+		7B1030DB257C7C8B0035F763 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1030DA257C7C8B0035F763 /* StringExtension.swift */; };
 		7B2ECC0F24B95E390004773E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2ECC0E24B95E390004773E /* AppDelegate.swift */; };
 		7B2ECC1124B95E390004773E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2ECC1024B95E390004773E /* SceneDelegate.swift */; };
 		7B2ECC1324B95E390004773E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2ECC1224B95E390004773E /* LoginController.swift */; };
@@ -28,6 +31,11 @@
 		7B359F5924D06AA30067763B /* StarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B359F5824D06AA30067763B /* StarStackView.swift */; };
 		7B359F5B24D071C60067763B /* CommentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B359F5A24D071C60067763B /* CommentController.swift */; };
 		7B359F5D24D0740C0067763B /* NSObjectExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B359F5C24D0740C0067763B /* NSObjectExtension.swift */; };
+		7B842D1D256E83F3008A16BB /* NetTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B842D1C256E83F3008A16BB /* NetTool.swift */; };
+		7B842D2225728F14008A16BB /* UserBean.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B842D2125728F14008A16BB /* UserBean.swift */; };
+		7B842D2525728F40008A16BB /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B842D2425728F40008A16BB /* NetManager.swift */; };
+		7B842D2825728F67008A16BB /* ApiBaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B842D2725728F67008A16BB /* ApiBaseModel.swift */; };
+		7B842D2C25728F80008A16BB /* EmptyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B842D2B25728F80008A16BB /* EmptyModel.swift */; };
 		7B9BB47724BAE645008B35ED /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9BB47524BAE645008B35ED /* Login.storyboard */; };
 		7B9BB47924BAE71C008B35ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B9BB47824BAE71C008B35ED /* Main.storyboard */; };
 		7B9BB47F24BAEA00008B35ED /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B9BB47E24BAEA00008B35ED /* HomeController.swift */; };
@@ -49,6 +57,10 @@
 /* Begin PBXFileReference section */
 		3A3758AAFC40FA1463C263C7 /* Pods-ZuYu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZuYu.debug.xcconfig"; path = "Target Support Files/Pods-ZuYu/Pods-ZuYu.debug.xcconfig"; sourceTree = "<group>"; };
 		4ED2830CF586459AF525A0A1 /* Pods_ZuYu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZuYu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0F35EF2590FC1C009384DA /* StoreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreList.swift; sourceTree = "<group>"; };
+		7B0F36132590FDB6009384DA /* ZuYu-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZuYu-Bridging-Header.h"; sourceTree = "<group>"; };
+		7B0F36192590FEAB009384DA /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+		7B1030DA257C7C8B0035F763 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		7B2ECC0B24B95E390004773E /* ZuYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZuYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2ECC0E24B95E390004773E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B2ECC1024B95E390004773E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +83,11 @@
 		7B359F5824D06AA30067763B /* StarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarStackView.swift; sourceTree = "<group>"; };
 		7B359F5A24D071C60067763B /* CommentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentController.swift; sourceTree = "<group>"; };
 		7B359F5C24D0740C0067763B /* NSObjectExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSObjectExtension.swift; sourceTree = "<group>"; };
+		7B842D1C256E83F3008A16BB /* NetTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTool.swift; sourceTree = "<group>"; };
+		7B842D2125728F14008A16BB /* UserBean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBean.swift; sourceTree = "<group>"; };
+		7B842D2425728F40008A16BB /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
+		7B842D2725728F67008A16BB /* ApiBaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiBaseModel.swift; sourceTree = "<group>"; };
+		7B842D2B25728F80008A16BB /* EmptyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyModel.swift; sourceTree = "<group>"; };
 		7B9BB47624BAE645008B35ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		7B9BB47824BAE71C008B35ED /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7B9BB47E24BAEA00008B35ED /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
@@ -134,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				7B9FB1FA24E57C0D002829F7 /* ZuYu.entitlements */,
+				7B842D1B256E83BC008A16BB /* api */,
 				7B2ECC2424B9C66C0004773E /* model */,
 				7B2ECC2324B9C6660004773E /* view */,
 				7B2ECC2224B9C6530004773E /* controller */,
@@ -147,6 +165,7 @@
 				7B9BB47824BAE71C008B35ED /* Main.storyboard */,
 				7B2ECC1924B95E3C0004773E /* LaunchScreen.storyboard */,
 				7B2ECC1C24B95E3C0004773E /* Info.plist */,
+				7B0F36132590FDB6009384DA /* ZuYu-Bridging-Header.h */,
 			);
 			path = ZuYu;
 			sourceTree = "<group>";
@@ -176,6 +195,10 @@
 		7B2ECC2424B9C66C0004773E /* model */ = {
 			isa = PBXGroup;
 			children = (
+				7B842D2125728F14008A16BB /* UserBean.swift */,
+				7B0F35EF2590FC1C009384DA /* StoreList.swift */,
+				7B842D2725728F67008A16BB /* ApiBaseModel.swift */,
+				7B842D2B25728F80008A16BB /* EmptyModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -184,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				7B2ECC2624B9C69E0004773E /* Constant.swift */,
+				7B0F36192590FEAB009384DA /* CommonUtils.swift */,
 			);
 			path = constant;
 			sourceTree = "<group>";
@@ -210,6 +234,15 @@
 				7B359F4224CD86360067763B /* RecentCitiesableViewCell.swift */,
 			);
 			path = SoolyCitySelector;
+			sourceTree = "<group>";
+		};
+		7B842D1B256E83BC008A16BB /* api */ = {
+			isa = PBXGroup;
+			children = (
+				7B842D1C256E83F3008A16BB /* NetTool.swift */,
+				7B842D2425728F40008A16BB /* NetManager.swift */,
+			);
+			path = api;
 			sourceTree = "<group>";
 		};
 		7B9BB47A24BAE833008B35ED /* login */ = {
@@ -259,6 +292,7 @@
 				7B359F5624D0641E0067763B /* TextViewWithPlaceholder.swift */,
 				7B359F5824D06AA30067763B /* StarStackView.swift */,
 				7B359F5C24D0740C0067763B /* NSObjectExtension.swift */,
+				7B1030DA257C7C8B0035F763 /* StringExtension.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -283,6 +317,7 @@
 				7B2ECC0824B95E390004773E /* Frameworks */,
 				7B2ECC0924B95E390004773E /* Resources */,
 				9CBD9963324AF8C4DD7D9456 /* [CP] Embed Pods Frameworks */,
+				1D3516EC8B18455347BCACC3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -305,6 +340,7 @@
 				TargetAttributes = {
 					7B2ECC0A24B95E390004773E = {
 						CreatedOnToolsVersion = 11.3;
+						LastSwiftMigration = 1220;
 					};
 				};
 			};
@@ -345,6 +381,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1D3516EC8B18455347BCACC3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZuYu/Pods-ZuYu-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ZuYu/Pods-ZuYu-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ZuYu/Pods-ZuYu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		44093136DA98651FB9D9BF17 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -396,10 +449,13 @@
 				7B359F5924D06AA30067763B /* StarStackView.swift in Sources */,
 				7B9BB48124BAEA53008B35ED /* OrderTableController.swift in Sources */,
 				7B359F4F24CD86360067763B /* ResultTableViewController.swift in Sources */,
+				7B842D2C25728F80008A16BB /* EmptyModel.swift in Sources */,
 				7B359F5524CF193F0067763B /* ExtraImageButton.swift in Sources */,
 				7BAD405E24CD31490075DBA9 /* SettingsTableController.swift in Sources */,
+				7B1030DB257C7C8B0035F763 /* StringExtension.swift in Sources */,
 				7B359F5D24D0740C0067763B /* NSObjectExtension.swift in Sources */,
 				7B9EF26824CC00CE000FC13D /* OrderCell.swift in Sources */,
+				7B842D1D256E83F3008A16BB /* NetTool.swift in Sources */,
 				7B359F5B24D071C60067763B /* CommentController.swift in Sources */,
 				7BAD406824CD68C50075DBA9 /* CustomButton.swift in Sources */,
 				7B359F5724D0641E0067763B /* TextViewWithPlaceholder.swift in Sources */,
@@ -409,15 +465,20 @@
 				7BAD406224CD31DE0075DBA9 /* FeedBackController.swift in Sources */,
 				7BAD406A24CD6A870075DBA9 /* CustomTextField.swift in Sources */,
 				7B9BB48624BB0263008B35ED /* ShopCell.swift in Sources */,
+				7B842D2825728F67008A16BB /* ApiBaseModel.swift in Sources */,
 				7B359F4B24CD86360067763B /* CurrentCityTableViewCell.swift in Sources */,
 				7B2ECC1124B95E390004773E /* SceneDelegate.swift in Sources */,
 				7B2ECC2724B9C69E0004773E /* Constant.swift in Sources */,
+				7B842D2525728F40008A16BB /* NetManager.swift in Sources */,
 				7B359F5024CD86360067763B /* Header.swift in Sources */,
 				7B9BB48324BAEA5F008B35ED /* MineTableController.swift in Sources */,
 				7B359F4824CD86360067763B /* HotCityTableViewCell.swift in Sources */,
 				7BAD406624CD67CB0075DBA9 /* ModifyPassword2Controller.swift in Sources */,
+				7B842D2225728F14008A16BB /* UserBean.swift in Sources */,
+				7B0F35F02590FC1C009384DA /* StoreList.swift in Sources */,
 				7B359F4C24CD86360067763B /* String+SoolyCitySelector.swift in Sources */,
 				7B9BB47F24BAEA00008B35ED /* HomeController.swift in Sources */,
+				7B0F361A2590FEAB009384DA /* CommonUtils.swift in Sources */,
 				7BAD406424CD31F00075DBA9 /* ModifyPasswordController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -563,9 +624,11 @@
 			baseConfigurationReference = 3A3758AAFC40FA1463C263C7 /* Pods-ZuYu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZuYu/ZuYu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 4QHHXE5WM4;
 				INFOPLIST_FILE = ZuYu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -575,6 +638,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = qx_million.dev;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu/ZuYu-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -585,9 +650,11 @@
 			baseConfigurationReference = 90C2F6966A7A723D1E7FCEDC /* Pods-ZuYu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZuYu/ZuYu.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_TEAM = 4QHHXE5WM4;
 				INFOPLIST_FILE = ZuYu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -597,6 +664,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = qx_million.dis;
+				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu/ZuYu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
