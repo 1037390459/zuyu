@@ -1,0 +1,136 @@
+PODS:
+  - Alamofire (5.2.2)
+  - AMap2DMap (5.6.1):
+    - AMapFoundation (~> 1.4)
+  - AMapFoundation (1.6.1)
+  - AMapLocation (2.6.4):
+    - AMapFoundation (~> 1.6.1)
+  - AMapSearch (7.1.0):
+    - AMapFoundation (~> 1.4)
+  - CHIOTPField (0.1.0):
+    - CHIOTPField/Four (= 0.1.0)
+    - CHIOTPField/One (= 0.1.0)
+    - CHIOTPField/Three (= 0.1.0)
+    - CHIOTPField/Two (= 0.1.0)
+  - CHIOTPField/Four (0.1.0)
+  - CHIOTPField/One (0.1.0)
+  - CHIOTPField/Three (0.1.0)
+  - CHIOTPField/Two (0.1.0)
+  - CryptoSwift (1.3.1)
+  - IQKeyboardManagerSwift (6.5.4)
+  - JCore (2.1.4-noidfa)
+  - JPush (3.2.4-noidfa):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - Kingfisher (4.8.1)
+  - LLCycleScrollView (1.5.4):
+    - Kingfisher (<= 4.10.1)
+  - MarqueeLabel (4.0.1)
+  - MJRefresh (3.3.1)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Moya/RxSwift (14.0.0):
+    - Moya/Core
+    - RxSwift (~> 5.0)
+  - PryntTrimmerView (4.0.0)
+  - RxSwift (5.1.1)
+  - Segmentio (4.1)
+  - SnapKit (4.2.0)
+  - SteviaLayout (4.7.3)
+  - SVProgressHUD (2.2.5)
+  - SwifterSwift/Foundation (5.1.0)
+  - SwifterSwift/SwiftStdlib (5.1.0)
+  - SwifterSwift/UIKit (5.1.0)
+  - SwiftyJSON (5.0.0)
+  - SwiftyMenu (0.5.8):
+    - SnapKit (~> 4.2.0)
+  - Toast-Swift (5.0.1)
+  - YPImagePicker (4.1.3):
+    - PryntTrimmerView (~> 4.0.0)
+    - SteviaLayout (~> 4.7.3)
+
+DEPENDENCIES:
+  - AMap2DMap
+  - AMapLocation
+  - AMapSearch
+  - CHIOTPField (~> 0.1)
+  - CHIOTPField/Four
+  - CryptoSwift (~> 1.0)
+  - IQKeyboardManagerSwift
+  - JCore (= 2.1.4-noidfa)
+  - JPush (= 3.2.4-noidfa)
+  - Kingfisher
+  - LLCycleScrollView
+  - MarqueeLabel
+  - MJRefresh
+  - Moya/RxSwift (~> 14.0)
+  - Segmentio
+  - SVProgressHUD
+  - SwifterSwift/Foundation
+  - SwifterSwift/SwiftStdlib
+  - SwifterSwift/UIKit
+  - SwiftyJSON
+  - SwiftyMenu (~> 0.5.8)
+  - Toast-Swift
+  - YPImagePicker
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Alamofire
+    - AMap2DMap
+    - AMapFoundation
+    - AMapLocation
+    - AMapSearch
+    - CryptoSwift
+    - IQKeyboardManagerSwift
+    - JCore
+    - JPush
+    - Kingfisher
+    - LLCycleScrollView
+    - MarqueeLabel
+    - MJRefresh
+    - Moya
+    - PryntTrimmerView
+    - RxSwift
+    - Segmentio
+    - SnapKit
+    - SteviaLayout
+    - SVProgressHUD
+    - SwifterSwift
+    - SwiftyJSON
+    - SwiftyMenu
+    - Toast-Swift
+    - YPImagePicker
+  trunk:
+    - CHIOTPField
+
+SPEC CHECKSUMS:
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  AMap2DMap: cac76bc057de18a1641f34df6b50bf5bc6b23571
+  AMapFoundation: df9a0ceec845ae2b5f57bdf9884666f2ed73bf5b
+  AMapLocation: b4162db67f813508a14ee7e05c7ee4073785221d
+  AMapSearch: 6bd6d361c5eb00110e0bffa4acf88b7bb9f7e059
+  CHIOTPField: 5df19b433ccfad2a80e944d3abde128a236aaf01
+  CryptoSwift: f12f037f6d0fcd6d48c96db0071b653de64e6c4d
+  IQKeyboardManagerSwift: 2dde0fc70110e8eac7ccce2a46fdbec6a850b414
+  JCore: 2f15311e6889ab43ed5d629802ef793cac566465
+  JPush: 2ff11d3013b360bc1b7da16741027e88f12fe3e6
+  Kingfisher: 868c1149679a7ab6869be118faa9b5aed154aaf0
+  LLCycleScrollView: 77f6e11980d1cd010ee9ee87e94da4e8026ccd21
+  MarqueeLabel: d24e821159667c93064ea3042ccf1875ca94db6b
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  Segmentio: ab29def64e1bff6e6e9b97671788a99bed3f1d9f
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SwifterSwift: a9e8e144832638c2850b43da5feaf9598c6ad65b
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  SwiftyMenu: 6eccf166d3f662783f2271abacc21923a2d5c481
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
+  YPImagePicker: 7a34eabd0ef544ae8fbf9785c3df9ec5bbf242e3
+
+PODFILE CHECKSUM: 3f22fd253769b080900a3cb36692a82fb70095a2
+
+COCOAPODS: 1.10.0

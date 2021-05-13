@@ -9,9 +9,11 @@
 import UIKit
 import SwifterSwift
 
-//public let serverUrl = "http://192.168.0.121" //测试地址
 
-public let serverUrl = "http://120.24.149.42" //正式地址
+//192.168.0.121:9310/apiFloor
+public let serverUrl = "http://192.168.0.121:9310" //测试地址
+
+//public let serverUrl = "http://120.24.149.42" //正式地址
 
 /// 高德sdk api key
 public let amapKey = "55debb8534627997e5146c6a9af80b2c"

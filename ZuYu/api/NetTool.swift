@@ -63,7 +63,16 @@ extension NetTool: Moya.TargetType {
         return URL(string: serverUrl)!
     }
     
-    public var path: String {
+    public var path:String{
+        var tempPath = self.pathBase
+        if serverUrl.contains("192.168"){
+            tempPath = tempPath.replacingOccurrences(of: "/app/api/customer", with: "/apiFloor", options: .literal, range: nil)
+            tempPath = tempPath.replacingOccurrences(of: "/app/api/store-app", with: "/apiFloor", options: .literal, range: nil)
+        }
+        return tempPath
+    }
+    
+    public var pathBase: String {
         switch self {
         case .getDynamicKey:
             return "/app/api/customer/common/getDynamicKey"

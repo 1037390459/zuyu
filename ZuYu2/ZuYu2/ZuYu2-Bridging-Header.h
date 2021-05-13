@@ -15,5 +15,7 @@
 
 #import "WXApi.h"
 #import "WXApiObject.h"
+#import "YKWoodpecker.h"
+#import <UIKit/UIKit.h>
 
 #endif /* Swift_Bridging_Header_h */

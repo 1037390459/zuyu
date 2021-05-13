@@ -26,6 +26,8 @@ class ProfileTableViewController: UITableViewController {
     
     
     @IBAction func save(_ sender: Any) {
+        
+        let signText = signatureTf.text
     }
     
     /*

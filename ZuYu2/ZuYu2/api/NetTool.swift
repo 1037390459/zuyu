@@ -11,6 +11,12 @@ import Moya
 import SVProgressHUD
 import RxSwift
 
+enum Skill {
+    case loumian
+    case jishi
+    case gudong
+}
+
 public enum NetTool {
     case getDynamicKey
     case login([String : Any])
@@ -30,6 +36,12 @@ public enum NetTool {
     case callProject([String : Any])
     case callWaiter([String : Any])
     case getAllProjectList([String : Any])
+    
+    case getTechStatus([String : Any])
+    
+    case editTechInfo([String : Any])
+
+    
 }
 
 extension NetTool: Moya.TargetType {
@@ -37,7 +49,16 @@ extension NetTool: Moya.TargetType {
         return URL(string: serverUrl)!
     }
     
-    public var path: String {
+    public var path:String{
+        var tempPath = self.pathBase
+        if serverUrl.contains("192.168") || serverUrl.contains("qx08.cn"){
+            tempPath = tempPath.replacingOccurrences(of: "/app/api/store-app", with: "/apiFloor", options: .literal, range: nil)
+        }
+        return tempPath
+    }
+    
+    public var pathBase: String {
+        
         switch self {
         case .getDynamicKey:
             return "/app/api/store-app/common/getDynamicKey"
@@ -71,6 +92,13 @@ extension NetTool: Moya.TargetType {
             return "/app/api/store-app/callService/callWaiter"
         case .getAllProjectList:
             return "/app/api/store-app/callService/getAllProjectList"
+            
+        case .getTechStatus:
+            return "/apiFloor/techStatus/getTechStatus"
+            
+        case .editTechInfo:
+            return "/apiFloor/techInfo/editTechInfo"
+        
         }
     }
     
@@ -95,7 +123,8 @@ extension NetTool: Moya.TargetType {
         case .getDynamicKey,
              .refreshToken,
              .achievements,
-             .walletTemplateList
+             .walletTemplateList,
+             .getTechStatus
             :
             return .requestParameters(parameters: [:], encoding: URLEncoding.default)
         case .login(let dict),
@@ -105,7 +134,8 @@ extension NetTool: Moya.TargetType {
              .callWaiter(let dict),
              .getAllProjectList(let dict),
              .createWalletOrder(let dict),
-             .walletOrderPay(let dict)
+             .walletOrderPay(let dict),
+             .editTechInfo(let dict)
             :
             return .requestParameters(parameters: dict, encoding: JSONEncoding.default)
         case .uploadData(let fileName, let data),

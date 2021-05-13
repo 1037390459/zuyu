@@ -10,6 +10,7 @@ import UIKit
 import Moya
 import SVProgressHUD
 import RxSwift
+import CocoaLumberjack
 
 class NetManager: NSObject {
     public final class CustomPlugin : PluginType {
@@ -28,7 +29,38 @@ class NetManager: NSObject {
         }
     }
     
-    static let provider = MoyaProvider<NetTool>(plugins:[NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose)),  CustomPlugin()])
+   static func JSONResponseDataFormatter(_ data: Data) -> String {
+        do {
+            let dataAsJSON = try JSONSerialization.jsonObject(with: data)
+            let prettyData = try JSONSerialization.data(withJSONObject: dataAsJSON, options: .prettyPrinted)
+            return String(data: prettyData, encoding: .utf8) ?? String(data: data, encoding: .utf8) ?? ""
+        } catch {
+            return String(data: data, encoding: .utf8) ?? ""
+        }
+    }
+
+    static var CustomLogPlugin: PluginType {
+       let configuration =  NetworkLoggerPlugin.Configuration.init(formatter: .init(responseData: JSONResponseDataFormatter), output: { (TargetType, items) in
+            for item in items {
+                DDLogVerbose(item as! String)
+            }
+        }, logOptions: .verbose)
+        
+        return NetworkLoggerPlugin.init(configuration: configuration)
+    }
+
+    func reversedPrint(_ separator: String, terminator: String, items: Any...) {
+        for item in items {
+            DDLogVerbose(item as! String)
+        }
+    }
+
+    
+    
+//    static let provider = MoyaProvider<NetTool>(plugins:[NetworkLoggerPlugin(configuration: NetworkLoggerPlugin.Configuration(logOptions: .verbose)),  CustomPlugin()])
+    
+    static let provider = MoyaProvider<NetTool>(plugins:[CustomLogPlugin,  CustomPlugin()])
+    
     
    @discardableResult
    static public func request<Entity : Codable>(_ token: NetTool, entity: Entity.Type) ->Observable<Entity> {

@@ -12,6 +12,7 @@ import Photos
 
 public protocol YPImagePickerDelegate: AnyObject {
     func noPhotos()
+    func shouldAddToSelection(indexPath: IndexPath, numSelections: Int) -> Bool
 }
 
 open class YPImagePicker: UINavigationController {
@@ -52,6 +53,7 @@ open class YPImagePicker: UINavigationController {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .fullScreen // Force .fullScreen as iOS 13 now shows modals as cards by default.
         picker.imagePickerDelegate = self
+        navigationBar.tintColor = .ypLabel
     }
     
     public required init?(coder aDecoder: NSCoder) {
@@ -144,11 +146,6 @@ override open func viewDidLoad() {
                 }
             }
         }
-        
-        // If user has not customized the Nav Bar tintColor, then use black.
-        if UINavigationBar.appearance().tintColor == nil {
-            UINavigationBar.appearance().tintColor = .ypLabel
-        }
     }
     
     deinit {
@@ -165,7 +162,13 @@ override open func viewDidLoad() {
 }
 
 extension YPImagePicker: ImagePickerDelegate {
+    
     func noPhotos() {
         self.imagePickerDelegate?.noPhotos()
+    }
+    
+    func shouldAddToSelection(indexPath: IndexPath, numSelections: Int) -> Bool {
+        return self.imagePickerDelegate?.shouldAddToSelection(indexPath: indexPath, numSelections: numSelections)
+			?? true
     }
 }

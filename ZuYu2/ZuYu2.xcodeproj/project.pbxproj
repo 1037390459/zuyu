@@ -106,6 +106,77 @@
 		7BEA559F24DAF9A10033C9B6 /* IndicatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA559E24DAF9A10033C9B6 /* IndicatorButton.swift */; };
 		7BEA55A224DB0D5A0033C9B6 /* CallCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA55A024DB0D5A0033C9B6 /* CallCell.swift */; };
 		7BEA55A324DB0D5A0033C9B6 /* CallCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7BEA55A124DB0D5A0033C9B6 /* CallCell.xib */; };
+		B71F98782645AB14001ACCD6 /* UIViewController+YKWoodpecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71F98772645AB14001ACCD6 /* UIViewController+YKWoodpecker.swift */; };
+		B7794B3426444758007B9852 /* JiShiSelectStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7794B3326444758007B9852 /* JiShiSelectStoreViewController.swift */; };
+		B7832963264ACA3B000319F4 /* LMWebHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7832962264ACA3B000319F4 /* LMWebHomeController.swift */; };
+		B7832966264ADB28000319F4 /* GdShopWebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7832965264ADB27000319F4 /* GdShopWebController.swift */; };
+		B78612A826458A9300C4ECFF /* PaiWeiWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78612A726458A9300C4ECFF /* PaiWeiWebViewController.swift */; };
+		B78612AB26458DA400C4ECFF /* YeJiWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78612AA26458DA400C4ECFF /* YeJiWebViewController.swift */; };
+		B7879FD9264667220082E478 /* UIColor +YKWoodpeckerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F37264667220082E478 /* UIColor +YKWoodpeckerAdditions.m */; };
+		B7879FDA264667220082E478 /* NSArray+YKWoodpeckerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F38264667220082E478 /* NSArray+YKWoodpeckerAdditions.m */; };
+		B7879FDB264667220082E478 /* NSObject+YKWoodpeckerRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F39264667220082E478 /* NSObject+YKWoodpeckerRuntime.m */; };
+		B7879FDC264667220082E478 /* UIView+YKWoodpeckerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F3F264667220082E478 /* UIView+YKWoodpeckerAdditions.m */; };
+		B7879FDD264667220082E478 /* UIImage +YKWoodpeckerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F41264667220082E478 /* UIImage +YKWoodpeckerAdditions.m */; };
+		B7879FDE264667220082E478 /* icon_woodpecker@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7879F43264667220082E478 /* icon_woodpecker@3x.png */; };
+		B7879FDF264667220082E478 /* icon_woodpecker@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B7879F44264667220082E478 /* icon_woodpecker@2x.png */; };
+		B7879FE0264667230082E478 /* YKWDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F4A264667220082E478 /* YKWDrawView.m */; };
+		B7879FE1264667230082E478 /* YKWUIComparePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F4B264667220082E478 /* YKWUIComparePanel.m */; };
+		B7879FE2264667230082E478 /* YKWUIComparePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F4D264667220082E478 /* YKWUIComparePlugin.m */; };
+		B7879FE3264667230082E478 /* woodpecker_plugin_list_cn.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7879F4E264667220082E478 /* woodpecker_plugin_list_cn.plist */; };
+		B7879FE4264667230082E478 /* YKWPanelView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F51264667220082E478 /* YKWPanelView.m */; };
+		B7879FE5264667230082E478 /* YKWProbeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F55264667220082E478 /* YKWProbeView.m */; };
+		B7879FE6264667230082E478 /* YKWLineNoteView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F56264667220082E478 /* YKWLineNoteView.m */; };
+		B7879FE7264667230082E478 /* YKWObjectTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F5C264667220082E478 /* YKWObjectTableView.m */; };
+		B7879FE8264667230082E478 /* YKWObjectProbeView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F5D264667220082E478 /* YKWObjectProbeView.m */; };
+		B7879FE9264667230082E478 /* YKWRulerTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F5F264667220082E478 /* YKWRulerTool.m */; };
+		B7879FEA264667230082E478 /* YKWRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F62264667220082E478 /* YKWRulerView.m */; };
+		B7879FEB264667230082E478 /* YKWProbeRulerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F63264667220082E478 /* YKWProbeRulerPlugin.m */; };
+		B7879FEC264667230082E478 /* YKWPathFileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F66264667220082E478 /* YKWPathFileTableViewController.m */; };
+		B7879FED264667230082E478 /* YKWSandBoxPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F67264667220082E478 /* YKWSandBoxPlugin.m */; };
+		B7879FEE264667230082E478 /* YKWTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F69264667220082E478 /* YKWTextViewController.m */; };
+		B7879FEF264667230082E478 /* YKWFPSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F6D264667220082E478 /* YKWFPSUtils.m */; };
+		B7879FF0264667230082E478 /* YKWFPSPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F6E264667220082E478 /* YKWFPSPlugin.m */; };
+		B7879FF1264667230082E478 /* YKWClearDataPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F72264667220082E478 /* YKWClearDataPlugin.m */; };
+		B7879FF2264667230082E478 /* YKWCommandPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F74264667220082E478 /* YKWCommandPlugin.m */; };
+		B7879FF3264667230082E478 /* YKWCmdCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F76264667220082E478 /* YKWCmdCollectionViewCell.m */; };
+		B7879FF4264667230082E478 /* YKWCmdView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F78264667220082E478 /* YKWCmdView.m */; };
+		B7879FF5264667230082E478 /* YKWCmdModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F79264667220082E478 /* YKWCmdModel.m */; };
+		B7879FF6264667230082E478 /* YKWCmdCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F7E264667220082E478 /* YKWCmdCore.m */; };
+		B7879FF7264667230082E478 /* YKWJSONGrabPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F81264667220082E478 /* YKWJSONGrabPlugin.m */; };
+		B7879FF8264667230082E478 /* YKWObjcMethodHook.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F85264667220082E478 /* YKWObjcMethodHook.m */; };
+		B7879FF9264667230082E478 /* YKWJSONGrabManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F86264667220082E478 /* YKWJSONGrabManager.m */; };
+		B7879FFA264667230082E478 /* woodpecker_plugin_list_en.plist in Resources */ = {isa = PBXBuildFile; fileRef = B7879F87264667220082E478 /* woodpecker_plugin_list_en.plist */; };
+		B7879FFB264667230082E478 /* YKWDataFlowUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F89264667220082E478 /* YKWDataFlowUtils.m */; };
+		B7879FFC264667230082E478 /* YKWDataFlowPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F8C264667220082E478 /* YKWDataFlowPlugin.m */; };
+		B7879FFD264667230082E478 /* YKWPoCommandPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F8F264667220082E478 /* YKWPoCommandPlugin.m */; };
+		B7879FFE264667230082E478 /* YKWPoCommandCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F91264667220082E478 /* YKWPoCommandCore.m */; };
+		B7879FFF264667230082E478 /* YKWBundleResourcePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F93264667220082E478 /* YKWBundleResourcePlugin.m */; };
+		B787A000264667230082E478 /* YKWUserDefaultsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F97264667220082E478 /* YKWUserDefaultsPlugin.m */; };
+		B787A001264667230082E478 /* YKWUserDefaultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F98264667220082E478 /* YKWUserDefaultsViewController.m */; };
+		B787A002264667230082E478 /* YKWSysInfoPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F9B264667220082E478 /* YKWSysInfoPlugin.m */; };
+		B787A003264667230082E478 /* YKWTouchIndicatorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879F9E264667220082E478 /* YKWTouchIndicatorPlugin.m */; };
+		B787A004264667230082E478 /* YKWCrashLogPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FA2264667220082E478 /* YKWCrashLogPlugin.m */; };
+		B787A005264667230082E478 /* YKWMemoryPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FA4264667220082E478 /* YKWMemoryPlugin.m */; };
+		B787A006264667230082E478 /* YKWMemoryUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FA7264667220082E478 /* YKWMemoryUtils.m */; };
+		B787A007264667230082E478 /* YKWAllImagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FAB264667220082E478 /* YKWAllImagesViewController.m */; };
+		B787A008264667230082E478 /* YKWAllImagesPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FAC264667220082E478 /* YKWAllImagesPlugin.m */; };
+		B787A009264667230082E478 /* YKWCPUUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FB0264667220082E478 /* YKWCPUUtils.m */; };
+		B787A00A264667230082E478 /* YKWCPUPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FB1264667220082E478 /* YKWCPUPlugin.m */; };
+		B787A00B264667230082E478 /* YKWoodpeckerMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FB4264667220082E478 /* YKWoodpeckerMessage.m */; };
+		B787A00C264667230082E478 /* YKWoodpeckerUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FB5264667220082E478 /* YKWoodpeckerUtils.m */; };
+		B787A00D264667230082E478 /* ykwoodpecker_cn.json in Resources */ = {isa = PBXBuildFile; fileRef = B7879FB6264667220082E478 /* ykwoodpecker_cn.json */; };
+		B787A00E264667230082E478 /* YKWChartLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FBB264667220082E478 /* YKWChartLineView.m */; };
+		B787A00F264667230082E478 /* YKWChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FBD264667220082E478 /* YKWChartView.m */; };
+		B787A010264667230082E478 /* YKWChartWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FBF264667220082E478 /* YKWChartWindow.m */; };
+		B787A011264667230082E478 /* YKWImageTextPreview.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FC2264667220082E478 /* YKWImageTextPreview.m */; };
+		B787A012264667230082E478 /* YKWScreenLog.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FC4264667220082E478 /* YKWScreenLog.m */; };
+		B787A013264667230082E478 /* YKWFollowView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FC7264667220082E478 /* YKWFollowView.m */; };
+		B787A014264667230082E478 /* YKWRotationWindowRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FCC264667220082E478 /* YKWRotationWindowRootViewController.m */; };
+		B787A015264667230082E478 /* YKWPluginSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FCD264667220082E478 /* YKWPluginSectionHeader.m */; };
+		B787A016264667230082E478 /* YKWPluginsWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FCE264667220082E478 /* YKWPluginsWindow.m */; };
+		B787A017264667230082E478 /* YKWPluginModelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FCF264667220082E478 /* YKWPluginModelCell.m */; };
+		B787A018264667230082E478 /* YKWPluginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FD1264667220082E478 /* YKWPluginModel.m */; };
+		B787A019264667230082E478 /* YKWoodpeckerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7879FD6264667220082E478 /* YKWoodpeckerManager.m */; };
 		E29C9EDD948D50AB5C96A779 /* Pods_ZuYu2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30693E7871868B17805A9A1 /* Pods_ZuYu2.framework */; };
 /* End PBXBuildFile section */
 
@@ -218,6 +289,141 @@
 		7BEA559E24DAF9A10033C9B6 /* IndicatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorButton.swift; sourceTree = "<group>"; };
 		7BEA55A024DB0D5A0033C9B6 /* CallCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallCell.swift; sourceTree = "<group>"; };
 		7BEA55A124DB0D5A0033C9B6 /* CallCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CallCell.xib; sourceTree = "<group>"; };
+		B71F98772645AB14001ACCD6 /* UIViewController+YKWoodpecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+YKWoodpecker.swift"; sourceTree = "<group>"; };
+		B7794B3326444758007B9852 /* JiShiSelectStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JiShiSelectStoreViewController.swift; sourceTree = "<group>"; };
+		B7832962264ACA3B000319F4 /* LMWebHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LMWebHomeController.swift; sourceTree = "<group>"; };
+		B7832965264ADB27000319F4 /* GdShopWebController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GdShopWebController.swift; sourceTree = "<group>"; };
+		B7832969264AE2F8000319F4 /* ZuYu2Debug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZuYu2Debug.entitlements; sourceTree = "<group>"; };
+		B78612A726458A9300C4ECFF /* PaiWeiWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaiWeiWebViewController.swift; sourceTree = "<group>"; };
+		B78612AA26458DA400C4ECFF /* YeJiWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YeJiWebViewController.swift; sourceTree = "<group>"; };
+		B7879F37264667220082E478 /* UIColor +YKWoodpeckerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor +YKWoodpeckerAdditions.m"; sourceTree = "<group>"; };
+		B7879F38264667220082E478 /* NSArray+YKWoodpeckerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+YKWoodpeckerAdditions.m"; sourceTree = "<group>"; };
+		B7879F39264667220082E478 /* NSObject+YKWoodpeckerRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YKWoodpeckerRuntime.m"; sourceTree = "<group>"; };
+		B7879F3A264667220082E478 /* UIView+YKWoodpeckerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YKWoodpeckerAdditions.h"; sourceTree = "<group>"; };
+		B7879F3B264667220082E478 /* YKWoodpeckerCommonHeaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWoodpeckerCommonHeaders.h; sourceTree = "<group>"; };
+		B7879F3C264667220082E478 /* UIColor+YKWoodpeckerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+YKWoodpeckerAdditions.h"; sourceTree = "<group>"; };
+		B7879F3D264667220082E478 /* NSArray+YKWoodpeckerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YKWoodpeckerAdditions.h"; sourceTree = "<group>"; };
+		B7879F3E264667220082E478 /* UIImage+YKWoodpeckerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+YKWoodpeckerAdditions.h"; sourceTree = "<group>"; };
+		B7879F3F264667220082E478 /* UIView+YKWoodpeckerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YKWoodpeckerAdditions.m"; sourceTree = "<group>"; };
+		B7879F40264667220082E478 /* NSObject+YKWoodpeckerRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+YKWoodpeckerRuntime.h"; sourceTree = "<group>"; };
+		B7879F41264667220082E478 /* UIImage +YKWoodpeckerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage +YKWoodpeckerAdditions.m"; sourceTree = "<group>"; };
+		B7879F43264667220082E478 /* icon_woodpecker@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_woodpecker@3x.png"; sourceTree = "<group>"; };
+		B7879F44264667220082E478 /* icon_woodpecker@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_woodpecker@2x.png"; sourceTree = "<group>"; };
+		B7879F48264667220082E478 /* YKWDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWDrawView.h; sourceTree = "<group>"; };
+		B7879F49264667220082E478 /* YKWUIComparePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWUIComparePanel.h; sourceTree = "<group>"; };
+		B7879F4A264667220082E478 /* YKWDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWDrawView.m; sourceTree = "<group>"; };
+		B7879F4B264667220082E478 /* YKWUIComparePanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWUIComparePanel.m; sourceTree = "<group>"; };
+		B7879F4C264667220082E478 /* YKWUIComparePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWUIComparePlugin.h; sourceTree = "<group>"; };
+		B7879F4D264667220082E478 /* YKWUIComparePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWUIComparePlugin.m; sourceTree = "<group>"; };
+		B7879F4E264667220082E478 /* woodpecker_plugin_list_cn.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = woodpecker_plugin_list_cn.plist; sourceTree = "<group>"; };
+		B7879F51264667220082E478 /* YKWPanelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPanelView.m; sourceTree = "<group>"; };
+		B7879F52264667220082E478 /* YKWPanelView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPanelView.h; sourceTree = "<group>"; };
+		B7879F54264667220082E478 /* YKWLineNoteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWLineNoteView.h; sourceTree = "<group>"; };
+		B7879F55264667220082E478 /* YKWProbeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWProbeView.m; sourceTree = "<group>"; };
+		B7879F56264667220082E478 /* YKWLineNoteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWLineNoteView.m; sourceTree = "<group>"; };
+		B7879F57264667220082E478 /* YKWProbeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWProbeView.h; sourceTree = "<group>"; };
+		B7879F58264667220082E478 /* YKWProbeRulerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWProbeRulerPlugin.h; sourceTree = "<group>"; };
+		B7879F5A264667220082E478 /* YKWObjectProbeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWObjectProbeView.h; sourceTree = "<group>"; };
+		B7879F5B264667220082E478 /* YKWObjectTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWObjectTableView.h; sourceTree = "<group>"; };
+		B7879F5C264667220082E478 /* YKWObjectTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWObjectTableView.m; sourceTree = "<group>"; };
+		B7879F5D264667220082E478 /* YKWObjectProbeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWObjectProbeView.m; sourceTree = "<group>"; };
+		B7879F5F264667220082E478 /* YKWRulerTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWRulerTool.m; sourceTree = "<group>"; };
+		B7879F60264667220082E478 /* YKWRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWRulerView.h; sourceTree = "<group>"; };
+		B7879F61264667220082E478 /* YKWRulerTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWRulerTool.h; sourceTree = "<group>"; };
+		B7879F62264667220082E478 /* YKWRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWRulerView.m; sourceTree = "<group>"; };
+		B7879F63264667220082E478 /* YKWProbeRulerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWProbeRulerPlugin.m; sourceTree = "<group>"; };
+		B7879F65264667220082E478 /* YKWTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWTextViewController.h; sourceTree = "<group>"; };
+		B7879F66264667220082E478 /* YKWPathFileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPathFileTableViewController.m; sourceTree = "<group>"; };
+		B7879F67264667220082E478 /* YKWSandBoxPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWSandBoxPlugin.m; sourceTree = "<group>"; };
+		B7879F68264667220082E478 /* YKWPathFileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPathFileTableViewController.h; sourceTree = "<group>"; };
+		B7879F69264667220082E478 /* YKWTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWTextViewController.m; sourceTree = "<group>"; };
+		B7879F6A264667220082E478 /* YKWSandBoxPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWSandBoxPlugin.h; sourceTree = "<group>"; };
+		B7879F6C264667220082E478 /* YKWFPSPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWFPSPlugin.h; sourceTree = "<group>"; };
+		B7879F6D264667220082E478 /* YKWFPSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWFPSUtils.m; sourceTree = "<group>"; };
+		B7879F6E264667220082E478 /* YKWFPSPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWFPSPlugin.m; sourceTree = "<group>"; };
+		B7879F6F264667220082E478 /* YKWFPSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWFPSUtils.h; sourceTree = "<group>"; };
+		B7879F71264667220082E478 /* YKWClearDataPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWClearDataPlugin.h; sourceTree = "<group>"; };
+		B7879F72264667220082E478 /* YKWClearDataPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWClearDataPlugin.m; sourceTree = "<group>"; };
+		B7879F74264667220082E478 /* YKWCommandPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCommandPlugin.m; sourceTree = "<group>"; };
+		B7879F76264667220082E478 /* YKWCmdCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCmdCollectionViewCell.m; sourceTree = "<group>"; };
+		B7879F77264667220082E478 /* YKWCmdModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCmdModel.h; sourceTree = "<group>"; };
+		B7879F78264667220082E478 /* YKWCmdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCmdView.m; sourceTree = "<group>"; };
+		B7879F79264667220082E478 /* YKWCmdModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCmdModel.m; sourceTree = "<group>"; };
+		B7879F7A264667220082E478 /* YKWCmdCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCmdCollectionViewCell.h; sourceTree = "<group>"; };
+		B7879F7B264667220082E478 /* YKWCmdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCmdView.h; sourceTree = "<group>"; };
+		B7879F7C264667220082E478 /* YKWCommandPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCommandPlugin.h; sourceTree = "<group>"; };
+		B7879F7E264667220082E478 /* YKWCmdCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCmdCore.m; sourceTree = "<group>"; };
+		B7879F7F264667220082E478 /* YKWCmdCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCmdCore.h; sourceTree = "<group>"; };
+		B7879F81264667220082E478 /* YKWJSONGrabPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWJSONGrabPlugin.m; sourceTree = "<group>"; };
+		B7879F82264667220082E478 /* YKWJSONGrabManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWJSONGrabManager.h; sourceTree = "<group>"; };
+		B7879F83264667220082E478 /* YKWObjcMethodHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWObjcMethodHook.h; sourceTree = "<group>"; };
+		B7879F84264667220082E478 /* YKWJSONGrabPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWJSONGrabPlugin.h; sourceTree = "<group>"; };
+		B7879F85264667220082E478 /* YKWObjcMethodHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWObjcMethodHook.m; sourceTree = "<group>"; };
+		B7879F86264667220082E478 /* YKWJSONGrabManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWJSONGrabManager.m; sourceTree = "<group>"; };
+		B7879F87264667220082E478 /* woodpecker_plugin_list_en.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = woodpecker_plugin_list_en.plist; sourceTree = "<group>"; };
+		B7879F89264667220082E478 /* YKWDataFlowUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWDataFlowUtils.m; sourceTree = "<group>"; };
+		B7879F8A264667220082E478 /* YKWDataFlowPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWDataFlowPlugin.h; sourceTree = "<group>"; };
+		B7879F8B264667220082E478 /* YKWDataFlowUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWDataFlowUtils.h; sourceTree = "<group>"; };
+		B7879F8C264667220082E478 /* YKWDataFlowPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWDataFlowPlugin.m; sourceTree = "<group>"; };
+		B7879F8E264667220082E478 /* YKWPoCommandCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPoCommandCore.h; sourceTree = "<group>"; };
+		B7879F8F264667220082E478 /* YKWPoCommandPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPoCommandPlugin.m; sourceTree = "<group>"; };
+		B7879F90264667220082E478 /* YKWPoCommandPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPoCommandPlugin.h; sourceTree = "<group>"; };
+		B7879F91264667220082E478 /* YKWPoCommandCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPoCommandCore.m; sourceTree = "<group>"; };
+		B7879F93264667220082E478 /* YKWBundleResourcePlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWBundleResourcePlugin.m; sourceTree = "<group>"; };
+		B7879F94264667220082E478 /* YKWBundleResourcePlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWBundleResourcePlugin.h; sourceTree = "<group>"; };
+		B7879F96264667220082E478 /* YKWUserDefaultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWUserDefaultsViewController.h; sourceTree = "<group>"; };
+		B7879F97264667220082E478 /* YKWUserDefaultsPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWUserDefaultsPlugin.m; sourceTree = "<group>"; };
+		B7879F98264667220082E478 /* YKWUserDefaultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWUserDefaultsViewController.m; sourceTree = "<group>"; };
+		B7879F99264667220082E478 /* YKWUserDefaultsPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWUserDefaultsPlugin.h; sourceTree = "<group>"; };
+		B7879F9B264667220082E478 /* YKWSysInfoPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWSysInfoPlugin.m; sourceTree = "<group>"; };
+		B7879F9C264667220082E478 /* YKWSysInfoPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWSysInfoPlugin.h; sourceTree = "<group>"; };
+		B7879F9E264667220082E478 /* YKWTouchIndicatorPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWTouchIndicatorPlugin.m; sourceTree = "<group>"; };
+		B7879F9F264667220082E478 /* YKWTouchIndicatorPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWTouchIndicatorPlugin.h; sourceTree = "<group>"; };
+		B7879FA1264667220082E478 /* YKWCrashLogPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCrashLogPlugin.h; sourceTree = "<group>"; };
+		B7879FA2264667220082E478 /* YKWCrashLogPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCrashLogPlugin.m; sourceTree = "<group>"; };
+		B7879FA4264667220082E478 /* YKWMemoryPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWMemoryPlugin.m; sourceTree = "<group>"; };
+		B7879FA5264667220082E478 /* YKWMemoryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWMemoryUtils.h; sourceTree = "<group>"; };
+		B7879FA6264667220082E478 /* YKWMemoryPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWMemoryPlugin.h; sourceTree = "<group>"; };
+		B7879FA7264667220082E478 /* YKWMemoryUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWMemoryUtils.m; sourceTree = "<group>"; };
+		B7879FA9264667220082E478 /* YKWAllImagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWAllImagesViewController.h; sourceTree = "<group>"; };
+		B7879FAA264667220082E478 /* YKWAllImagesPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWAllImagesPlugin.h; sourceTree = "<group>"; };
+		B7879FAB264667220082E478 /* YKWAllImagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWAllImagesViewController.m; sourceTree = "<group>"; };
+		B7879FAC264667220082E478 /* YKWAllImagesPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWAllImagesPlugin.m; sourceTree = "<group>"; };
+		B7879FAE264667220082E478 /* YKWCPUUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCPUUtils.h; sourceTree = "<group>"; };
+		B7879FAF264667220082E478 /* YKWCPUPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWCPUPlugin.h; sourceTree = "<group>"; };
+		B7879FB0264667220082E478 /* YKWCPUUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCPUUtils.m; sourceTree = "<group>"; };
+		B7879FB1264667220082E478 /* YKWCPUPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWCPUPlugin.m; sourceTree = "<group>"; };
+		B7879FB3264667220082E478 /* YKWoodpeckerUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWoodpeckerUtils.h; sourceTree = "<group>"; };
+		B7879FB4264667220082E478 /* YKWoodpeckerMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWoodpeckerMessage.m; sourceTree = "<group>"; };
+		B7879FB5264667220082E478 /* YKWoodpeckerUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWoodpeckerUtils.m; sourceTree = "<group>"; };
+		B7879FB6264667220082E478 /* ykwoodpecker_cn.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ykwoodpecker_cn.json; sourceTree = "<group>"; };
+		B7879FB7264667220082E478 /* YKWoodpeckerMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWoodpeckerMessage.h; sourceTree = "<group>"; };
+		B7879FBA264667220082E478 /* YKWChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWChartView.h; sourceTree = "<group>"; };
+		B7879FBB264667220082E478 /* YKWChartLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWChartLineView.m; sourceTree = "<group>"; };
+		B7879FBC264667220082E478 /* YKWChartWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWChartWindow.h; sourceTree = "<group>"; };
+		B7879FBD264667220082E478 /* YKWChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWChartView.m; sourceTree = "<group>"; };
+		B7879FBE264667220082E478 /* YKWChartLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWChartLineView.h; sourceTree = "<group>"; };
+		B7879FBF264667220082E478 /* YKWChartWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWChartWindow.m; sourceTree = "<group>"; };
+		B7879FC1264667220082E478 /* YKWImageTextPreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWImageTextPreview.h; sourceTree = "<group>"; };
+		B7879FC2264667220082E478 /* YKWImageTextPreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWImageTextPreview.m; sourceTree = "<group>"; };
+		B7879FC4264667220082E478 /* YKWScreenLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWScreenLog.m; sourceTree = "<group>"; };
+		B7879FC5264667220082E478 /* YKWScreenLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWScreenLog.h; sourceTree = "<group>"; };
+		B7879FC7264667220082E478 /* YKWFollowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWFollowView.m; sourceTree = "<group>"; };
+		B7879FC8264667220082E478 /* YKWFollowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWFollowView.h; sourceTree = "<group>"; };
+		B7879FCB264667220082E478 /* YKWPluginModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPluginModel.h; sourceTree = "<group>"; };
+		B7879FCC264667220082E478 /* YKWRotationWindowRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWRotationWindowRootViewController.m; sourceTree = "<group>"; };
+		B7879FCD264667220082E478 /* YKWPluginSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPluginSectionHeader.m; sourceTree = "<group>"; };
+		B7879FCE264667220082E478 /* YKWPluginsWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPluginsWindow.m; sourceTree = "<group>"; };
+		B7879FCF264667220082E478 /* YKWPluginModelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPluginModelCell.m; sourceTree = "<group>"; };
+		B7879FD0264667220082E478 /* YKWPluginProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPluginProtocol.h; sourceTree = "<group>"; };
+		B7879FD1264667220082E478 /* YKWPluginModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWPluginModel.m; sourceTree = "<group>"; };
+		B7879FD2264667220082E478 /* YKWPluginSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPluginSectionHeader.h; sourceTree = "<group>"; };
+		B7879FD3264667220082E478 /* YKWRotationWindowRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWRotationWindowRootViewController.h; sourceTree = "<group>"; };
+		B7879FD4264667220082E478 /* YKWPluginsWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPluginsWindow.h; sourceTree = "<group>"; };
+		B7879FD5264667220082E478 /* YKWPluginModelCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWPluginModelCell.h; sourceTree = "<group>"; };
+		B7879FD6264667220082E478 /* YKWoodpeckerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YKWoodpeckerManager.m; sourceTree = "<group>"; };
+		B7879FD7264667220082E478 /* YKWoodpeckerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWoodpeckerManager.h; sourceTree = "<group>"; };
+		B7879FD8264667220082E478 /* YKWoodpecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YKWoodpecker.h; sourceTree = "<group>"; };
 		D23984C4224258786911380D /* Pods-ZuYu2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZuYu2.release.xcconfig"; path = "Target Support Files/Pods-ZuYu2/Pods-ZuYu2.release.xcconfig"; sourceTree = "<group>"; };
 		F30693E7871868B17805A9A1 /* Pods_ZuYu2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ZuYu2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -243,6 +449,7 @@
 				7BAAEAA024DED0BF00C72AF8 /* JSYeJiTableController.swift */,
 				7BAAEAA224DED0D200C72AF8 /* GongZiTableController.swift */,
 				7BAAEAA424DED0E900C72AF8 /* PaiHangBanTableController.swift */,
+				B78612AA26458DA400C4ECFF /* YeJiWebViewController.swift */,
 			);
 			path = yeji;
 			sourceTree = "<group>";
@@ -285,6 +492,8 @@
 		7B359FAF24D5A8C00067763B /* ZuYu2 */ = {
 			isa = PBXGroup;
 			children = (
+				B7832969264AE2F8000319F4 /* ZuYu2Debug.entitlements */,
+				B7879F34264666FE0082E478 /* Tools */,
 				7B9FB1FB24E849AD002829F7 /* ZuYu2.entitlements */,
 				7B97D97424F413AE00A81A93 /* api */,
 				7B35A00324D5B9CD0067763B /* constant */,
@@ -355,6 +564,7 @@
 				7B9FB1F224E009C0002829F7 /* SelfSizedTableView.swift */,
 				7B97D96C24EEB41000A81A93 /* UIImageExtension.swift */,
 				7B223E98250DA40200D5FCB2 /* StringExtension.swift */,
+				B71F98772645AB14001ACCD6 /* UIViewController+YKWoodpecker.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -379,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				7B1F5A7824D76104005AB33E /* JiShiController.swift */,
+				B7794B3326444758007B9852 /* JiShiSelectStoreViewController.swift */,
 				7BD8B9F424DAEB4800CE72D5 /* RoleController.swift */,
 				7BD8B9F524DAEB4800CE72D5 /* RoleController.xib */,
 			);
@@ -389,6 +600,7 @@
 			isa = PBXGroup;
 			children = (
 				7B1F5A7A24D76115005AB33E /* PaiWeiController.swift */,
+				B78612A726458A9300C4ECFF /* PaiWeiWebViewController.swift */,
 				7B9FB1F824E04A1A002829F7 /* TouPaiTableController.swift */,
 			);
 			path = paiwei;
@@ -519,11 +731,436 @@
 			isa = PBXGroup;
 			children = (
 				7B9FB20524E8DDFD002829F7 /* GdShopTableController.swift */,
+				B7832965264ADB27000319F4 /* GdShopWebController.swift */,
 				7B9D11EE24ED820D00962407 /* LMHomeController.swift */,
 				7B97D96424EEA01600A81A93 /* LMNotificationController.swift */,
 				7B97D96624EEA1BA00A81A93 /* LMNotiTableController.swift */,
+				B7832962264ACA3B000319F4 /* LMWebHomeController.swift */,
 			);
 			path = other;
+			sourceTree = "<group>";
+		};
+		B7879F34264666FE0082E478 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F35264667220082E478 /* YKWoodpecker */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		B7879F35264667220082E478 /* YKWoodpecker */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F36264667220082E478 /* Category */,
+				B7879F42264667220082E478 /* Images */,
+				B7879F45264667220082E478 /* Plugins */,
+				B7879FB2264667220082E478 /* Utils */,
+				B7879FB8264667220082E478 /* Common */,
+				B7879FC9264667220082E478 /* Base */,
+				B7879FD8264667220082E478 /* YKWoodpecker.h */,
+			);
+			path = YKWoodpecker;
+			sourceTree = "<group>";
+		};
+		B7879F36264667220082E478 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F37264667220082E478 /* UIColor +YKWoodpeckerAdditions.m */,
+				B7879F38264667220082E478 /* NSArray+YKWoodpeckerAdditions.m */,
+				B7879F39264667220082E478 /* NSObject+YKWoodpeckerRuntime.m */,
+				B7879F3A264667220082E478 /* UIView+YKWoodpeckerAdditions.h */,
+				B7879F3B264667220082E478 /* YKWoodpeckerCommonHeaders.h */,
+				B7879F3C264667220082E478 /* UIColor+YKWoodpeckerAdditions.h */,
+				B7879F3D264667220082E478 /* NSArray+YKWoodpeckerAdditions.h */,
+				B7879F3E264667220082E478 /* UIImage+YKWoodpeckerAdditions.h */,
+				B7879F3F264667220082E478 /* UIView+YKWoodpeckerAdditions.m */,
+				B7879F40264667220082E478 /* NSObject+YKWoodpeckerRuntime.h */,
+				B7879F41264667220082E478 /* UIImage +YKWoodpeckerAdditions.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		B7879F42264667220082E478 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F43264667220082E478 /* icon_woodpecker@3x.png */,
+				B7879F44264667220082E478 /* icon_woodpecker@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		B7879F45264667220082E478 /* Plugins */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F46264667220082E478 /* UIComparePlugin */,
+				B7879F4E264667220082E478 /* woodpecker_plugin_list_cn.plist */,
+				B7879F4F264667220082E478 /* ProbeRulerPlugin */,
+				B7879F64264667220082E478 /* SandBoxPlugin */,
+				B7879F6B264667220082E478 /* FPSPlugin */,
+				B7879F70264667220082E478 /* ClearDataPlugin */,
+				B7879F73264667220082E478 /* CommandPlugin */,
+				B7879F80264667220082E478 /* JSONGrabPlugin */,
+				B7879F87264667220082E478 /* woodpecker_plugin_list_en.plist */,
+				B7879F88264667220082E478 /* DataFlowPlugin */,
+				B7879F8D264667220082E478 /* PoCommandPlugin */,
+				B7879F92264667220082E478 /* BundleResourcePlugin */,
+				B7879F95264667220082E478 /* UserDefaultsPlugin */,
+				B7879F9A264667220082E478 /* SysInfoPlugin */,
+				B7879F9D264667220082E478 /* TouchIndicatorPlugin */,
+				B7879FA0264667220082E478 /* CrashLogPlugin */,
+				B7879FA3264667220082E478 /* MemoryPlugin */,
+				B7879FA8264667220082E478 /* AllImagesPlugin */,
+				B7879FAD264667220082E478 /* CPUPlugin */,
+			);
+			path = Plugins;
+			sourceTree = "<group>";
+		};
+		B7879F46264667220082E478 /* UIComparePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F47264667220082E478 /* Panel */,
+				B7879F4C264667220082E478 /* YKWUIComparePlugin.h */,
+				B7879F4D264667220082E478 /* YKWUIComparePlugin.m */,
+			);
+			path = UIComparePlugin;
+			sourceTree = "<group>";
+		};
+		B7879F47264667220082E478 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F48264667220082E478 /* YKWDrawView.h */,
+				B7879F49264667220082E478 /* YKWUIComparePanel.h */,
+				B7879F4A264667220082E478 /* YKWDrawView.m */,
+				B7879F4B264667220082E478 /* YKWUIComparePanel.m */,
+			);
+			path = Panel;
+			sourceTree = "<group>";
+		};
+		B7879F4F264667220082E478 /* ProbeRulerPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F50264667220082E478 /* Panel */,
+				B7879F53264667220082E478 /* ViewProbe */,
+				B7879F58264667220082E478 /* YKWProbeRulerPlugin.h */,
+				B7879F59264667220082E478 /* ObjectProbe */,
+				B7879F5E264667220082E478 /* RulerTool */,
+				B7879F63264667220082E478 /* YKWProbeRulerPlugin.m */,
+			);
+			path = ProbeRulerPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F50264667220082E478 /* Panel */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F51264667220082E478 /* YKWPanelView.m */,
+				B7879F52264667220082E478 /* YKWPanelView.h */,
+			);
+			path = Panel;
+			sourceTree = "<group>";
+		};
+		B7879F53264667220082E478 /* ViewProbe */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F54264667220082E478 /* YKWLineNoteView.h */,
+				B7879F55264667220082E478 /* YKWProbeView.m */,
+				B7879F56264667220082E478 /* YKWLineNoteView.m */,
+				B7879F57264667220082E478 /* YKWProbeView.h */,
+			);
+			path = ViewProbe;
+			sourceTree = "<group>";
+		};
+		B7879F59264667220082E478 /* ObjectProbe */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F5A264667220082E478 /* YKWObjectProbeView.h */,
+				B7879F5B264667220082E478 /* YKWObjectTableView.h */,
+				B7879F5C264667220082E478 /* YKWObjectTableView.m */,
+				B7879F5D264667220082E478 /* YKWObjectProbeView.m */,
+			);
+			path = ObjectProbe;
+			sourceTree = "<group>";
+		};
+		B7879F5E264667220082E478 /* RulerTool */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F5F264667220082E478 /* YKWRulerTool.m */,
+				B7879F60264667220082E478 /* YKWRulerView.h */,
+				B7879F61264667220082E478 /* YKWRulerTool.h */,
+				B7879F62264667220082E478 /* YKWRulerView.m */,
+			);
+			path = RulerTool;
+			sourceTree = "<group>";
+		};
+		B7879F64264667220082E478 /* SandBoxPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F65264667220082E478 /* YKWTextViewController.h */,
+				B7879F66264667220082E478 /* YKWPathFileTableViewController.m */,
+				B7879F67264667220082E478 /* YKWSandBoxPlugin.m */,
+				B7879F68264667220082E478 /* YKWPathFileTableViewController.h */,
+				B7879F69264667220082E478 /* YKWTextViewController.m */,
+				B7879F6A264667220082E478 /* YKWSandBoxPlugin.h */,
+			);
+			path = SandBoxPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F6B264667220082E478 /* FPSPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F6C264667220082E478 /* YKWFPSPlugin.h */,
+				B7879F6D264667220082E478 /* YKWFPSUtils.m */,
+				B7879F6E264667220082E478 /* YKWFPSPlugin.m */,
+				B7879F6F264667220082E478 /* YKWFPSUtils.h */,
+			);
+			path = FPSPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F70264667220082E478 /* ClearDataPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F71264667220082E478 /* YKWClearDataPlugin.h */,
+				B7879F72264667220082E478 /* YKWClearDataPlugin.m */,
+			);
+			path = ClearDataPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F73264667220082E478 /* CommandPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F74264667220082E478 /* YKWCommandPlugin.m */,
+				B7879F75264667220082E478 /* CmdView */,
+				B7879F7C264667220082E478 /* YKWCommandPlugin.h */,
+				B7879F7D264667220082E478 /* CmdCore */,
+			);
+			path = CommandPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F75264667220082E478 /* CmdView */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F76264667220082E478 /* YKWCmdCollectionViewCell.m */,
+				B7879F77264667220082E478 /* YKWCmdModel.h */,
+				B7879F78264667220082E478 /* YKWCmdView.m */,
+				B7879F79264667220082E478 /* YKWCmdModel.m */,
+				B7879F7A264667220082E478 /* YKWCmdCollectionViewCell.h */,
+				B7879F7B264667220082E478 /* YKWCmdView.h */,
+			);
+			path = CmdView;
+			sourceTree = "<group>";
+		};
+		B7879F7D264667220082E478 /* CmdCore */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F7E264667220082E478 /* YKWCmdCore.m */,
+				B7879F7F264667220082E478 /* YKWCmdCore.h */,
+			);
+			path = CmdCore;
+			sourceTree = "<group>";
+		};
+		B7879F80264667220082E478 /* JSONGrabPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F81264667220082E478 /* YKWJSONGrabPlugin.m */,
+				B7879F82264667220082E478 /* YKWJSONGrabManager.h */,
+				B7879F83264667220082E478 /* YKWObjcMethodHook.h */,
+				B7879F84264667220082E478 /* YKWJSONGrabPlugin.h */,
+				B7879F85264667220082E478 /* YKWObjcMethodHook.m */,
+				B7879F86264667220082E478 /* YKWJSONGrabManager.m */,
+			);
+			path = JSONGrabPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F88264667220082E478 /* DataFlowPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F89264667220082E478 /* YKWDataFlowUtils.m */,
+				B7879F8A264667220082E478 /* YKWDataFlowPlugin.h */,
+				B7879F8B264667220082E478 /* YKWDataFlowUtils.h */,
+				B7879F8C264667220082E478 /* YKWDataFlowPlugin.m */,
+			);
+			path = DataFlowPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F8D264667220082E478 /* PoCommandPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F8E264667220082E478 /* YKWPoCommandCore.h */,
+				B7879F8F264667220082E478 /* YKWPoCommandPlugin.m */,
+				B7879F90264667220082E478 /* YKWPoCommandPlugin.h */,
+				B7879F91264667220082E478 /* YKWPoCommandCore.m */,
+			);
+			path = PoCommandPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F92264667220082E478 /* BundleResourcePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F93264667220082E478 /* YKWBundleResourcePlugin.m */,
+				B7879F94264667220082E478 /* YKWBundleResourcePlugin.h */,
+			);
+			path = BundleResourcePlugin;
+			sourceTree = "<group>";
+		};
+		B7879F95264667220082E478 /* UserDefaultsPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F96264667220082E478 /* YKWUserDefaultsViewController.h */,
+				B7879F97264667220082E478 /* YKWUserDefaultsPlugin.m */,
+				B7879F98264667220082E478 /* YKWUserDefaultsViewController.m */,
+				B7879F99264667220082E478 /* YKWUserDefaultsPlugin.h */,
+			);
+			path = UserDefaultsPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F9A264667220082E478 /* SysInfoPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F9B264667220082E478 /* YKWSysInfoPlugin.m */,
+				B7879F9C264667220082E478 /* YKWSysInfoPlugin.h */,
+			);
+			path = SysInfoPlugin;
+			sourceTree = "<group>";
+		};
+		B7879F9D264667220082E478 /* TouchIndicatorPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879F9E264667220082E478 /* YKWTouchIndicatorPlugin.m */,
+				B7879F9F264667220082E478 /* YKWTouchIndicatorPlugin.h */,
+			);
+			path = TouchIndicatorPlugin;
+			sourceTree = "<group>";
+		};
+		B7879FA0264667220082E478 /* CrashLogPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FA1264667220082E478 /* YKWCrashLogPlugin.h */,
+				B7879FA2264667220082E478 /* YKWCrashLogPlugin.m */,
+			);
+			path = CrashLogPlugin;
+			sourceTree = "<group>";
+		};
+		B7879FA3264667220082E478 /* MemoryPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FA4264667220082E478 /* YKWMemoryPlugin.m */,
+				B7879FA5264667220082E478 /* YKWMemoryUtils.h */,
+				B7879FA6264667220082E478 /* YKWMemoryPlugin.h */,
+				B7879FA7264667220082E478 /* YKWMemoryUtils.m */,
+			);
+			path = MemoryPlugin;
+			sourceTree = "<group>";
+		};
+		B7879FA8264667220082E478 /* AllImagesPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FA9264667220082E478 /* YKWAllImagesViewController.h */,
+				B7879FAA264667220082E478 /* YKWAllImagesPlugin.h */,
+				B7879FAB264667220082E478 /* YKWAllImagesViewController.m */,
+				B7879FAC264667220082E478 /* YKWAllImagesPlugin.m */,
+			);
+			path = AllImagesPlugin;
+			sourceTree = "<group>";
+		};
+		B7879FAD264667220082E478 /* CPUPlugin */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FAE264667220082E478 /* YKWCPUUtils.h */,
+				B7879FAF264667220082E478 /* YKWCPUPlugin.h */,
+				B7879FB0264667220082E478 /* YKWCPUUtils.m */,
+				B7879FB1264667220082E478 /* YKWCPUPlugin.m */,
+			);
+			path = CPUPlugin;
+			sourceTree = "<group>";
+		};
+		B7879FB2264667220082E478 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FB3264667220082E478 /* YKWoodpeckerUtils.h */,
+				B7879FB4264667220082E478 /* YKWoodpeckerMessage.m */,
+				B7879FB5264667220082E478 /* YKWoodpeckerUtils.m */,
+				B7879FB6264667220082E478 /* ykwoodpecker_cn.json */,
+				B7879FB7264667220082E478 /* YKWoodpeckerMessage.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B7879FB8264667220082E478 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FB9264667220082E478 /* ChartWindow */,
+				B7879FC0264667220082E478 /* TextImagePreview */,
+				B7879FC3264667220082E478 /* ScreenLog */,
+				B7879FC6264667220082E478 /* FollowView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B7879FB9264667220082E478 /* ChartWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FBA264667220082E478 /* YKWChartView.h */,
+				B7879FBB264667220082E478 /* YKWChartLineView.m */,
+				B7879FBC264667220082E478 /* YKWChartWindow.h */,
+				B7879FBD264667220082E478 /* YKWChartView.m */,
+				B7879FBE264667220082E478 /* YKWChartLineView.h */,
+				B7879FBF264667220082E478 /* YKWChartWindow.m */,
+			);
+			path = ChartWindow;
+			sourceTree = "<group>";
+		};
+		B7879FC0264667220082E478 /* TextImagePreview */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FC1264667220082E478 /* YKWImageTextPreview.h */,
+				B7879FC2264667220082E478 /* YKWImageTextPreview.m */,
+			);
+			path = TextImagePreview;
+			sourceTree = "<group>";
+		};
+		B7879FC3264667220082E478 /* ScreenLog */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FC4264667220082E478 /* YKWScreenLog.m */,
+				B7879FC5264667220082E478 /* YKWScreenLog.h */,
+			);
+			path = ScreenLog;
+			sourceTree = "<group>";
+		};
+		B7879FC6264667220082E478 /* FollowView */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FC7264667220082E478 /* YKWFollowView.m */,
+				B7879FC8264667220082E478 /* YKWFollowView.h */,
+			);
+			path = FollowView;
+			sourceTree = "<group>";
+		};
+		B7879FC9264667220082E478 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FCA264667220082E478 /* PluginManage */,
+				B7879FD6264667220082E478 /* YKWoodpeckerManager.m */,
+				B7879FD7264667220082E478 /* YKWoodpeckerManager.h */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B7879FCA264667220082E478 /* PluginManage */ = {
+			isa = PBXGroup;
+			children = (
+				B7879FCB264667220082E478 /* YKWPluginModel.h */,
+				B7879FCC264667220082E478 /* YKWRotationWindowRootViewController.m */,
+				B7879FCD264667220082E478 /* YKWPluginSectionHeader.m */,
+				B7879FCE264667220082E478 /* YKWPluginsWindow.m */,
+				B7879FCF264667220082E478 /* YKWPluginModelCell.m */,
+				B7879FD0264667220082E478 /* YKWPluginProtocol.h */,
+				B7879FD1264667220082E478 /* YKWPluginModel.m */,
+				B7879FD2264667220082E478 /* YKWPluginSectionHeader.h */,
+				B7879FD3264667220082E478 /* YKWRotationWindowRootViewController.h */,
+				B7879FD4264667220082E478 /* YKWPluginsWindow.h */,
+				B7879FD5264667220082E478 /* YKWPluginModelCell.h */,
+			);
+			path = PluginManage;
 			sourceTree = "<group>";
 		};
 		C6C2A0BFA5D09394B48D6B54 /* Pods */ = {
@@ -609,20 +1246,25 @@
 			files = (
 				7B35A02424D5BA5C0067763B /* Login.storyboard in Resources */,
 				7B9D11F324ED8ABB00962407 /* LMHomeCell.xib in Resources */,
+				B7879FDE264667220082E478 /* icon_woodpecker@3x.png in Resources */,
 				7BEA55A324DB0D5A0033C9B6 /* CallCell.xib in Resources */,
 				7B359FBD24D5A8C20067763B /* LaunchScreen.storyboard in Resources */,
 				7B97D96B24EEAFC500A81A93 /* LMNotiCell.xib in Resources */,
 				7B359FBA24D5A8C20067763B /* Assets.xcassets in Resources */,
 				7B35A01A24D5B9CD0067763B /* cities.plist in Resources */,
 				7BD8B9F724DAEB4800CE72D5 /* RoleController.xib in Resources */,
+				B787A00D264667230082E478 /* ykwoodpecker_cn.json in Resources */,
+				B7879FFA264667230082E478 /* woodpecker_plugin_list_en.plist in Resources */,
 				7BAAEA9F24DEC81300C72AF8 /* MingXiInnerCell.xib in Resources */,
 				7B842C822566E06E008A16BB /* AlipaySDK.bundle in Resources */,
 				7B359FB824D5A8C00067763B /* Main.storyboard in Resources */,
 				7B9FB1F724E037E0002829F7 /* PaiWeiCell.xib in Resources */,
 				7BAAEA9724DEA42100C72AF8 /* HeJiCell.xib in Resources */,
+				B7879FDF264667220082E478 /* icon_woodpecker@2x.png in Resources */,
 				7B9FB20324E8DD99002829F7 /* GdShopCell.xib in Resources */,
 				7B97D97124F159E600A81A93 /* DurationView.xib in Resources */,
 				7B35A01C24D5B9CD0067763B /* hotCities.plist in Resources */,
+				B7879FE3264667230082E478 /* woodpecker_plugin_list_cn.plist in Resources */,
 				7B842C832566E06E008A16BB /* LICENSE in Resources */,
 				7BAAEA8F24DE7FD600C72AF8 /* PaiHangBanCell.xib in Resources */,
 				7B957CE9255660CB00A8F627 /* PoiCell.xib in Resources */,
@@ -703,76 +1345,142 @@
 				7BA047A724D66620008CF9A4 /* PlatformStepThreeController.swift in Sources */,
 				7B97D97824FAE33C00A81A93 /* ApiBaseModel.swift in Sources */,
 				7B58B48C24DC6046006C1161 /* DashLine.swift in Sources */,
+				B7879FF6264667230082E478 /* YKWCmdCore.m in Sources */,
 				7B35A00B24D5B9CD0067763B /* StarStackView.swift in Sources */,
 				7B35A00924D5B9CD0067763B /* NSObjectExtension.swift in Sources */,
 				7BEA55A224DB0D5A0033C9B6 /* CallCell.swift in Sources */,
+				B7879FFB264667230082E478 /* YKWDataFlowUtils.m in Sources */,
+				B787A000264667230082E478 /* YKWUserDefaultsPlugin.m in Sources */,
 				7B223E9D2517264900D5FCB2 /* UserInfo.swift in Sources */,
+				B787A017264667230082E478 /* YKWPluginModelCell.m in Sources */,
 				7B9FB20624E8DDFD002829F7 /* GdShopTableController.swift in Sources */,
 				7B9FB1F324E009C0002829F7 /* SelfSizedTableView.swift in Sources */,
 				7B842C7C2566D633008A16BB /* WXApiManager.swift in Sources */,
+				B78612AB26458DA400C4ECFF /* YeJiWebViewController.swift in Sources */,
 				7B1F5A7924D76105005AB33E /* JiShiController.swift in Sources */,
+				B787A00C264667230082E478 /* YKWoodpeckerUtils.m in Sources */,
 				7B97D97B25021DD200A81A93 /* EmptyModel.swift in Sources */,
 				7B1F5A7B24D76115005AB33E /* PaiWeiController.swift in Sources */,
+				B7879FE6264667230082E478 /* YKWLineNoteView.m in Sources */,
 				7B35A01D24D5B9CD0067763B /* CurrentCityTableViewCell.swift in Sources */,
+				B7794B3426444758007B9852 /* JiShiSelectStoreViewController.swift in Sources */,
+				B7879FD9264667220082E478 /* UIColor +YKWoodpeckerAdditions.m in Sources */,
+				B7879FEC264667230082E478 /* YKWPathFileTableViewController.m in Sources */,
+				B7879FFD264667230082E478 /* YKWPoCommandPlugin.m in Sources */,
+				B787A016264667230082E478 /* YKWPluginsWindow.m in Sources */,
+				B787A012264667230082E478 /* YKWScreenLog.m in Sources */,
 				7B23FE2525543C7D00D7616A /* LocationViewController.swift in Sources */,
+				B7879FE1264667230082E478 /* YKWUIComparePanel.m in Sources */,
 				7B223E9F25173F2500D5FCB2 /* AchievementsBean.swift in Sources */,
+				B787A00B264667230082E478 /* YKWoodpeckerMessage.m in Sources */,
+				B7879FF0264667230082E478 /* YKWFPSPlugin.m in Sources */,
 				7B35A02224D5B9CD0067763B /* Constant.swift in Sources */,
 				7BAAEAA524DED0E900C72AF8 /* PaiHangBanTableController.swift in Sources */,
+				B787A004264667230082E478 /* YKWCrashLogPlugin.m in Sources */,
 				7B1F5A8024D763E6005AB33E /* JSTabController.swift in Sources */,
+				B787A011264667230082E478 /* YKWImageTextPreview.m in Sources */,
 				7B9D11EF24ED820D00962407 /* LMHomeController.swift in Sources */,
+				B787A019264667230082E478 /* YKWoodpeckerManager.m in Sources */,
 				7B842CF12566E6C4008A16BB /* AliPayManager.swift in Sources */,
 				7B35A02024D5B9CD0067763B /* Header.swift in Sources */,
 				7B9D11ED24EAD5A600962407 /* JSNavigationController.swift in Sources */,
 				7B359FB124D5A8C00067763B /* AppDelegate.swift in Sources */,
+				B7879FDC264667220082E478 /* UIView+YKWoodpeckerAdditions.m in Sources */,
 				7B35A00D24D5B9CD0067763B /* CustomTextField.swift in Sources */,
+				B7879FDA264667220082E478 /* NSArray+YKWoodpeckerAdditions.m in Sources */,
 				7B35A02124D5B9CD0067763B /* RecentCitiesableViewCell.swift in Sources */,
+				B787A010264667230082E478 /* YKWChartWindow.m in Sources */,
+				B787A006264667230082E478 /* YKWMemoryUtils.m in Sources */,
+				B7879FFE264667230082E478 /* YKWPoCommandCore.m in Sources */,
 				7B35A00C24D5B9CD0067763B /* ExtraImageButton.swift in Sources */,
 				7B97D97E25044AE900A81A93 /* WebController.swift in Sources */,
 				7B957CE8255660CB00A8F627 /* PoiCell.swift in Sources */,
+				B7879FDB264667220082E478 /* NSObject+YKWoodpeckerRuntime.m in Sources */,
+				B7832966264ADB28000319F4 /* GdShopWebController.swift in Sources */,
+				B787A009264667230082E478 /* YKWCPUUtils.m in Sources */,
+				B787A007264667230082E478 /* YKWAllImagesViewController.m in Sources */,
+				B7879FE7264667230082E478 /* YKWObjectTableView.m in Sources */,
 				7BA047A124D665DB008CF9A4 /* LoginController.swift in Sources */,
 				7B97D96D24EEB41000A81A93 /* UIImageExtension.swift in Sources */,
+				B7879FE9264667230082E478 /* YKWRulerTool.m in Sources */,
 				7B97D96724EEA1BA00A81A93 /* LMNotiTableController.swift in Sources */,
 				7BAAEA9224DE93AB00C72AF8 /* GongZiCell.swift in Sources */,
 				7B9D11F624ED99BB00962407 /* LMHomeHeader.swift in Sources */,
 				7BEA559F24DAF9A10033C9B6 /* IndicatorButton.swift in Sources */,
 				7B97D96F24F159CB00A81A93 /* DurationView.swift in Sources */,
+				B787A00E264667230082E478 /* YKWChartLineView.m in Sources */,
 				7B97D96524EEA01700A81A93 /* LMNotificationController.swift in Sources */,
 				7BAAEAA124DED0BF00C72AF8 /* JSYeJiTableController.swift in Sources */,
+				B7879FF2264667230082E478 /* YKWCommandPlugin.m in Sources */,
 				7B35A01F24D5B9CD0067763B /* ResultTableViewController.swift in Sources */,
+				B787A00A264667230082E478 /* YKWCPUPlugin.m in Sources */,
 				7B35A01924D5B9CD0067763B /* CitySelectorViewController.swift in Sources */,
 				7B35A00E24D5B9CD0067763B /* TextViewWithPlaceholder.swift in Sources */,
+				B7879FF8264667230082E478 /* YKWObjcMethodHook.m in Sources */,
+				B787A005264667230082E478 /* YKWMemoryPlugin.m in Sources */,
+				B787A003264667230082E478 /* YKWTouchIndicatorPlugin.m in Sources */,
+				B7879FEB264667230082E478 /* YKWProbeRulerPlugin.m in Sources */,
 				7B45B04B24D6BB8B002A3F02 /* UIButtonExtension.swift in Sources */,
 				7B1F5A8324D99F6F005AB33E /* CustomImagePostionButton.swift in Sources */,
 				7B43576B255ACE650024CDD0 /* ProfileViewController.swift in Sources */,
+				B7879FF9264667230082E478 /* YKWJSONGrabManager.m in Sources */,
+				B787A001264667230082E478 /* YKWUserDefaultsViewController.m in Sources */,
 				7B35A00A24D5B9CD0067763B /* CustomBgLayerButton.swift in Sources */,
 				7B1FEE4D24D74ECF0053CFBD /* ResetPassword2Controller.swift in Sources */,
+				B7879FEF264667230082E478 /* YKWFPSUtils.m in Sources */,
 				7BAAEAA324DED0D200C72AF8 /* GongZiTableController.swift in Sources */,
 				7BA047A324D665F9008CF9A4 /* PlatformStepOneController.swift in Sources */,
+				B787A014264667230082E478 /* YKWRotationWindowRootViewController.m in Sources */,
+				B71F98782645AB14001ACCD6 /* UIViewController+YKWoodpecker.swift in Sources */,
 				7B1F5A7524D76095005AB33E /* CallController.swift in Sources */,
+				B7879FDD264667220082E478 /* UIImage +YKWoodpeckerAdditions.m in Sources */,
 				7B9FB20224E8DD99002829F7 /* GdShopCell.swift in Sources */,
 				7BA047A524D6660C008CF9A4 /* PlatformStepTwoController.swift in Sources */,
+				B7879FF3264667230082E478 /* YKWCmdCollectionViewCell.m in Sources */,
 				7BAAEA9A24DEA43600C72AF8 /* MingXiCell.swift in Sources */,
+				B7879FED264667230082E478 /* YKWSandBoxPlugin.m in Sources */,
+				B7879FFC264667230082E478 /* YKWDataFlowPlugin.m in Sources */,
+				B7879FF4264667230082E478 /* YKWCmdView.m in Sources */,
+				B7832963264ACA3B000319F4 /* LMWebHomeController.swift in Sources */,
+				B7879FF7264667230082E478 /* YKWJSONGrabPlugin.m in Sources */,
+				B7879FF1264667230082E478 /* YKWClearDataPlugin.m in Sources */,
 				7BD8B9F624DAEB4800CE72D5 /* RoleController.swift in Sources */,
 				7BAAEA9E24DEC81300C72AF8 /* MingXiInnerCell.swift in Sources */,
 				7B359FB324D5A8C00067763B /* SceneDelegate.swift in Sources */,
+				B7879FE8264667230082E478 /* YKWObjectProbeView.m in Sources */,
 				7B223E99250DA40200D5FCB2 /* StringExtension.swift in Sources */,
+				B7879FFF264667230082E478 /* YKWBundleResourcePlugin.m in Sources */,
 				7B9FB1F924E04A1A002829F7 /* TouPaiTableController.swift in Sources */,
+				B7879FEE264667230082E478 /* YKWTextViewController.m in Sources */,
+				B787A00F264667230082E478 /* YKWChartView.m in Sources */,
 				7B842BC4255AEE3A008A16BB /* ProjectsBean.swift in Sources */,
+				B7879FE0264667230082E478 /* YKWDrawView.m in Sources */,
+				B7879FF5264667230082E478 /* YKWCmdModel.m in Sources */,
 				7B1F5A7D24D76138005AB33E /* WodeTableController.swift in Sources */,
+				B7879FE4264667230082E478 /* YKWPanelView.m in Sources */,
 				7B9FB1F624E037E0002829F7 /* PaiWeiCell.swift in Sources */,
+				B7879FE5264667230082E478 /* YKWProbeView.m in Sources */,
 				7B223E97250D919400D5FCB2 /* NetManager.swift in Sources */,
 				7B9D11F224ED8ABB00962407 /* LMHomeCell.swift in Sources */,
+				B7879FE2264667230082E478 /* YKWUIComparePlugin.m in Sources */,
 				7B842BE8255AF2C2008A16BB /* ProjectBean.swift in Sources */,
 				7BAAEA9624DEA42100C72AF8 /* HeJiCell.swift in Sources */,
+				B787A008264667230082E478 /* YKWAllImagesPlugin.m in Sources */,
 				7BAAEA8E24DE7FD600C72AF8 /* PaiHangBanCell.swift in Sources */,
 				7B1F5A7724D760EB005AB33E /* YeJiController.swift in Sources */,
+				B787A015264667230082E478 /* YKWPluginSectionHeader.m in Sources */,
 				7B624954255628D100DC5E34 /* AddressSearchViewController.swift in Sources */,
 				7B23FE272554538100D7616A /* CommonUtils.swift in Sources */,
+				B787A018264667230082E478 /* YKWPluginModel.m in Sources */,
 				7B1FEE4B24D74EBC0053CFBD /* ResetPassword1Controller.swift in Sources */,
 				7B97D97624F413C900A81A93 /* NetTool.swift in Sources */,
+				B7879FEA264667230082E478 /* YKWRulerView.m in Sources */,
+				B787A002264667230082E478 /* YKWSysInfoPlugin.m in Sources */,
 				7B35A01B24D5B9CD0067763B /* HotCityTableViewCell.swift in Sources */,
+				B78612A826458A9300C4ECFF /* PaiWeiWebViewController.swift in Sources */,
 				7B223E9B2517214A00D5FCB2 /* UserBean.swift in Sources */,
 				7B97D96A24EEAFC500A81A93 /* LMNotiCell.swift in Sources */,
+				B787A013264667230082E478 /* YKWFollowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,16 +1626,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ZuYu2/ZuYu2.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 4QHHXE5WM4;
+				CODE_SIGN_ENTITLEMENTS = ZuYu2/ZuYu2Debug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_TEAM = SH823459N5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZuYu2/vendor/AlipaySDK-iOS",
 				);
 				INFOPLIST_FILE = ZuYu2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -936,9 +1645,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZuYu2/vendor/WechatOpenSDK/OpenSDK1.8.7.1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu2;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu2DEV;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zuyu2.dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu2/ZuYu2-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -953,15 +1663,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZuYu2/ZuYu2.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 4QHHXE5WM4;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1.2;
+				DEVELOPMENT_TEAM = SH823459N5;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZuYu2/vendor/AlipaySDK-iOS",
 				);
 				INFOPLIST_FILE = ZuYu2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -970,9 +1681,9 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/ZuYu2/vendor/WechatOpenSDK/OpenSDK1.8.7.1",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu2.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = zuyu2.dis;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu2/ZuYu2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

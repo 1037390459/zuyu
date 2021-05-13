@@ -26,7 +26,8 @@ class WebController: UIViewController {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+//        fatalError("init(coder:) has not been implemented")
     }
     
     func registerElementEvent(methodName : String, id : String) -> WKUserScript {
@@ -63,6 +64,7 @@ class WebController: UIViewController {
         configuration.selectionGranularity = WKSelectionGranularity.character
         let userContent = WKUserContentController()
         userContent.add(self, name: backMethodName)
+        userContent.add(self, name: "periodtask")
 //        userContent.addUserScript(registerElementEvent(methodName: backMethodName, className: "van-nav-bar__left"))
         configuration.userContentController = userContent
         let webView = WKWebView(frame: .zero, configuration: configuration)
@@ -105,6 +107,18 @@ class WebController: UIViewController {
     }
     
     func callNative(code : String?, data: String?, source : String? = nil) {
+        
+        //TODO: 考勤
+        if let code = code, code == "attendance"{
+            
+        }
+        
+        if let code = code, code == "login"{
+            let window = AppDelegate.shared.window
+            window?.rootViewController = UIStoryboard.init(name: "Login", bundle: nil).instantiateInitialViewController()
+            window?.makeKeyAndVisible()
+        }
+        
         if let code = code, code == "back" {
             navigationController?.popViewController(animated: true)
         }
@@ -194,12 +208,12 @@ extension WebController: WKNavigationDelegate, WKScriptMessageHandler {
     ///接收js调用方法
     func userContentController(_ userContentController: WKUserContentController,
                                didReceive message: WKScriptMessage) {
-        if message.name == backMethodName {
+        if message.name == backMethodName  || message.name == "periodtask"     {
             navigationController?.popViewController(animated: true)
         }
     }
     
-    //! WKWeView在每次加载请求前会调用此方法来确认是否进行请求跳转
+     //! WKWeView在每次加载请求前会调用此方法来确认是否进行请求跳转
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         print("navigation==>\(navigationAction.request.url!)")
         if let url = navigationAction.request.url, url.scheme == "protocol", url.host == "android" {

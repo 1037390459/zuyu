@@ -1,12 +1,20 @@
 # Uncomment the next line to define a global platform for your project
+
 platform :ios, '11.0'
 # Comment the next line if you don't want to use dynamic frameworks
 use_frameworks!
 
 workspace 'ZuYu.xcworkspace'
 
-target 'ZuYu' do
+def pods
+  pod 'Bugly'
+  pod 'CocoaLumberjack/Swift'
+#  pod  'YKWoodpecker','~> 1.1.1'
+end
 
+target 'ZuYu' do
+  
+  pods
 # Pods for ZuYu ZuYu.xcworkspace
 pod 'Moya/RxSwift', '~> 14.0'
 pod 'SwifterSwift/SwiftStdlib'
@@ -37,6 +45,7 @@ end
 
 
 target 'ZuYu2' do
+  pods
 project "ZuYu2/ZuYu2.project"
 pod 'Moya/RxSwift', '~> 14.0'
 pod 'SwifterSwift/SwiftStdlib'

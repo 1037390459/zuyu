@@ -9,9 +9,16 @@
 import UIKit
 import SwifterSwift
 
-//public let serverUrl = "http://192.168.0.121" //测试地址
+//public let h5BaseUrl = "http://bisci-vpn.tpddns.cn:65502"
 
-public let serverUrl = "http://120.24.149.42" //正式地址
+public let h5BaseUrl = "https://qx08.cn"
+
+
+//public let serverUrl = "http://192.168.0.121:9310" //测试地址
+
+//public let serverUrl = "http://192.168.0.121:9310" //测试地址
+
+public let serverUrl = "https://qx08.cn" //正式地址
 
 /// 高德sdk api key 
 public let amapKey = "387ff81741c5fe3f9cb043f46695f7a4"

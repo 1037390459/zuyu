@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class YeJiController: UIViewController {
     
     enum YejiType : Int {
@@ -172,3 +174,5 @@ class YeJiController: UIViewController {
      */
     
 }
+
+

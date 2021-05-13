@@ -26,6 +26,8 @@ class LoginController: UIViewController {
     
     @IBOutlet weak var wayBtn: UIButton!
     
+    var userBean : UserBean?
+    
     private lazy var forgetPwdBtn : UIButton = {
         let button = UIButton.init(type: .custom)
         button.addTarget(self, action: #selector(resetPassword), for: .touchUpInside)
@@ -104,6 +106,7 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
+        setupYKWoodpecker()
     }
     
     deinit {
@@ -169,6 +172,8 @@ class LoginController: UIViewController {
     @objc func resetPassword() {
         print("resetPassword")
         performSegue(withIdentifier: ResetPassword1Controller.className, sender: nil)
+        
+//        performSegue(withIdentifier: JiShiSelectStoreViewController.className, sender: nil)
     }
     
     @IBAction func toggleLoginWay(_ sender: Any) {
@@ -208,24 +213,36 @@ class LoginController: UIViewController {
             })
             .subscribe(onNext: { (result) in
                 print("result:\(result)")
+                self.userBean = result
                 let encoder = JSONEncoder()
                 let jsonData = try? encoder.encode(result)
                 let jsonString = String(bytes: jsonData!, encoding: .utf8)
                 let userDefaults = UserDefaults.standard
                 userDefaults.set(jsonString, forKey: "userBean")
+//                if !self.shouldGotoStoreList(userBean: result){
+//                    clientType = ClientType(rawValue: result.userType ?? "JS")
+//                }
                 clientType = ClientType(rawValue: result.userType ?? "JS")
                 }, onError: { (e) in
                     SVProgressHUD.showError(withStatus: e.localizedDescription)
             }).disposed(by: disposeBag)
     }
     
+    func shouldGotoStoreList(userBean:UserBean)->Bool{
+        if (userBean.stores?.count ?? 0) > 1 {
+            performSegue(withIdentifier: JiShiSelectStoreViewController.className, sender: nil)
+            return true
+        }
+        return false
+    }
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let vc = segue.destination as? JiShiSelectStoreViewController{
+            vc.userBean = userBean
+        }
     }
     
     

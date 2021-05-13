@@ -12,10 +12,14 @@ import SVProgressHUD
 import IQKeyboardManagerSwift
 import AMapFoundationKit
 import SystemConfiguration.CaptiveNetwork
+import Bugly
+import CocoaLumberjack
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
+    var fileLogger: DDFileLogger?
+    
     var window: UIWindow?
     static var shared: AppDelegate { return UIApplication.shared.delegate as! AppDelegate }
     
@@ -23,14 +27,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         globalSettings()
+        setupLogManager()
         AMapServices.shared()?.apiKey = amapKey
         requestLocationPermission()
         WXApi.startLog(by: .detail) { (info) in
             print(info)
         }
-        WXApi.registerApp(WX_APPID, universalLink: "https://m.sz-mysaas.com/app2")
+        WXApi.registerApp(WX_APPID, universalLink: "https://m.sz-mysaas.com/app")
         print("wifi : \(getWifiName() ?? "")")
+        
+        //加入bugly崩溃日志收集
+        Bugly.start(withAppId: "5b89ad1fbf")
+        
         return true
+    }
+    
+    fileprivate func setupLogManager() {
+        if #available(iOS 10.0, *) {
+            DDLog.add(DDOSLogger.sharedInstance)
+        } else {
+            // Fallback on earlier versions
+        } // Uses os_log
+        
+        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        fileLogger.rollingFrequency = 60 * 60 * 24 // 24 hours
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 9
+        fileLogger.maximumFileSize = 900 * 1024 //最大上传不超过 1MB
+        DDLog.add(fileLogger)
+        
+        self.fileLogger = fileLogger
     }
     
     func requestLocationPermission() {

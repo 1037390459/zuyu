@@ -13,7 +13,6 @@
 		7B1030DB257C7C8B0035F763 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B1030DA257C7C8B0035F763 /* StringExtension.swift */; };
 		7B2ECC0F24B95E390004773E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2ECC0E24B95E390004773E /* AppDelegate.swift */; };
 		7B2ECC1124B95E390004773E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2ECC1024B95E390004773E /* SceneDelegate.swift */; };
-		7B2ECC1324B95E390004773E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2ECC1224B95E390004773E /* LoginController.swift */; };
 		7B2ECC1824B95E3C0004773E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B2ECC1724B95E3C0004773E /* Assets.xcassets */; };
 		7B2ECC1B24B95E3C0004773E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B2ECC1924B95E3C0004773E /* LaunchScreen.storyboard */; };
 		7B2ECC2724B9C69E0004773E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2ECC2624B9C69E0004773E /* Constant.swift */; };
@@ -52,6 +51,7 @@
 		7BAD406624CD67CB0075DBA9 /* ModifyPassword2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD406524CD67CB0075DBA9 /* ModifyPassword2Controller.swift */; };
 		7BAD406824CD68C50075DBA9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD406724CD68C50075DBA9 /* CustomButton.swift */; };
 		7BAD406A24CD6A870075DBA9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAD406924CD6A870075DBA9 /* CustomTextField.swift */; };
+		B75A9EAD25EA07CE0004A1B8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75A9EAC25EA07CE0004A1B8 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +64,6 @@
 		7B2ECC0B24B95E390004773E /* ZuYu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZuYu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B2ECC0E24B95E390004773E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B2ECC1024B95E390004773E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B2ECC1224B95E390004773E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = ../LoginController.swift; sourceTree = "<group>"; };
 		7B2ECC1724B95E3C0004773E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7B2ECC1A24B95E3C0004773E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7B2ECC1C24B95E3C0004773E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		7BAD406724CD68C50075DBA9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		7BAD406924CD6A870075DBA9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		90C2F6966A7A723D1E7FCEDC /* Pods-ZuYu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZuYu.release.xcconfig"; path = "Target Support Files/Pods-ZuYu/Pods-ZuYu.release.xcconfig"; sourceTree = "<group>"; };
+		B75A9EAC25EA07CE0004A1B8 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginController.swift; path = ZuYu/controller/LoginController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,7 +248,7 @@
 		7B9BB47A24BAE833008B35ED /* login */ = {
 			isa = PBXGroup;
 			children = (
-				7B2ECC1224B95E390004773E /* LoginController.swift */,
+				B75A9EAC25EA07CE0004A1B8 /* LoginController.swift */,
 			);
 			path = login;
 			sourceTree = "<group>";
@@ -460,7 +460,6 @@
 				7BAD406824CD68C50075DBA9 /* CustomButton.swift in Sources */,
 				7B359F5724D0641E0067763B /* TextViewWithPlaceholder.swift in Sources */,
 				7B359F5124CD86360067763B /* RecentCitiesableViewCell.swift in Sources */,
-				7B2ECC1324B95E390004773E /* LoginController.swift in Sources */,
 				7B2ECC0F24B95E390004773E /* AppDelegate.swift in Sources */,
 				7BAD406224CD31DE0075DBA9 /* FeedBackController.swift in Sources */,
 				7BAD406A24CD6A870075DBA9 /* CustomTextField.swift in Sources */,
@@ -478,6 +477,7 @@
 				7B0F35F02590FC1C009384DA /* StoreList.swift in Sources */,
 				7B359F4C24CD86360067763B /* String+SoolyCitySelector.swift in Sources */,
 				7B9BB47F24BAEA00008B35ED /* HomeController.swift in Sources */,
+				B75A9EAD25EA07CE0004A1B8 /* LoginController.swift in Sources */,
 				7B0F361A2590FEAB009384DA /* CommonUtils.swift in Sources */,
 				7BAD406424CD31F00075DBA9 /* ModifyPasswordController.swift in Sources */,
 			);
@@ -626,18 +626,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZuYu/ZuYu.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 4QHHXE5WM4;
+				DEVELOPMENT_TEAM = SH823459N5;
 				INFOPLIST_FILE = ZuYu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qianxing.zuyu-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = qx_million.dev;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu/ZuYu-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -652,18 +652,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ZuYu/ZuYu.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.1;
-				DEVELOPMENT_TEAM = 4QHHXE5WM4;
+				DEVELOPMENT_TEAM = SH823459N5;
 				INFOPLIST_FILE = ZuYu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianxing.zuyu;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.qianxing.zuyu-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = qx_million.dis;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ZuYu/ZuYu-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

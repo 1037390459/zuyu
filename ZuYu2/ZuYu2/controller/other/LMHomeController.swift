@@ -124,6 +124,8 @@ class LMHomeController: UIViewController {
         let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
         layout.estimatedItemSize = CGSize(width: 100, height: 100)
         getAchievementsApi()
+        
+        setupYKWoodpecker()
     }
     
     override func viewDidLayoutSubviews() {
@@ -244,7 +246,8 @@ extension LMHomeController :  UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let model = mData[indexPath.row]
         let action = model["action"]
-        let vc = WebController.init("\(serverUrl)/app/h5/floor/#/\(action!)")
+//        let vc = WebController.init("\(h5BaseUrl)/app/h5/floor/#/\(action!)")
+        let vc = WebController.init("\(h5BaseUrl)/qx-floor-app/#/\(action!)")
         vc.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(vc)
     }
